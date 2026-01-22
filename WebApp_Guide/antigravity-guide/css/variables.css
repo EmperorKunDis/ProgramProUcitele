@@ -1,65 +1,101 @@
+/* ==================== PHASE 1: ELECTRIC BLUE LEVITATION ==================== */
+
 :root {
-  /* PRAUT Brand Palette */
-  --color-brand-primary: #5B2C9D;
-  /* Deep Purple */
-  --color-brand-secondary: #7C4DFF;
-  /* Lighter Purple for accents */
-  --color-brand-success: #00C853;
-  /* Green */
-  --color-brand-danger: #D50000;
-  /* Red */
-  --color-brand-warning: #FFAB00;
-  /* Amber */
+    /* Phase 1 Color Palette - Electric Blue */
+    --p1-bg-primary: #080810;
+    --p1-bg-secondary: #0d0d18;
+    --p1-bg-card: rgba(13, 13, 24, 0.8);
+    --p1-bg-glass: rgba(13, 13, 24, 0.6);
 
-  /* Neutrals - Light */
-  --color-bg-primary: #F4F5F7;
-  /* Slight grey for depth */
-  --color-bg-secondary: #FFFFFF;
-  /* Pure white for cards */
-  --color-bg-glass: rgba(255, 255, 255, 0.7);
-  /* Glass effect */
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #5E5E5E;
-  --color-border: #E0E0E0;
+    --p1-accent: #00d4ff;
+    --p1-accent-secondary: #0099cc;
+    --p1-accent-glow: rgba(0, 212, 255, 0.3);
+    --p1-accent-subtle: rgba(0, 212, 255, 0.1);
 
-  /* Typography - Premium */
-  --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
-  /* Cleaner modern font */
-  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+    --p1-text-primary: #e8e8f0;
+    --p1-text-secondary: #6b7280;
+    --p1-text-muted: #4a4a5a;
 
-  --font-size-base: 16px;
-  --font-size-header: 28px;
-  --font-size-hero: 52px;
+    --p1-border: rgba(0, 212, 255, 0.15);
+    --p1-border-hover: rgba(0, 212, 255, 0.4);
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-xxl: 64px;
+    /* Status Colors */
+    --p1-success: #00ff88;
+    --p1-success-glow: rgba(0, 255, 136, 0.3);
+    --p1-warning: #ffaa00;
+    --p1-warning-glow: rgba(255, 170, 0, 0.3);
+    --p1-danger: #ff3366;
+    --p1-danger-glow: rgba(255, 51, 102, 0.3);
+    --p1-info: #00d4ff;
+    --p1-info-glow: rgba(0, 212, 255, 0.3);
 
-  /* UI Elements */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px rgba(91, 44, 157, 0.08);
-  /* Purple tinted shadow */
-  --shadow-lg: 0 16px 32px rgba(91, 44, 157, 0.12);
+    /* Typography */
+    --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+    --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
 
-  --glass-blur: blur(12px);
+    --font-size-base: 16px;
+    --font-size-header: 28px;
+    --font-size-hero: 52px;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 64px;
+
+    /* UI Elements */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 30px var(--p1-accent-glow);
+
+    --glass-blur: blur(20px);
+
+    /* Grid Background */
+    --grid-color: rgba(0, 212, 255, 0.03);
+
+    /* Legacy variable mapping for compatibility */
+    --color-brand-primary: var(--p1-accent);
+    --color-brand-secondary: var(--p1-accent-secondary);
+    --color-brand-success: var(--p1-success);
+    --color-brand-danger: var(--p1-danger);
+    --color-brand-warning: var(--p1-warning);
+    --color-bg-primary: var(--p1-bg-primary);
+    --color-bg-secondary: var(--p1-bg-secondary);
+    --color-bg-glass: var(--p1-bg-glass);
+    --color-text-primary: var(--p1-text-primary);
+    --color-text-secondary: var(--p1-text-secondary);
+    --color-border: var(--p1-border);
 }
 
+/* Dark theme is default for cyberpunk */
 [data-theme="dark"] {
-  /* Neutrals - Dark */
-  --color-bg-primary: #0F0F13;
-  /* Very dark purple-grey */
-  --color-bg-secondary: #1A1B26;
-  --color-bg-glass: rgba(26, 27, 38, 0.7);
-  --color-text-primary: #E8E8E8;
-  --color-text-secondary: #A0A0A0;
-  --color-border: #2E2E3E;
+    --color-bg-primary: var(--p1-bg-primary);
+    --color-bg-secondary: var(--p1-bg-secondary);
+    --color-bg-glass: var(--p1-bg-glass);
+    --color-text-primary: var(--p1-text-primary);
+    --color-text-secondary: var(--p1-text-secondary);
+    --color-border: var(--p1-border);
+}
 
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+/* Light theme - slightly lighter but still cyberpunk */
+[data-theme="light"] {
+    --p1-bg-primary: #0f0f1a;
+    --p1-bg-secondary: #14142a;
+    --p1-bg-card: rgba(20, 20, 42, 0.9);
+    --p1-bg-glass: rgba(20, 20, 42, 0.7);
+    --p1-text-primary: #f0f0f8;
+    --p1-text-secondary: #8b8b9b;
+
+    --color-bg-primary: var(--p1-bg-primary);
+    --color-bg-secondary: var(--p1-bg-secondary);
+    --color-bg-glass: var(--p1-bg-glass);
+    --color-text-primary: var(--p1-text-primary);
+    --color-text-secondary: var(--p1-text-secondary);
 }

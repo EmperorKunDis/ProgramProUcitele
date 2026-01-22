@@ -1,11 +1,29 @@
+/* ==================== CODE BLOCKS - TERMINAL STYLE ==================== */
+
 pre {
-    background: #1e293b;
-    border-radius: var(--radius-md);
+    background: #0d1117;
     padding: var(--space-lg);
-    padding-top: calc(var(--space-lg) + 8px);
+    padding-top: calc(var(--space-lg) + 20px);
     overflow-x: auto;
     margin: var(--space-lg) 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--p2-border);
+    position: relative;
+}
+
+/* Terminal header */
+pre::before {
+    content: '// TERMINAL';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 6px 16px;
+    background: var(--p2-accent-subtle);
+    border-bottom: 1px solid var(--p2-border);
+    font-size: 0.65rem;
+    color: var(--p2-accent);
+    font-family: var(--font-family-mono);
+    letter-spacing: 0.1em;
 }
 
 pre[class*="language-"] { margin: 0; }
@@ -13,52 +31,154 @@ pre[class*="language-"] { margin: 0; }
 pre code {
     background: transparent;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.6;
-    color: #e2e8f0;
+    color: #e6edf3;
     font-family: var(--font-family-mono);
 }
 
+/* Inline code */
 :not(pre) > code {
-    background: rgba(37, 99, 235, 0.1);
-    color: var(--color-brand-primary);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.9em;
+    background: var(--p2-accent-subtle);
+    color: var(--p2-accent);
+    padding: 3px 10px;
+    font-size: 0.85em;
+    font-family: var(--font-family-mono);
+    border: 1px solid var(--p2-border);
 }
 
-[data-theme="dark"] :not(pre) > code {
-    background: rgba(96, 165, 250, 0.15);
-    color: var(--color-brand-accent);
+/* ==================== SYNTAX HIGHLIGHTING - MATRIX STYLE ==================== */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #484f58;
+    font-style: italic;
 }
 
-.token.comment { color: #64748b; }
-.token.punctuation { color: #e2e8f0; }
-.token.property, .token.tag, .token.number { color: #f97316; }
-.token.string, .token.char { color: #22c55e; }
-.token.keyword { color: #a78bfa; }
-.token.function { color: #60a5fa; }
-.token.variable { color: #fbbf24; }
+.token.punctuation {
+    color: #7d8590;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #ff7b72;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #00ffaa;
+    text-shadow: 0 0 8px var(--p2-accent-glow);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #79c0ff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #ff7b72;
+}
+
+.token.function,
+.token.class-name {
+    color: #d2a8ff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #ffa657;
+}
+
+/* Selection */
+pre::selection,
+pre *::selection,
+code::selection,
+code *::selection {
+    background: rgba(0, 255, 170, 0.3);
+}
+
+/* Scrollbar */
+pre::-webkit-scrollbar {
+    height: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: var(--p2-accent);
+}
+
+/* ==================== TABLES ==================== */
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin: var(--space-lg) 0;
-    font-size: 0.95rem;
-    border-radius: var(--radius-md);
+    font-size: 0.9rem;
     overflow: hidden;
+    border: 1px solid var(--p2-border);
+    font-family: var(--font-family-mono);
 }
 
 th, td {
     padding: var(--space-sm) var(--space-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--p2-border);
     text-align: left;
 }
 
 th {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(96, 165, 250, 0.05));
+    background: var(--p2-accent-subtle);
     font-weight: 600;
+    color: var(--p2-accent);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
 }
 
-tr:nth-child(even) { background-color: rgba(0, 0, 0, 0.02); }
-[data-theme="dark"] tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+tr {
+    transition: all 0.2s;
+}
+
+tr:hover {
+    background: var(--p2-accent-subtle);
+}
+
+tr:nth-child(even) {
+    background: rgba(0, 255, 170, 0.02);
+}
+
+tr:nth-child(even):hover {
+    background: var(--p2-accent-subtle);
+}
+
+/* ==================== CURSOR BLINK ==================== */
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.cursor-blink::after {
+    content: '_';
+    color: var(--p2-accent);
+    animation: blink 1s step-end infinite;
+}

@@ -1,13 +1,25 @@
-/* Code Blocks Styling */
+/* ==================== CODE BLOCKS - CYBERPUNK TERMINAL ==================== */
 
 pre {
-    background: #1e1e2e;
+    background: #0a0a14;
     border-radius: var(--radius-md);
     padding: var(--space-lg);
-    padding-top: calc(var(--space-lg) + 8px);
+    padding-top: calc(var(--space-lg) + 12px);
     overflow-x: auto;
     margin: var(--space-lg) 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--p1-border);
+    position: relative;
+}
+
+/* Terminal header decoration */
+pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--p1-accent), var(--p1-accent-secondary), transparent);
 }
 
 pre[class*="language-"] {
@@ -19,23 +31,19 @@ pre code {
     padding: 0;
     font-size: 0.9rem;
     line-height: 1.6;
-    color: #cdd6f4;
+    color: #e8e8f0;
     font-family: var(--font-family-mono);
 }
 
 /* Inline code in callouts and paragraphs */
 :not(pre) > code {
-    background: rgba(91, 44, 157, 0.1);
-    color: var(--color-brand-primary);
-    padding: 2px 8px;
-    border-radius: 4px;
+    background: var(--p1-accent-subtle);
+    color: var(--p1-accent);
+    padding: 3px 10px;
+    border-radius: 6px;
     font-size: 0.9em;
     font-family: var(--font-family-mono);
-}
-
-[data-theme="dark"] :not(pre) > code {
-    background: rgba(124, 77, 255, 0.15);
-    color: var(--color-brand-secondary);
+    border: 1px solid var(--p1-border);
 }
 
 /* Code block container styling */
@@ -47,16 +55,18 @@ pre code {
     margin: 0;
 }
 
-/* PrismJS Theme - Catppuccin inspired for readability */
+/* ==================== SYNTAX HIGHLIGHTING - CYBERPUNK NEON ==================== */
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #6c7086;
+    color: #4a5568;
+    font-style: italic;
 }
 
 .token.punctuation {
-    color: #cdd6f4;
+    color: #8b9cc0;
 }
 
 .token.property,
@@ -66,7 +76,7 @@ pre code {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #fab387;
+    color: #ff6b9d;
 }
 
 .token.selector,
@@ -75,7 +85,7 @@ pre code {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #a6e3a1;
+    color: #00ff88;
 }
 
 .token.operator,
@@ -83,24 +93,25 @@ pre code {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #94e2d5;
+    color: #00d4ff;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #cba6f7;
+    color: #a855f7;
 }
 
 .token.function,
 .token.class-name {
-    color: #89b4fa;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: #f9e2af;
+    color: #ffaa00;
 }
 
 /* Selection */
@@ -108,29 +119,30 @@ pre::selection,
 pre *::selection,
 code::selection,
 code *::selection {
-    background: rgba(124, 77, 255, 0.3);
+    background: rgba(0, 212, 255, 0.3);
 }
 
 /* Scrollbar for code blocks */
 pre::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 pre::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
+    background: rgba(0, 212, 255, 0.05);
+    border-radius: 3px;
 }
 
 pre::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    background: var(--p1-accent);
+    border-radius: 3px;
 }
 
 pre::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--p1-accent-secondary);
 }
 
-/* Tables */
+/* ==================== TABLES - CYBERPUNK GRID ==================== */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -138,25 +150,50 @@ table {
     font-size: 0.95rem;
     border-radius: var(--radius-md);
     overflow: hidden;
+    border: 1px solid var(--p1-border);
 }
 
 th,
 td {
     padding: var(--space-sm) var(--space-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--p1-border);
     text-align: left;
 }
 
 th {
-    background: linear-gradient(135deg, rgba(91, 44, 157, 0.1), rgba(124, 77, 255, 0.05));
+    background: linear-gradient(135deg, var(--p1-accent-subtle), transparent);
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: var(--p1-accent);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+tr {
+    transition: all 0.2s;
+}
+
+tr:hover {
+    background: var(--p1-accent-subtle);
 }
 
 tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.02);
+    background: rgba(0, 212, 255, 0.02);
 }
 
-[data-theme="dark"] tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.02);
+tr:nth-child(even):hover {
+    background: var(--p1-accent-subtle);
+}
+
+/* ==================== TERMINAL CURSOR BLINK ==================== */
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.cursor-blink::after {
+    content: '▌';
+    color: var(--p1-accent);
+    animation: blink 1s step-end infinite;
 }

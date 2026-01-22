@@ -1,3 +1,5 @@
+/* ==================== SIDEBAR NAVIGATION - HUD TERMINAL ==================== */
+
 .sidebar-nav {
     padding: var(--space-sm) 0;
     flex: 1;
@@ -8,23 +10,43 @@
     display: flex;
     align-items: center;
     padding: var(--space-sm) var(--space-lg);
-    color: var(--color-text-secondary);
+    color: var(--p2-text-secondary);
     cursor: pointer;
-    border-left: 4px solid transparent;
+    border-left: 2px solid transparent;
     transition: all 0.2s;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     gap: var(--space-sm);
+    font-family: var(--font-family-mono);
+    position: relative;
+}
+
+.nav-item::before {
+    content: '>';
+    position: absolute;
+    left: 12px;
+    color: transparent;
+    transition: all 0.2s;
+    font-weight: bold;
 }
 
 .nav-item:hover {
-    background-color: rgba(37, 99, 235, 0.05);
-    color: var(--color-text-primary);
+    background: var(--p2-accent-subtle);
+    color: var(--p2-text-primary);
+}
+
+.nav-item:hover::before {
+    color: var(--p2-accent);
 }
 
 .nav-item.active {
-    background-color: rgba(37, 99, 235, 0.1);
-    color: var(--color-brand-primary);
-    border-left-color: var(--color-brand-primary);
+    background: linear-gradient(90deg, var(--p2-accent-subtle), transparent);
+    color: var(--p2-accent);
+    border-left-color: var(--p2-accent);
+}
+
+.nav-item.active::before {
+    color: var(--p2-accent);
+    text-shadow: 0 0 10px var(--p2-accent-glow);
 }
 
 .nav-item.active .nav-item-content span:first-child {
@@ -34,20 +56,27 @@
 .nav-item-check {
     width: 20px;
     height: 20px;
-    border: 2px solid var(--color-border);
-    border-radius: 50%;
+    border: 1px solid var(--p2-border);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     transition: all 0.2s;
+    background: var(--p2-bg-secondary);
+    margin-left: 12px;
+}
+
+.nav-item:hover .nav-item-check {
+    border-color: var(--p2-accent);
 }
 
 .nav-item.completed .nav-item-check {
-    background-color: var(--color-brand-success);
-    border-color: var(--color-brand-success);
-    color: white;
-    font-size: 11px;
+    background: var(--p2-success);
+    border-color: var(--p2-success);
+    color: var(--p2-bg-primary);
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 8px var(--p2-success-glow);
 }
 
 .nav-item.completed .nav-item-check::after {
@@ -61,9 +90,36 @@
     min-width: 0;
 }
 
+.nav-item-content span:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .reading-time {
-    font-size: 0.75rem;
-    color: var(--color-text-secondary);
-    opacity: 0.7;
+    font-size: 0.65rem;
+    color: var(--p2-text-muted);
     margin-top: 2px;
+    font-family: var(--font-family-mono);
+}
+
+.nav-item.active .reading-time {
+    color: var(--p2-accent-secondary);
+}
+
+/* Scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--p2-border);
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: var(--p2-accent);
 }

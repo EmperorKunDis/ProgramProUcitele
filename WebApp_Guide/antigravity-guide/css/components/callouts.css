@@ -1,46 +1,122 @@
+/* ==================== CALLOUTS - CYBERPUNK STYLE ==================== */
+
 .callout {
-    padding: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     margin: var(--space-lg) 0;
     border-radius: var(--radius-md);
     border-left: 4px solid;
     display: flex;
     gap: var(--space-md);
-    background-color: var(--color-bg-secondary);
+    background: var(--p1-bg-secondary);
+    border: 1px solid var(--p1-border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.callout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+.callout:hover {
+    transform: translateX(4px);
 }
 
 .callout-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
+    filter: drop-shadow(0 0 8px currentColor);
 }
 
 .callout-content {
     flex: 1;
 }
 
-/* Tip (Green) */
+.callout-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tip (Green/Success) */
 .callout-tip {
-    border-color: var(--color-brand-success);
-    background-color: rgba(0, 200, 83, 0.05);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.08), transparent);
+    border-color: var(--p1-border);
+}
+
+.callout-tip::before {
+    background: var(--p1-success);
+    box-shadow: 0 0 15px var(--p1-success-glow);
+}
+
+.callout-tip .callout-icon {
+    color: var(--p1-success);
+}
+
+.callout-tip:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px var(--p1-success-glow);
 }
 
 /* Warning (Amber) */
 .callout-warning {
-    border-color: var(--color-brand-warning);
-    background-color: rgba(255, 171, 0, 0.05);
+    background: linear-gradient(135deg, rgba(255, 170, 0, 0.08), transparent);
+    border-color: var(--p1-border);
+}
+
+.callout-warning::before {
+    background: var(--p1-warning);
+    box-shadow: 0 0 15px var(--p1-warning-glow);
+}
+
+.callout-warning .callout-icon {
+    color: var(--p1-warning);
+}
+
+.callout-warning:hover {
+    border-color: rgba(255, 170, 0, 0.3);
+    box-shadow: 0 0 20px var(--p1-warning-glow);
 }
 
 /* Danger (Red) */
 .callout-danger {
-    border-color: var(--color-brand-danger);
-    background-color: rgba(213, 0, 0, 0.05);
+    background: linear-gradient(135deg, rgba(255, 51, 102, 0.08), transparent);
+    border-color: var(--p1-border);
 }
 
-/* Info (Brand) */
+.callout-danger::before {
+    background: var(--p1-danger);
+    box-shadow: 0 0 15px var(--p1-danger-glow);
+}
+
+.callout-danger .callout-icon {
+    color: var(--p1-danger);
+}
+
+.callout-danger:hover {
+    border-color: rgba(255, 51, 102, 0.3);
+    box-shadow: 0 0 20px var(--p1-danger-glow);
+}
+
+/* Info (Cyan/Brand) */
 .callout-info {
-    border-color: var(--color-brand-primary);
-    background-color: rgba(91, 44, 157, 0.05);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), transparent);
+    border-color: var(--p1-border);
 }
 
-[data-theme="dark"] .callout {
-    background-color: rgba(255, 255, 255, 0.03);
+.callout-info::before {
+    background: var(--p1-info);
+    box-shadow: 0 0 15px var(--p1-info-glow);
+}
+
+.callout-info .callout-icon {
+    color: var(--p1-info);
+}
+
+.callout-info:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px var(--p1-info-glow);
 }

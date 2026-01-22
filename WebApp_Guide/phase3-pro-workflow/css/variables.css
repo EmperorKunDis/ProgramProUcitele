@@ -1,49 +1,87 @@
+/* ==================== PHASE 3: COMMAND CENTER AMBER ==================== */
+
 :root {
-  /* Phase 3 Brand Palette - Green Theme */
-  --color-brand-primary: #059669;
-  --color-brand-secondary: #10B981;
-  --color-brand-accent: #34D399;
-  --color-brand-success: #22C55E;
-  --color-brand-danger: #EF4444;
-  --color-brand-warning: #F59E0B;
+    /* Phase 3 Color Palette - Command Center Amber */
+    --p3-bg-primary: #0f0f0f;
+    --p3-bg-secondary: #161616;
+    --p3-bg-card: rgba(22, 22, 22, 0.9);
+    --p3-bg-glass: rgba(22, 22, 22, 0.7);
+    --p3-bg-widget: #1a1a1a;
 
-  /* Neutrals - Light */
-  --color-bg-primary: #F0FDF4;
-  --color-bg-secondary: #FFFFFF;
-  --color-bg-glass: rgba(255, 255, 255, 0.8);
-  --color-text-primary: #14532D;
-  --color-text-secondary: #4D7C5F;
-  --color-border: #D1FAE5;
+    --p3-accent: #f59e0b;
+    --p3-accent-secondary: #d97706;
+    --p3-accent-glow: rgba(245, 158, 11, 0.3);
+    --p3-accent-subtle: rgba(245, 158, 11, 0.08);
 
-  /* Typography */
-  --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
-  --font-size-base: 16px;
+    --p3-text-primary: #fafafa;
+    --p3-text-secondary: #a3a3a3;
+    --p3-text-muted: #525252;
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-xxl: 64px;
+    --p3-border: rgba(245, 158, 11, 0.15);
+    --p3-border-hover: rgba(245, 158, 11, 0.4);
 
-  /* UI Elements */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px rgba(5, 150, 105, 0.1);
-  --shadow-lg: 0 16px 32px rgba(5, 150, 105, 0.15);
-  --glass-blur: blur(12px);
+    /* Status Colors */
+    --p3-success: #22c55e;
+    --p3-success-glow: rgba(34, 197, 94, 0.3);
+    --p3-warning: #f59e0b;
+    --p3-warning-glow: rgba(245, 158, 11, 0.3);
+    --p3-danger: #ef4444;
+    --p3-danger-glow: rgba(239, 68, 68, 0.3);
+    --p3-info: #3b82f6;
+    --p3-info-glow: rgba(59, 130, 246, 0.3);
+
+    /* Online Status */
+    --p3-online: #22c55e;
+    --p3-offline: #ef4444;
+    --p3-idle: #f59e0b;
+
+    /* Typography */
+    --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+    --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+
+    --font-size-base: 16px;
+    --font-size-header: 28px;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 64px;
+
+    /* UI Elements - Sharp edges for command center */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 30px var(--p3-accent-glow);
+
+    --glass-blur: blur(16px);
+
+    /* Legacy mapping */
+    --color-brand-primary: var(--p3-accent);
+    --color-brand-secondary: var(--p3-accent-secondary);
+    --color-brand-success: var(--p3-success);
+    --color-brand-danger: var(--p3-danger);
+    --color-brand-warning: var(--p3-warning);
+    --color-bg-primary: var(--p3-bg-primary);
+    --color-bg-secondary: var(--p3-bg-secondary);
+    --color-bg-glass: var(--p3-bg-glass);
+    --color-text-primary: var(--p3-text-primary);
+    --color-text-secondary: var(--p3-text-secondary);
+    --color-border: var(--p3-border);
 }
 
-[data-theme="dark"] {
-  --color-bg-primary: #0A1F0F;
-  --color-bg-secondary: #14352A;
-  --color-bg-glass: rgba(20, 53, 42, 0.8);
-  --color-text-primary: #D1FAE5;
-  --color-text-secondary: #86EFAC;
-  --color-border: #166534;
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+[data-theme="dark"],
+[data-theme="light"] {
+    --color-bg-primary: var(--p3-bg-primary);
+    --color-bg-secondary: var(--p3-bg-secondary);
+    --color-bg-glass: var(--p3-bg-glass);
+    --color-text-primary: var(--p3-text-primary);
+    --color-text-secondary: var(--p3-text-secondary);
+    --color-border: var(--p3-border);
 }

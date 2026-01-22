@@ -1,49 +1,85 @@
+/* ==================== PHASE 2: DIGITAL HUD TERMINAL ==================== */
+
 :root {
-  /* Phase 2 Brand Palette - Blue Theme */
-  --color-brand-primary: #2563EB;
-  --color-brand-secondary: #3B82F6;
-  --color-brand-accent: #60A5FA;
-  --color-brand-success: #10B981;
-  --color-brand-danger: #EF4444;
-  --color-brand-warning: #F59E0B;
+    /* Phase 2 Color Palette - HUD Teal */
+    --p2-bg-primary: #0a0f14;
+    --p2-bg-secondary: #0d1117;
+    --p2-bg-card: rgba(13, 17, 23, 0.9);
+    --p2-bg-glass: rgba(13, 17, 23, 0.7);
+    --p2-bg-terminal: #0d1117;
 
-  /* Neutrals - Light */
-  --color-bg-primary: #F0F4F8;
-  --color-bg-secondary: #FFFFFF;
-  --color-bg-glass: rgba(255, 255, 255, 0.8);
-  --color-text-primary: #1E293B;
-  --color-text-secondary: #64748B;
-  --color-border: #E2E8F0;
+    --p2-accent: #00ffaa;
+    --p2-accent-secondary: #00cc88;
+    --p2-accent-glow: rgba(0, 255, 170, 0.3);
+    --p2-accent-subtle: rgba(0, 255, 170, 0.08);
 
-  /* Typography */
-  --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
-  --font-size-base: 16px;
+    --p2-text-primary: #e6edf3;
+    --p2-text-secondary: #7d8590;
+    --p2-text-muted: #484f58;
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-xxl: 64px;
+    --p2-border: rgba(0, 255, 170, 0.15);
+    --p2-border-hover: rgba(0, 255, 170, 0.4);
 
-  /* UI Elements */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px rgba(37, 99, 235, 0.1);
-  --shadow-lg: 0 16px 32px rgba(37, 99, 235, 0.15);
-  --glass-blur: blur(12px);
+    /* Status Colors */
+    --p2-success: #00ffaa;
+    --p2-success-glow: rgba(0, 255, 170, 0.3);
+    --p2-warning: #ffcc00;
+    --p2-warning-glow: rgba(255, 204, 0, 0.3);
+    --p2-danger: #ff5555;
+    --p2-danger-glow: rgba(255, 85, 85, 0.3);
+    --p2-info: #00d4ff;
+    --p2-info-glow: rgba(0, 212, 255, 0.3);
+
+    /* Typography */
+    --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+    --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+
+    --font-size-base: 16px;
+    --font-size-header: 28px;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 64px;
+
+    /* UI Elements - More angular for HUD */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 10px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 30px var(--p2-accent-glow);
+
+    --glass-blur: blur(16px);
+
+    /* Scanline effect color */
+    --scanline-color: rgba(0, 255, 170, 0.02);
+
+    /* Legacy mapping */
+    --color-brand-primary: var(--p2-accent);
+    --color-brand-secondary: var(--p2-accent-secondary);
+    --color-brand-success: var(--p2-success);
+    --color-brand-danger: var(--p2-danger);
+    --color-brand-warning: var(--p2-warning);
+    --color-bg-primary: var(--p2-bg-primary);
+    --color-bg-secondary: var(--p2-bg-secondary);
+    --color-bg-glass: var(--p2-bg-glass);
+    --color-text-primary: var(--p2-text-primary);
+    --color-text-secondary: var(--p2-text-secondary);
+    --color-border: var(--p2-border);
 }
 
-[data-theme="dark"] {
-  --color-bg-primary: #0F172A;
-  --color-bg-secondary: #1E293B;
-  --color-bg-glass: rgba(30, 41, 59, 0.8);
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-border: #334155;
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+[data-theme="dark"],
+[data-theme="light"] {
+    --color-bg-primary: var(--p2-bg-primary);
+    --color-bg-secondary: var(--p2-bg-secondary);
+    --color-bg-glass: var(--p2-bg-glass);
+    --color-text-primary: var(--p2-text-primary);
+    --color-text-secondary: var(--p2-text-secondary);
+    --color-border: var(--p2-border);
 }

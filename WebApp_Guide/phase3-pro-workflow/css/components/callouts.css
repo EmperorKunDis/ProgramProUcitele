@@ -1,36 +1,154 @@
+/* ==================== CALLOUTS - COMMAND CENTER WIDGETS ==================== */
+
 .callout {
-    padding: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     margin: var(--space-lg) 0;
-    border-radius: var(--radius-md);
-    border-left: 4px solid;
+    border-left: 3px solid;
     display: flex;
     gap: var(--space-md);
-    background-color: var(--color-bg-secondary);
+    background: var(--p3-bg-widget);
+    border: 1px solid var(--p3-border);
+    position: relative;
+    transition: all 0.3s;
 }
 
-.callout-icon { font-size: 1.2rem; flex-shrink: 0; }
+/* Widget header bar */
+.callout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+/* Status indicator */
+.callout::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+.callout:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.callout-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
 .callout-content { flex: 1; }
+.callout-content p:last-child { margin-bottom: 0; }
 
+/* Tip (Green/Online) */
 .callout-tip {
-    border-color: var(--color-brand-success);
-    background-color: rgba(16, 185, 129, 0.05);
+    border-left-color: var(--p3-success);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), var(--p3-bg-widget));
 }
 
+.callout-tip::before {
+    background: linear-gradient(90deg, var(--p3-success), transparent);
+}
+
+.callout-tip::after {
+    background: var(--p3-success);
+    box-shadow: 0 0 8px var(--p3-success-glow);
+}
+
+.callout-tip .callout-icon {
+    color: var(--p3-success);
+}
+
+.callout-tip:hover {
+    border-color: var(--p3-success);
+}
+
+/* Warning (Amber/Idle) */
 .callout-warning {
-    border-color: var(--color-brand-warning);
-    background-color: rgba(245, 158, 11, 0.05);
+    border-left-color: var(--p3-warning);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), var(--p3-bg-widget));
 }
 
+.callout-warning::before {
+    background: linear-gradient(90deg, var(--p3-warning), transparent);
+}
+
+.callout-warning::after {
+    background: var(--p3-warning);
+    box-shadow: 0 0 8px var(--p3-warning-glow);
+}
+
+.callout-warning .callout-icon {
+    color: var(--p3-warning);
+}
+
+.callout-warning:hover {
+    border-color: var(--p3-warning);
+}
+
+/* Danger (Red/Offline) */
 .callout-danger {
-    border-color: var(--color-brand-danger);
-    background-color: rgba(239, 68, 68, 0.05);
+    border-left-color: var(--p3-danger);
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), var(--p3-bg-widget));
 }
 
+.callout-danger::before {
+    background: linear-gradient(90deg, var(--p3-danger), transparent);
+}
+
+.callout-danger::after {
+    background: var(--p3-danger);
+    box-shadow: 0 0 8px var(--p3-danger-glow);
+}
+
+.callout-danger .callout-icon {
+    color: var(--p3-danger);
+}
+
+.callout-danger:hover {
+    border-color: var(--p3-danger);
+}
+
+/* Info (Blue/Processing) */
 .callout-info {
-    border-color: var(--color-brand-primary);
-    background-color: rgba(5, 150, 105, 0.05);
+    border-left-color: var(--p3-info);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), var(--p3-bg-widget));
 }
 
-[data-theme="dark"] .callout {
-    background-color: rgba(255, 255, 255, 0.03);
+.callout-info::before {
+    background: linear-gradient(90deg, var(--p3-info), transparent);
+}
+
+.callout-info::after {
+    background: var(--p3-info);
+    box-shadow: 0 0 8px var(--p3-info-glow);
+}
+
+.callout-info .callout-icon {
+    color: var(--p3-info);
+}
+
+.callout-info:hover {
+    border-color: var(--p3-info);
+}
+
+/* Metric badge */
+.callout-metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: var(--p3-bg-secondary);
+    border: 1px solid var(--p3-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-family: var(--font-family-mono);
+    color: var(--p3-accent);
 }

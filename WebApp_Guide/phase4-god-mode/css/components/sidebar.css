@@ -1,3 +1,5 @@
+/* ==================== SIDEBAR NAVIGATION - HOLOGRAPHIC ==================== */
+
 .sidebar-nav {
     padding: var(--space-sm) 0;
     flex: 1;
@@ -8,46 +10,83 @@
     display: flex;
     align-items: center;
     padding: var(--space-sm) var(--space-lg);
-    color: var(--color-text-secondary);
+    color: var(--p4-text-secondary);
     cursor: pointer;
-    border-left: 4px solid transparent;
-    transition: all 0.2s;
-    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    font-size: 0.85rem;
     gap: var(--space-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Holographic shimmer on hover */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(168, 85, 247, 0.1),
+        rgba(236, 72, 153, 0.1),
+        rgba(6, 182, 212, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+    left: 100%;
 }
 
 .nav-item:hover {
-    background-color: rgba(220, 38, 38, 0.05);
-    color: var(--color-text-primary);
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.1), transparent);
+    color: var(--p4-text-primary);
 }
 
 .nav-item.active {
-    background-color: rgba(220, 38, 38, 0.1);
-    color: var(--color-brand-primary);
-    border-left-color: var(--color-brand-primary);
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.15), transparent);
+    border-left-color: transparent;
+    border-image: linear-gradient(180deg, var(--p4-purple), var(--p4-pink), var(--p4-cyan)) 1;
 }
 
 .nav-item.active .nav-item-content span:first-child {
     font-weight: 600;
+    background: linear-gradient(90deg, var(--p4-purple), var(--p4-pink), var(--p4-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-item-check {
     width: 20px;
     height: 20px;
-    border: 2px solid var(--color-border);
+    border: 2px solid var(--p4-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    background: var(--p4-bg-secondary);
+}
+
+.nav-item:hover .nav-item-check {
+    border-color: var(--p4-purple);
+    box-shadow: 0 0 10px var(--p4-purple-glow);
 }
 
 .nav-item.completed .nav-item-check {
-    background-color: var(--color-brand-success);
-    border-color: var(--color-brand-success);
+    background: linear-gradient(135deg, var(--p4-purple), var(--p4-pink));
+    border-color: transparent;
     color: white;
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--p4-purple-glow);
 }
 
 .nav-item.completed .nav-item-check::after {
@@ -61,9 +100,37 @@
     min-width: 0;
 }
 
+.nav-item-content span:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .reading-time {
-    font-size: 0.75rem;
-    color: var(--color-text-secondary);
-    opacity: 0.7;
+    font-size: 0.65rem;
+    color: var(--p4-text-muted);
     margin-top: 2px;
+    font-family: var(--font-family-mono);
+}
+
+.nav-item.active .reading-time {
+    color: var(--p4-cyan);
+}
+
+/* Scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--p4-purple), var(--p4-pink));
+    border-radius: 2px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--p4-pink), var(--p4-cyan));
 }
