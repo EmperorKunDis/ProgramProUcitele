@@ -1,0 +1,5708 @@
+{
+  "01-agents": {
+    "name": "Agents",
+    "files": [
+      {
+        "file": "ACADEMIC_RESEARCHER_AGENT.md",
+        "name": "ACADEMIC RESEARCHER AGENT",
+        "size": 3087
+      },
+      {
+        "file": "ADAPTATION_AGENT.md",
+        "name": "ADAPTATION AGENT",
+        "size": 3033
+      },
+      {
+        "file": "AGENT_ANATOMY.md",
+        "name": "AGENT ANATOMY",
+        "size": 3015
+      },
+      {
+        "file": "AGENT_BELIEFS.md",
+        "name": "AGENT BELIEFS",
+        "size": 3015
+      },
+      {
+        "file": "AGENT_CAPABILITIES.md",
+        "name": "AGENT CAPABILITIES",
+        "size": 3045
+      },
+      {
+        "file": "AGENT_CONSTRAINTS.md",
+        "name": "AGENT CONSTRAINTS",
+        "size": 3039
+      },
+      {
+        "file": "AGENT_GOALS.md",
+        "name": "AGENT GOALS",
+        "size": 3003
+      },
+      {
+        "file": "AGENT_IDENTITY.md",
+        "name": "AGENT IDENTITY",
+        "size": 3021
+      },
+      {
+        "file": "AGENT_LIFECYCLE.md",
+        "name": "AGENT LIFECYCLE",
+        "size": 3027
+      },
+      {
+        "file": "AGENT_TEMPLATE.md",
+        "name": "AGENT TEMPLATE",
+        "size": 3021
+      },
+      {
+        "file": "AGGREGATOR_AGENT.md",
+        "name": "AGGREGATOR AGENT",
+        "size": 3033
+      },
+      {
+        "file": "API_DESIGNER_AGENT.md",
+        "name": "API DESIGNER AGENT",
+        "size": 3045
+      },
+      {
+        "file": "ARBITRATOR_AGENT.md",
+        "name": "ARBITRATOR AGENT",
+        "size": 3033
+      },
+      {
+        "file": "ASSISTANT_AGENT.md",
+        "name": "ASSISTANT AGENT",
+        "size": 3027
+      },
+      {
+        "file": "AUDIO_PRODUCER_AGENT.md",
+        "name": "AUDIO PRODUCER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "BACKEND_DEVELOPER_AGENT.md",
+        "name": "BACKEND DEVELOPER AGENT",
+        "size": 3075
+      },
+      {
+        "file": "BLOCKCHAIN_DEVELOPER_AGENT.md",
+        "name": "BLOCKCHAIN DEVELOPER AGENT",
+        "size": 3093
+      },
+      {
+        "file": "BLOG_WRITER_AGENT.md",
+        "name": "BLOG WRITER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "BRAINSTORMING_AGENT.md",
+        "name": "BRAINSTORMING AGENT",
+        "size": 3051
+      },
+      {
+        "file": "BRAND_DESIGNER_AGENT.md",
+        "name": "BRAND DESIGNER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "BUDGET_PLANNER_AGENT.md",
+        "name": "BUDGET PLANNER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "BUSINESS_ANALYST_AGENT.md",
+        "name": "BUSINESS ANALYST AGENT",
+        "size": 3069
+      },
+      {
+        "file": "CAPACITY_PLANNER_AGENT.md",
+        "name": "CAPACITY PLANNER AGENT",
+        "size": 3069
+      },
+      {
+        "file": "CITATION_AGENT.md",
+        "name": "CITATION AGENT",
+        "size": 3021
+      },
+      {
+        "file": "COACH_AGENT.md",
+        "name": "COACH AGENT",
+        "size": 3003
+      },
+      {
+        "file": "CODER_AGENT.md",
+        "name": "CODER AGENT",
+        "size": 3003
+      },
+      {
+        "file": "CODE_REVIEWER_AGENT.md",
+        "name": "CODE REVIEWER AGENT",
+        "size": 3051
+      },
+      {
+        "file": "COMPETITIVE_INTELLIGENCE_AGENT.md",
+        "name": "COMPETITIVE INTELLIGENCE AGENT",
+        "size": 3117
+      },
+      {
+        "file": "COMPLIANCE_ANALYST_AGENT.md",
+        "name": "COMPLIANCE ANALYST AGENT",
+        "size": 3081
+      },
+      {
+        "file": "CONCIERGE_AGENT.md",
+        "name": "CONCIERGE AGENT",
+        "size": 3027
+      },
+      {
+        "file": "CONSENSUS_AGENT.md",
+        "name": "CONSENSUS AGENT",
+        "size": 3027
+      },
+      {
+        "file": "CONTENT_STRATEGIST_AGENT.md",
+        "name": "CONTENT STRATEGIST AGENT",
+        "size": 3081
+      },
+      {
+        "file": "CONTINGENCY_PLANNER_AGENT.md",
+        "name": "CONTINGENCY PLANNER AGENT",
+        "size": 3087
+      },
+      {
+        "file": "COORDINATOR_AGENT.md",
+        "name": "COORDINATOR AGENT",
+        "size": 3039
+      },
+      {
+        "file": "COPYWRITER_AGENT.md",
+        "name": "COPYWRITER AGENT",
+        "size": 3033
+      },
+      {
+        "file": "CREATIVE_WRITER_AGENT.md",
+        "name": "CREATIVE WRITER AGENT",
+        "size": 3063
+      },
+      {
+        "file": "CRITIC_AGENT.md",
+        "name": "CRITIC AGENT",
+        "size": 3009
+      },
+      {
+        "file": "CUSTOMER_SUPPORT_AGENT.md",
+        "name": "CUSTOMER SUPPORT AGENT",
+        "size": 3069
+      },
+      {
+        "file": "DATABASE_ARCHITECT_AGENT.md",
+        "name": "DATABASE ARCHITECT AGENT",
+        "size": 3081
+      },
+      {
+        "file": "DATA_ANALYST_AGENT.md",
+        "name": "DATA ANALYST AGENT",
+        "size": 3045
+      },
+      {
+        "file": "DATA_ENGINEER_AGENT.md",
+        "name": "DATA ENGINEER AGENT",
+        "size": 3051
+      },
+      {
+        "file": "DEBUGGER_AGENT.md",
+        "name": "DEBUGGER AGENT",
+        "size": 3021
+      },
+      {
+        "file": "DESIGNER_AGENT.md",
+        "name": "DESIGNER AGENT",
+        "size": 3021
+      },
+      {
+        "file": "DEVOPS_AGENT.md",
+        "name": "DEVOPS AGENT",
+        "size": 3009
+      },
+      {
+        "file": "DIAGNOSTIC_AGENT.md",
+        "name": "DIAGNOSTIC AGENT",
+        "size": 3033
+      },
+      {
+        "file": "DISPATCHER_AGENT.md",
+        "name": "DISPATCHER AGENT",
+        "size": 3033
+      },
+      {
+        "file": "DOCUMENTATION_CODER_AGENT.md",
+        "name": "DOCUMENTATION CODER AGENT",
+        "size": 3087
+      },
+      {
+        "file": "EDITOR_AGENT.md",
+        "name": "EDITOR AGENT",
+        "size": 3009
+      },
+      {
+        "file": "EMAIL_WRITER_AGENT.md",
+        "name": "EMAIL WRITER AGENT",
+        "size": 3045
+      },
+      {
+        "file": "EMBEDDED_SYSTEMS_AGENT.md",
+        "name": "EMBEDDED SYSTEMS AGENT",
+        "size": 3069
+      },
+      {
+        "file": "EVOLUTION_AGENT.md",
+        "name": "EVOLUTION AGENT",
+        "size": 3027
+      },
+      {
+        "file": "FACT_CHECKER_AGENT.md",
+        "name": "FACT CHECKER AGENT",
+        "size": 3045
+      },
+      {
+        "file": "FAILOVER_AGENT.md",
+        "name": "FAILOVER AGENT",
+        "size": 3021
+      },
+      {
+        "file": "FINANCIAL_ANALYST_AGENT.md",
+        "name": "FINANCIAL ANALYST AGENT",
+        "size": 3075
+      },
+      {
+        "file": "FORENSIC_ANALYST_AGENT.md",
+        "name": "FORENSIC ANALYST AGENT",
+        "size": 3069
+      },
+      {
+        "file": "FRONTEND_DEVELOPER_AGENT.md",
+        "name": "FRONTEND DEVELOPER AGENT",
+        "size": 3081
+      },
+      {
+        "file": "FULLSTACK_DEVELOPER_AGENT.md",
+        "name": "FULLSTACK DEVELOPER AGENT",
+        "size": 3087
+      },
+      {
+        "file": "GAME_DEVELOPER_AGENT.md",
+        "name": "GAME DEVELOPER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "GHOSTWRITER_AGENT.md",
+        "name": "GHOSTWRITER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "GRANT_WRITER_AGENT.md",
+        "name": "GRANT WRITER AGENT",
+        "size": 3045
+      },
+      {
+        "file": "GRAPHIC_DESIGNER_AGENT.md",
+        "name": "GRAPHIC DESIGNER AGENT",
+        "size": 3069
+      },
+      {
+        "file": "IDEATION_AGENT.md",
+        "name": "IDEATION AGENT",
+        "size": 3021
+      },
+      {
+        "file": "ILLUSTRATOR_AGENT.md",
+        "name": "ILLUSTRATOR AGENT",
+        "size": 3039
+      },
+      {
+        "file": "IMPROVEMENT_AGENT.md",
+        "name": "IMPROVEMENT AGENT",
+        "size": 3039
+      },
+      {
+        "file": "JOURNALIST_AGENT.md",
+        "name": "JOURNALIST AGENT",
+        "size": 3033
+      },
+      {
+        "file": "LEARNING_AGENT.md",
+        "name": "LEARNING AGENT",
+        "size": 3021
+      },
+      {
+        "file": "LEGACY_CODE_AGENT.md",
+        "name": "LEGACY CODE AGENT",
+        "size": 3039
+      },
+      {
+        "file": "LITERATURE_REVIEW_AGENT.md",
+        "name": "LITERATURE REVIEW AGENT",
+        "size": 3075
+      },
+      {
+        "file": "LOAD_BALANCER_AGENT.md",
+        "name": "LOAD BALANCER AGENT",
+        "size": 3051
+      },
+      {
+        "file": "LOCALIZATION_AGENT.md",
+        "name": "LOCALIZATION AGENT",
+        "size": 3045
+      },
+      {
+        "file": "MARKET_RESEARCHER_AGENT.md",
+        "name": "MARKET RESEARCHER AGENT",
+        "size": 3075
+      },
+      {
+        "file": "MEDIATOR_AGENT.md",
+        "name": "MEDIATOR AGENT",
+        "size": 3021
+      },
+      {
+        "file": "MENTOR_AGENT.md",
+        "name": "MENTOR AGENT",
+        "size": 3009
+      },
+      {
+        "file": "META_COGNITIVE_AGENT.md",
+        "name": "META COGNITIVE AGENT",
+        "size": 3057
+      },
+      {
+        "file": "MIGRATION_AGENT.md",
+        "name": "MIGRATION AGENT",
+        "size": 3027
+      },
+      {
+        "file": "ML_ENGINEER_AGENT.md",
+        "name": "ML ENGINEER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "MOBILE_DEVELOPER_AGENT.md",
+        "name": "MOBILE DEVELOPER AGENT",
+        "size": 3069
+      },
+      {
+        "file": "MUSIC_COMPOSER_AGENT.md",
+        "name": "MUSIC COMPOSER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "ONBOARDING_AGENT.md",
+        "name": "ONBOARDING AGENT",
+        "size": 3033
+      },
+      {
+        "file": "PATENT_RESEARCHER_AGENT.md",
+        "name": "PATENT RESEARCHER AGENT",
+        "size": 3075
+      },
+      {
+        "file": "PERFORMANCE_ANALYST_AGENT.md",
+        "name": "PERFORMANCE ANALYST AGENT",
+        "size": 3087
+      },
+      {
+        "file": "PERFORMANCE_OPTIMIZER_AGENT.md",
+        "name": "PERFORMANCE OPTIMIZER AGENT",
+        "size": 3099
+      },
+      {
+        "file": "PLANNER_AGENT.md",
+        "name": "PLANNER AGENT",
+        "size": 3015
+      },
+      {
+        "file": "PREDICTIVE_ANALYST_AGENT.md",
+        "name": "PREDICTIVE ANALYST AGENT",
+        "size": 3081
+      },
+      {
+        "file": "PROJECT_PLANNER_AGENT.md",
+        "name": "PROJECT PLANNER AGENT",
+        "size": 3063
+      },
+      {
+        "file": "PROOFREADER_AGENT.md",
+        "name": "PROOFREADER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "PROPOSAL_WRITER_AGENT.md",
+        "name": "PROPOSAL WRITER AGENT",
+        "size": 3063
+      },
+      {
+        "file": "QA_ENGINEER_AGENT.md",
+        "name": "QA ENGINEER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "QUALITY_ASSURANCE_AGENT.md",
+        "name": "QUALITY ASSURANCE AGENT",
+        "size": 3075
+      },
+      {
+        "file": "REFACTORING_AGENT.md",
+        "name": "REFACTORING AGENT",
+        "size": 3039
+      },
+      {
+        "file": "REMINDER_AGENT.md",
+        "name": "REMINDER AGENT",
+        "size": 3021
+      },
+      {
+        "file": "REPORT_WRITER_AGENT.md",
+        "name": "REPORT WRITER AGENT",
+        "size": 3051
+      },
+      {
+        "file": "RESEARCHER_AGENT.md",
+        "name": "RESEARCHER AGENT",
+        "size": 3033
+      },
+      {
+        "file": "RESOURCE_PLANNER_AGENT.md",
+        "name": "RESOURCE PLANNER AGENT",
+        "size": 3069
+      },
+      {
+        "file": "REVIEWER_AGENT.md",
+        "name": "REVIEWER AGENT",
+        "size": 3021
+      },
+      {
+        "file": "RISK_ANALYST_AGENT.md",
+        "name": "RISK ANALYST AGENT",
+        "size": 3045
+      },
+      {
+        "file": "ROADMAP_AGENT.md",
+        "name": "ROADMAP AGENT",
+        "size": 3015
+      },
+      {
+        "file": "ROOT_CAUSE_ANALYST_AGENT.md",
+        "name": "ROOT CAUSE ANALYST AGENT",
+        "size": 3081
+      },
+      {
+        "file": "ROUTER_AGENT.md",
+        "name": "ROUTER AGENT",
+        "size": 3009
+      },
+      {
+        "file": "SALES_AGENT.md",
+        "name": "SALES AGENT",
+        "size": 3003
+      },
+      {
+        "file": "SCHEDULER_AGENT.md",
+        "name": "SCHEDULER AGENT",
+        "size": 3027
+      },
+      {
+        "file": "SCHEDULE_OPTIMIZER_AGENT.md",
+        "name": "SCHEDULE OPTIMIZER AGENT",
+        "size": 3081
+      },
+      {
+        "file": "SCRIPT_WRITER_AGENT.md",
+        "name": "SCRIPT WRITER AGENT",
+        "size": 3051
+      },
+      {
+        "file": "SECURITY_ENGINEER_AGENT.md",
+        "name": "SECURITY ENGINEER AGENT",
+        "size": 3075
+      },
+      {
+        "file": "SELF_REFLECTION_AGENT.md",
+        "name": "SELF REFLECTION AGENT",
+        "size": 3063
+      },
+      {
+        "file": "SENTIMENT_ANALYST_AGENT.md",
+        "name": "SENTIMENT ANALYST AGENT",
+        "size": 3075
+      },
+      {
+        "file": "SEO_WRITER_AGENT.md",
+        "name": "SEO WRITER AGENT",
+        "size": 3033
+      },
+      {
+        "file": "SOCIAL_MEDIA_WRITER_AGENT.md",
+        "name": "SOCIAL MEDIA WRITER AGENT",
+        "size": 3087
+      },
+      {
+        "file": "SOURCE_VALIDATOR_AGENT.md",
+        "name": "SOURCE VALIDATOR AGENT",
+        "size": 3069
+      },
+      {
+        "file": "SPRINT_PLANNER_AGENT.md",
+        "name": "SPRINT PLANNER AGENT",
+        "size": 3057
+      },
+      {
+        "file": "STATISTICAL_ANALYST_AGENT.md",
+        "name": "STATISTICAL ANALYST AGENT",
+        "size": 3087
+      },
+      {
+        "file": "STORYTELLER_AGENT.md",
+        "name": "STORYTELLER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "STRATEGIC_PLANNER_AGENT.md",
+        "name": "STRATEGIC PLANNER AGENT",
+        "size": 3075
+      },
+      {
+        "file": "SUPERVISOR_AGENT.md",
+        "name": "SUPERVISOR AGENT",
+        "size": 3033
+      },
+      {
+        "file": "TECHNICAL_WRITER_AGENT.md",
+        "name": "TECHNICAL WRITER AGENT",
+        "size": 3069
+      },
+      {
+        "file": "TEST_WRITER_AGENT.md",
+        "name": "TEST WRITER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "TRAINING_AGENT.md",
+        "name": "TRAINING AGENT",
+        "size": 3021
+      },
+      {
+        "file": "TRANSLATOR_AGENT.md",
+        "name": "TRANSLATOR AGENT",
+        "size": 3033
+      },
+      {
+        "file": "TREND_ANALYST_AGENT.md",
+        "name": "TREND ANALYST AGENT",
+        "size": 3051
+      },
+      {
+        "file": "UI_DESIGNER_AGENT.md",
+        "name": "UI DESIGNER AGENT",
+        "size": 3039
+      },
+      {
+        "file": "UX_WRITER_AGENT.md",
+        "name": "UX WRITER AGENT",
+        "size": 3027
+      },
+      {
+        "file": "VALIDATOR_AGENT.md",
+        "name": "VALIDATOR AGENT",
+        "size": 3027
+      },
+      {
+        "file": "VIDEO_EDITOR_AGENT.md",
+        "name": "VIDEO EDITOR AGENT",
+        "size": 3045
+      },
+      {
+        "file": "WRITER_AGENT.md",
+        "name": "WRITER AGENT",
+        "size": 3009
+      }
+    ],
+    "count": 124
+  },
+  "02-orchestration": {
+    "name": "Orchestration",
+    "files": [
+      {
+        "file": "AGGREGATOR_PATTERN.md",
+        "name": "AGGREGATOR PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "AUCTION_PATTERN.md",
+        "name": "AUCTION PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "BATCH_PATTERN.md",
+        "name": "BATCH PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "BLACKBOARD_PATTERN.md",
+        "name": "BLACKBOARD PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "BRANCH_MERGE_PATTERN.md",
+        "name": "BRANCH MERGE PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "BULKHEAD_PATTERN.md",
+        "name": "BULKHEAD PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "CALLBACK_PATTERN.md",
+        "name": "CALLBACK PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "CHAIN_PATTERN.md",
+        "name": "CHAIN PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "CIRCUIT_BREAKER_PATTERN.md",
+        "name": "CIRCUIT BREAKER PATTERN",
+        "size": 3015
+      },
+      {
+        "file": "CLAIM_CHECK_PATTERN.md",
+        "name": "CLAIM CHECK PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "COLLABORATION_PATTERN.md",
+        "name": "COLLABORATION PATTERN",
+        "size": 3003
+      },
+      {
+        "file": "COLONY_PATTERN.md",
+        "name": "COLONY PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "COMPENSATION_PATTERN.md",
+        "name": "COMPENSATION PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "COMPETITION_PATTERN.md",
+        "name": "COMPETITION PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "COMPOSED_MESSAGE_PATTERN.md",
+        "name": "COMPOSED MESSAGE PATTERN",
+        "size": 3021
+      },
+      {
+        "file": "CONDITIONAL_PATTERN.md",
+        "name": "CONDITIONAL PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "CONSENSUS_PATTERN.md",
+        "name": "CONSENSUS PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "CONTENT_BASED_ROUTER_PATTERN.md",
+        "name": "CONTENT BASED ROUTER PATTERN",
+        "size": 3045
+      },
+      {
+        "file": "CONTENT_ENRICHER_PATTERN.md",
+        "name": "CONTENT ENRICHER PATTERN",
+        "size": 3021
+      },
+      {
+        "file": "COOPERATION_PATTERN.md",
+        "name": "COOPERATION PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "CORRELATION_PATTERN.md",
+        "name": "CORRELATION PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "DEAD_LETTER_PATTERN.md",
+        "name": "DEAD LETTER PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "DELEGATION_PATTERN.md",
+        "name": "DELEGATION PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "DYNAMIC_ROUTER_PATTERN.md",
+        "name": "DYNAMIC ROUTER PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "EVENT_DRIVEN_PATTERN.md",
+        "name": "EVENT DRIVEN PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "FALLBACK_PATTERN.md",
+        "name": "FALLBACK PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "FEDERATION_PATTERN.md",
+        "name": "FEDERATION PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "FILTER_PATTERN.md",
+        "name": "FILTER PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "FIRE_FORGET_PATTERN.md",
+        "name": "FIRE FORGET PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "FORK_JOIN_PATTERN.md",
+        "name": "FORK JOIN PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "HIERARCHICAL_PATTERN.md",
+        "name": "HIERARCHICAL PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "HIERARCHY_PATTERN.md",
+        "name": "HIERARCHY PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "IDEMPOTENCY_PATTERN.md",
+        "name": "IDEMPOTENCY PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "LANGGRAPH_BASICS.md",
+        "name": "LANGGRAPH BASICS",
+        "size": 2973
+      },
+      {
+        "file": "LANGGRAPH_CHECKPOINTING.md",
+        "name": "LANGGRAPH CHECKPOINTING",
+        "size": 3015
+      },
+      {
+        "file": "LANGGRAPH_CONDITIONAL_EDGES.md",
+        "name": "LANGGRAPH CONDITIONAL EDGES",
+        "size": 3039
+      },
+      {
+        "file": "LANGGRAPH_CYCLES.md",
+        "name": "LANGGRAPH CYCLES",
+        "size": 2973
+      },
+      {
+        "file": "LANGGRAPH_DEBUGGING.md",
+        "name": "LANGGRAPH DEBUGGING",
+        "size": 2991
+      },
+      {
+        "file": "LANGGRAPH_MESSAGE_GRAPH.md",
+        "name": "LANGGRAPH MESSAGE GRAPH",
+        "size": 3015
+      },
+      {
+        "file": "LANGGRAPH_PERSISTENCE.md",
+        "name": "LANGGRAPH PERSISTENCE",
+        "size": 3003
+      },
+      {
+        "file": "LANGGRAPH_STATE_GRAPH.md",
+        "name": "LANGGRAPH STATE GRAPH",
+        "size": 3003
+      },
+      {
+        "file": "LANGGRAPH_STREAMING.md",
+        "name": "LANGGRAPH STREAMING",
+        "size": 2991
+      },
+      {
+        "file": "LANGGRAPH_SUBGRAPHS.md",
+        "name": "LANGGRAPH SUBGRAPHS",
+        "size": 2991
+      },
+      {
+        "file": "LONG_POLLING_PATTERN.md",
+        "name": "LONG POLLING PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "LOOP_PATTERN.md",
+        "name": "LOOP PATTERN",
+        "size": 2949
+      },
+      {
+        "file": "MAP_REDUCE_PATTERN.md",
+        "name": "MAP REDUCE PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "MARKET_PATTERN.md",
+        "name": "MARKET PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "MESSAGE_FILTER_PATTERN.md",
+        "name": "MESSAGE FILTER PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "NORMALIZER_PATTERN.md",
+        "name": "NORMALIZER PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "ORCHESTRATION_OVERVIEW.md",
+        "name": "ORCHESTRATION OVERVIEW",
+        "size": 3009
+      },
+      {
+        "file": "PARALLEL_PATTERN.md",
+        "name": "PARALLEL PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "PEER_TO_PEER_PATTERN.md",
+        "name": "PEER TO PEER PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "PIPELINE_PATTERN.md",
+        "name": "PIPELINE PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "POLLING_PATTERN.md",
+        "name": "POLLING PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "PRIORITY_QUEUE_PATTERN.md",
+        "name": "PRIORITY QUEUE PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "PROCESS_MANAGER_PATTERN.md",
+        "name": "PROCESS MANAGER PATTERN",
+        "size": 3015
+      },
+      {
+        "file": "PUBLISH_SUBSCRIBE_PATTERN.md",
+        "name": "PUBLISH SUBSCRIBE PATTERN",
+        "size": 3027
+      },
+      {
+        "file": "QUEUE_PATTERN.md",
+        "name": "QUEUE PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "REACTIVE_PATTERN.md",
+        "name": "REACTIVE PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "RECIPIENT_LIST_PATTERN.md",
+        "name": "RECIPIENT LIST PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "REQUEST_REPLY_PATTERN.md",
+        "name": "REQUEST REPLY PATTERN",
+        "size": 3003
+      },
+      {
+        "file": "RESEQUENCER_PATTERN.md",
+        "name": "RESEQUENCER PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "RETRY_PATTERN.md",
+        "name": "RETRY PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "ROLLBACK_PATTERN.md",
+        "name": "ROLLBACK PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "ROUTING_SLIP_PATTERN.md",
+        "name": "ROUTING SLIP PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "SAGA_PATTERN.md",
+        "name": "SAGA PATTERN",
+        "size": 2949
+      },
+      {
+        "file": "SCATTER_GATHER_PATTERN.md",
+        "name": "SCATTER GATHER PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "SEQUENTIAL_PATTERN.md",
+        "name": "SEQUENTIAL PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "SPLITTER_PATTERN.md",
+        "name": "SPLITTER PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "SPLIT_AGGREGATE_PATTERN.md",
+        "name": "SPLIT AGGREGATE PATTERN",
+        "size": 3015
+      },
+      {
+        "file": "STREAMING_PATTERN.md",
+        "name": "STREAMING PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "SWARM_PATTERN.md",
+        "name": "SWARM PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "TEAM_PATTERN.md",
+        "name": "TEAM PATTERN",
+        "size": 2949
+      },
+      {
+        "file": "TIMEOUT_PATTERN.md",
+        "name": "TIMEOUT PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "TRANSFORMER_PATTERN.md",
+        "name": "TRANSFORMER PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "VOTING_PATTERN.md",
+        "name": "VOTING PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "WEBHOOK_PATTERN.md",
+        "name": "WEBHOOK PATTERN",
+        "size": 2967
+      }
+    ],
+    "count": 77
+  },
+  "03-tools": {
+    "name": "Tools",
+    "files": [
+      {
+        "file": "AIRTABLE_TOOL.md",
+        "name": "AIRTABLE TOOL",
+        "size": 2275
+      },
+      {
+        "file": "ANSIBLE_TOOL.md",
+        "name": "ANSIBLE TOOL",
+        "size": 2265
+      },
+      {
+        "file": "API_CALLER_TOOL.md",
+        "name": "API CALLER TOOL",
+        "size": 2293
+      },
+      {
+        "file": "ASANA_TOOL.md",
+        "name": "ASANA TOOL",
+        "size": 2245
+      },
+      {
+        "file": "AWS_TOOL.md",
+        "name": "AWS TOOL",
+        "size": 2225
+      },
+      {
+        "file": "AZURE_TOOL.md",
+        "name": "AZURE TOOL",
+        "size": 2245
+      },
+      {
+        "file": "CALCULATOR_TOOL.md",
+        "name": "CALCULATOR TOOL",
+        "size": 2295
+      },
+      {
+        "file": "CALENDAR_TOOL.md",
+        "name": "CALENDAR TOOL",
+        "size": 2275
+      },
+      {
+        "file": "CI_CD_TOOL.md",
+        "name": "CI CD TOOL",
+        "size": 2243
+      },
+      {
+        "file": "CLASSIFICATION_TOOL.md",
+        "name": "CLASSIFICATION TOOL",
+        "size": 2335
+      },
+      {
+        "file": "CLOUDFLARE_TOOL.md",
+        "name": "CLOUDFLARE TOOL",
+        "size": 2295
+      },
+      {
+        "file": "CODE_EXECUTOR_TOOL.md",
+        "name": "CODE EXECUTOR TOOL",
+        "size": 2323
+      },
+      {
+        "file": "CRM_TOOL.md",
+        "name": "CRM TOOL",
+        "size": 2225
+      },
+      {
+        "file": "CSV_TOOL.md",
+        "name": "CSV TOOL",
+        "size": 2225
+      },
+      {
+        "file": "DATABASE_MIGRATION_TOOL.md",
+        "name": "DATABASE MIGRATION TOOL",
+        "size": 2373
+      },
+      {
+        "file": "DIGITALOCEAN_TOOL.md",
+        "name": "DIGITALOCEAN TOOL",
+        "size": 2315
+      },
+      {
+        "file": "DIRECTORY_TOOL.md",
+        "name": "DIRECTORY TOOL",
+        "size": 2285
+      },
+      {
+        "file": "DISCORD_TOOL.md",
+        "name": "DISCORD TOOL",
+        "size": 2265
+      },
+      {
+        "file": "DOCKER_TOOL.md",
+        "name": "DOCKER TOOL",
+        "size": 2255
+      },
+      {
+        "file": "ELASTICSEARCH_TOOL.md",
+        "name": "ELASTICSEARCH TOOL",
+        "size": 2325
+      },
+      {
+        "file": "EMAIL_TOOL.md",
+        "name": "EMAIL TOOL",
+        "size": 2245
+      },
+      {
+        "file": "EMBEDDING_TOOL.md",
+        "name": "EMBEDDING TOOL",
+        "size": 2285
+      },
+      {
+        "file": "ERP_TOOL.md",
+        "name": "ERP TOOL",
+        "size": 2225
+      },
+      {
+        "file": "EXCEL_TOOL.md",
+        "name": "EXCEL TOOL",
+        "size": 2245
+      },
+      {
+        "file": "FILE_MANAGER_TOOL.md",
+        "name": "FILE MANAGER TOOL",
+        "size": 2313
+      },
+      {
+        "file": "FILE_READER_TOOL.md",
+        "name": "FILE READER TOOL",
+        "size": 2303
+      },
+      {
+        "file": "FILE_WRITER_TOOL.md",
+        "name": "FILE WRITER TOOL",
+        "size": 2303
+      },
+      {
+        "file": "FINANCIAL_MATH_TOOL.md",
+        "name": "FINANCIAL MATH TOOL",
+        "size": 2333
+      },
+      {
+        "file": "GCP_TOOL.md",
+        "name": "GCP TOOL",
+        "size": 2225
+      },
+      {
+        "file": "GIT_TOOL.md",
+        "name": "GIT TOOL",
+        "size": 2225
+      },
+      {
+        "file": "GOOGLE_WORKSPACE_TOOL.md",
+        "name": "GOOGLE WORKSPACE TOOL",
+        "size": 2353
+      },
+      {
+        "file": "GRAPHQL_TOOL.md",
+        "name": "GRAPHQL TOOL",
+        "size": 2265
+      },
+      {
+        "file": "GRAPH_DB_TOOL.md",
+        "name": "GRAPH DB TOOL",
+        "size": 2273
+      },
+      {
+        "file": "GRAPH_THEORY_TOOL.md",
+        "name": "GRAPH THEORY TOOL",
+        "size": 2313
+      },
+      {
+        "file": "HEROKU_TOOL.md",
+        "name": "HEROKU TOOL",
+        "size": 2255
+      },
+      {
+        "file": "HUBSPOT_TOOL.md",
+        "name": "HUBSPOT TOOL",
+        "size": 2265
+      },
+      {
+        "file": "IMAGE_GENERATION_TOOL.md",
+        "name": "IMAGE GENERATION TOOL",
+        "size": 2353
+      },
+      {
+        "file": "JIRA_TOOL.md",
+        "name": "JIRA TOOL",
+        "size": 2235
+      },
+      {
+        "file": "JSON_TOOL.md",
+        "name": "JSON TOOL",
+        "size": 2235
+      },
+      {
+        "file": "KUBERNETES_TOOL.md",
+        "name": "KUBERNETES TOOL",
+        "size": 2295
+      },
+      {
+        "file": "LAMBDA_TOOL.md",
+        "name": "LAMBDA TOOL",
+        "size": 2255
+      },
+      {
+        "file": "LINEAR_ALGEBRA_TOOL.md",
+        "name": "LINEAR ALGEBRA TOOL",
+        "size": 2333
+      },
+      {
+        "file": "LLM_TOOL.md",
+        "name": "LLM TOOL",
+        "size": 2225
+      },
+      {
+        "file": "MARKDOWN_TOOL.md",
+        "name": "MARKDOWN TOOL",
+        "size": 2275
+      },
+      {
+        "file": "MONGODB_TOOL.md",
+        "name": "MONGODB TOOL",
+        "size": 2265
+      },
+      {
+        "file": "NETLIFY_TOOL.md",
+        "name": "NETLIFY TOOL",
+        "size": 2265
+      },
+      {
+        "file": "NLP_TOOL.md",
+        "name": "NLP TOOL",
+        "size": 2225
+      },
+      {
+        "file": "NOSQL_TOOL.md",
+        "name": "NOSQL TOOL",
+        "size": 2245
+      },
+      {
+        "file": "NOTIFICATION_TOOL.md",
+        "name": "NOTIFICATION TOOL",
+        "size": 2315
+      },
+      {
+        "file": "NOTION_TOOL.md",
+        "name": "NOTION TOOL",
+        "size": 2255
+      },
+      {
+        "file": "OPTIMIZATION_TOOL.md",
+        "name": "OPTIMIZATION TOOL",
+        "size": 2315
+      },
+      {
+        "file": "PACKAGE_MANAGER_TOOL.md",
+        "name": "PACKAGE MANAGER TOOL",
+        "size": 2343
+      },
+      {
+        "file": "PDF_DOWNLOADER_TOOL.md",
+        "name": "PDF DOWNLOADER TOOL",
+        "size": 2333
+      },
+      {
+        "file": "PDF_TOOL.md",
+        "name": "PDF TOOL",
+        "size": 2225
+      },
+      {
+        "file": "POSTGRESQL_TOOL.md",
+        "name": "POSTGRESQL TOOL",
+        "size": 2295
+      },
+      {
+        "file": "PROBABILITY_TOOL.md",
+        "name": "PROBABILITY TOOL",
+        "size": 2305
+      },
+      {
+        "file": "PYTHON_REPL_TOOL.md",
+        "name": "PYTHON REPL TOOL",
+        "size": 2303
+      },
+      {
+        "file": "REDIS_TOOL.md",
+        "name": "REDIS TOOL",
+        "size": 2245
+      },
+      {
+        "file": "RSS_READER_TOOL.md",
+        "name": "RSS READER TOOL",
+        "size": 2293
+      },
+      {
+        "file": "S3_TOOL.md",
+        "name": "S3 TOOL",
+        "size": 2215
+      },
+      {
+        "file": "SALESFORCE_TOOL.md",
+        "name": "SALESFORCE TOOL",
+        "size": 2295
+      },
+      {
+        "file": "SCREENSHOT_TOOL.md",
+        "name": "SCREENSHOT TOOL",
+        "size": 2295
+      },
+      {
+        "file": "SHELL_TOOL.md",
+        "name": "SHELL TOOL",
+        "size": 2245
+      },
+      {
+        "file": "SITEMAP_PARSER_TOOL.md",
+        "name": "SITEMAP PARSER TOOL",
+        "size": 2333
+      },
+      {
+        "file": "SLACK_TOOL.md",
+        "name": "SLACK TOOL",
+        "size": 2245
+      },
+      {
+        "file": "SMS_TOOL.md",
+        "name": "SMS TOOL",
+        "size": 2225
+      },
+      {
+        "file": "SPEECH_TO_TEXT_TOOL.md",
+        "name": "SPEECH TO TEXT TOOL",
+        "size": 2331
+      },
+      {
+        "file": "SQLITE_TOOL.md",
+        "name": "SQLITE TOOL",
+        "size": 2255
+      },
+      {
+        "file": "SQL_QUERY_TOOL.md",
+        "name": "SQL QUERY TOOL",
+        "size": 2283
+      },
+      {
+        "file": "STATISTICS_TOOL.md",
+        "name": "STATISTICS TOOL",
+        "size": 2295
+      },
+      {
+        "file": "SUMMARIZATION_TOOL.md",
+        "name": "SUMMARIZATION TOOL",
+        "size": 2325
+      },
+      {
+        "file": "SYMBOLIC_MATH_TOOL.md",
+        "name": "SYMBOLIC MATH TOOL",
+        "size": 2323
+      },
+      {
+        "file": "TEAMS_TOOL.md",
+        "name": "TEAMS TOOL",
+        "size": 2245
+      },
+      {
+        "file": "TELEGRAM_TOOL.md",
+        "name": "TELEGRAM TOOL",
+        "size": 2275
+      },
+      {
+        "file": "TERRAFORM_TOOL.md",
+        "name": "TERRAFORM TOOL",
+        "size": 2285
+      },
+      {
+        "file": "TEXT_TO_SPEECH_TOOL.md",
+        "name": "TEXT TO SPEECH TOOL",
+        "size": 2331
+      },
+      {
+        "file": "TOOL_CHAINING.md",
+        "name": "TOOL CHAINING",
+        "size": 2275
+      },
+      {
+        "file": "TOOL_COMPOSITION.md",
+        "name": "TOOL COMPOSITION",
+        "size": 2305
+      },
+      {
+        "file": "TOOL_DEFINITION_GUIDE.md",
+        "name": "TOOL DEFINITION GUIDE",
+        "size": 2353
+      },
+      {
+        "file": "TOOL_DISCOVERY.md",
+        "name": "TOOL DISCOVERY",
+        "size": 2285
+      },
+      {
+        "file": "TOOL_EXECUTION.md",
+        "name": "TOOL EXECUTION",
+        "size": 2285
+      },
+      {
+        "file": "TOOL_REGISTRATION.md",
+        "name": "TOOL REGISTRATION",
+        "size": 2315
+      },
+      {
+        "file": "TOOL_SCHEMA.md",
+        "name": "TOOL SCHEMA",
+        "size": 2255
+      },
+      {
+        "file": "TOOL_SELECTION.md",
+        "name": "TOOL SELECTION",
+        "size": 2285
+      },
+      {
+        "file": "TOOL_VALIDATION.md",
+        "name": "TOOL VALIDATION",
+        "size": 2295
+      },
+      {
+        "file": "TOOL_VERSIONING.md",
+        "name": "TOOL VERSIONING",
+        "size": 2295
+      },
+      {
+        "file": "TRANSLATION_TOOL.md",
+        "name": "TRANSLATION TOOL",
+        "size": 2305
+      },
+      {
+        "file": "TRELLO_TOOL.md",
+        "name": "TRELLO TOOL",
+        "size": 2255
+      },
+      {
+        "file": "UNIT_CONVERTER_TOOL.md",
+        "name": "UNIT CONVERTER TOOL",
+        "size": 2333
+      },
+      {
+        "file": "URL_FETCHER_TOOL.md",
+        "name": "URL FETCHER TOOL",
+        "size": 2303
+      },
+      {
+        "file": "VECTOR_DB_TOOL.md",
+        "name": "VECTOR DB TOOL",
+        "size": 2283
+      },
+      {
+        "file": "VERCEL_TOOL.md",
+        "name": "VERCEL TOOL",
+        "size": 2255
+      },
+      {
+        "file": "VISION_TOOL.md",
+        "name": "VISION TOOL",
+        "size": 2255
+      },
+      {
+        "file": "WEBHOOK_TOOL.md",
+        "name": "WEBHOOK TOOL",
+        "size": 2265
+      },
+      {
+        "file": "WEB_CRAWLER_TOOL.md",
+        "name": "WEB CRAWLER TOOL",
+        "size": 2303
+      },
+      {
+        "file": "WEB_SCRAPER_TOOL.md",
+        "name": "WEB SCRAPER TOOL",
+        "size": 2303
+      },
+      {
+        "file": "WEB_SEARCH_TOOL.md",
+        "name": "WEB SEARCH TOOL",
+        "size": 2293
+      },
+      {
+        "file": "WHATSAPP_TOOL.md",
+        "name": "WHATSAPP TOOL",
+        "size": 2275
+      },
+      {
+        "file": "WOLFRAM_ALPHA_TOOL.md",
+        "name": "WOLFRAM ALPHA TOOL",
+        "size": 2323
+      },
+      {
+        "file": "XML_TOOL.md",
+        "name": "XML TOOL",
+        "size": 2225
+      },
+      {
+        "file": "YAML_TOOL.md",
+        "name": "YAML TOOL",
+        "size": 2235
+      },
+      {
+        "file": "ZIP_TOOL.md",
+        "name": "ZIP TOOL",
+        "size": 2225
+      }
+    ],
+    "count": 102
+  },
+  "04-state": {
+    "name": "State",
+    "files": [
+      {
+        "file": "ADD_MESSAGES_REDUCER.md",
+        "name": "ADD MESSAGES REDUCER",
+        "size": 1404
+      },
+      {
+        "file": "AGGREGATE_CHANNEL.md",
+        "name": "AGGREGATE CHANNEL",
+        "size": 1384
+      },
+      {
+        "file": "AGGREGATE_OPERATORS.md",
+        "name": "AGGREGATE OPERATORS",
+        "size": 1398
+      },
+      {
+        "file": "APPEND_REDUCER.md",
+        "name": "APPEND REDUCER",
+        "size": 1363
+      },
+      {
+        "file": "BACKUP_RESTORE.md",
+        "name": "BACKUP RESTORE",
+        "size": 1363
+      },
+      {
+        "file": "BINARY_OPERATORS.md",
+        "name": "BINARY OPERATORS",
+        "size": 1377
+      },
+      {
+        "file": "BROADCAST_CHANNEL.md",
+        "name": "BROADCAST CHANNEL",
+        "size": 1384
+      },
+      {
+        "file": "BUFFER_CHANNEL.md",
+        "name": "BUFFER CHANNEL",
+        "size": 1363
+      },
+      {
+        "file": "CHANNELS_OVERVIEW.md",
+        "name": "CHANNELS OVERVIEW",
+        "size": 1384
+      },
+      {
+        "file": "CHECKPOINTING.md",
+        "name": "CHECKPOINTING",
+        "size": 1357
+      },
+      {
+        "file": "CUSTOM_REDUCERS.md",
+        "name": "CUSTOM REDUCERS",
+        "size": 1370
+      },
+      {
+        "file": "EPHEMERAL_CHANNEL.md",
+        "name": "EPHEMERAL CHANNEL",
+        "size": 1384
+      },
+      {
+        "file": "FILTER_OPERATORS.md",
+        "name": "FILTER OPERATORS",
+        "size": 1377
+      },
+      {
+        "file": "GLOBAL_STATE.md",
+        "name": "GLOBAL STATE",
+        "size": 1349
+      },
+      {
+        "file": "INCREMENT_REDUCER.md",
+        "name": "INCREMENT REDUCER",
+        "size": 1384
+      },
+      {
+        "file": "LAST_VALUE_CHANNEL.md",
+        "name": "LAST VALUE CHANNEL",
+        "size": 1390
+      },
+      {
+        "file": "LOCAL_STATE.md",
+        "name": "LOCAL STATE",
+        "size": 1342
+      },
+      {
+        "file": "MEMORY_PERSISTENCE.md",
+        "name": "MEMORY PERSISTENCE",
+        "size": 1391
+      },
+      {
+        "file": "MERGE_DICTS_REDUCER.md",
+        "name": "MERGE DICTS REDUCER",
+        "size": 1397
+      },
+      {
+        "file": "OPERATOR_COMPOSITION.md",
+        "name": "OPERATOR COMPOSITION",
+        "size": 1405
+      },
+      {
+        "file": "PERSISTENCE_STRATEGIES.md",
+        "name": "PERSISTENCE STRATEGIES",
+        "size": 1419
+      },
+      {
+        "file": "PERSISTENT_CHANNEL.md",
+        "name": "PERSISTENT CHANNEL",
+        "size": 1391
+      },
+      {
+        "file": "POSTGRESQL_PERSISTENCE.md",
+        "name": "POSTGRESQL PERSISTENCE",
+        "size": 1419
+      },
+      {
+        "file": "PRIORITY_CHANNEL.md",
+        "name": "PRIORITY CHANNEL",
+        "size": 1377
+      },
+      {
+        "file": "PRIVATE_STATE.md",
+        "name": "PRIVATE STATE",
+        "size": 1356
+      },
+      {
+        "file": "RECOVERY.md",
+        "name": "RECOVERY",
+        "size": 1322
+      },
+      {
+        "file": "REDIS_PERSISTENCE.md",
+        "name": "REDIS PERSISTENCE",
+        "size": 1384
+      },
+      {
+        "file": "REDUCERS_OVERVIEW.md",
+        "name": "REDUCERS OVERVIEW",
+        "size": 1384
+      },
+      {
+        "file": "S3_PERSISTENCE.md",
+        "name": "S3 PERSISTENCE",
+        "size": 1363
+      },
+      {
+        "file": "SCOPED_CHANNEL.md",
+        "name": "SCOPED CHANNEL",
+        "size": 1363
+      },
+      {
+        "file": "SHARED_STATE.md",
+        "name": "SHARED STATE",
+        "size": 1349
+      },
+      {
+        "file": "SNAPSHOTTING.md",
+        "name": "SNAPSHOTTING",
+        "size": 1350
+      },
+      {
+        "file": "SQLITE_PERSISTENCE.md",
+        "name": "SQLITE PERSISTENCE",
+        "size": 1391
+      },
+      {
+        "file": "STATE_COMPRESSION.md",
+        "name": "STATE COMPRESSION",
+        "size": 1384
+      },
+      {
+        "file": "STATE_CONFLICT_RESOLUTION.md",
+        "name": "STATE CONFLICT RESOLUTION",
+        "size": 1439
+      },
+      {
+        "file": "STATE_FUNDAMENTALS.md",
+        "name": "STATE FUNDAMENTALS",
+        "size": 1391
+      },
+      {
+        "file": "STATE_GARBAGE_COLLECTION.md",
+        "name": "STATE GARBAGE COLLECTION",
+        "size": 1432
+      },
+      {
+        "file": "STATE_IMMUTABILITY.md",
+        "name": "STATE IMMUTABILITY",
+        "size": 1391
+      },
+      {
+        "file": "STATE_INITIALIZATION.md",
+        "name": "STATE INITIALIZATION",
+        "size": 1405
+      },
+      {
+        "file": "STATE_ISOLATION.md",
+        "name": "STATE ISOLATION",
+        "size": 1370
+      },
+      {
+        "file": "STATE_MIGRATION.md",
+        "name": "STATE MIGRATION",
+        "size": 1370
+      },
+      {
+        "file": "STATE_MUTATION.md",
+        "name": "STATE MUTATION",
+        "size": 1363
+      },
+      {
+        "file": "STATE_SCHEMA.md",
+        "name": "STATE SCHEMA",
+        "size": 1349
+      },
+      {
+        "file": "STATE_SCOPING.md",
+        "name": "STATE SCOPING",
+        "size": 1356
+      },
+      {
+        "file": "STATE_SERIALIZATION.md",
+        "name": "STATE SERIALIZATION",
+        "size": 1398
+      },
+      {
+        "file": "STATE_SYNCHRONIZATION.md",
+        "name": "STATE SYNCHRONIZATION",
+        "size": 1412
+      },
+      {
+        "file": "STATE_TYPING.md",
+        "name": "STATE TYPING",
+        "size": 1349
+      },
+      {
+        "file": "STATE_VALIDATION.md",
+        "name": "STATE VALIDATION",
+        "size": 1377
+      },
+      {
+        "file": "STATE_VERSIONING.md",
+        "name": "STATE VERSIONING",
+        "size": 1377
+      },
+      {
+        "file": "TOPIC_CHANNEL.md",
+        "name": "TOPIC CHANNEL",
+        "size": 1356
+      },
+      {
+        "file": "TRANSFORM_OPERATORS.md",
+        "name": "TRANSFORM OPERATORS",
+        "size": 1398
+      }
+    ],
+    "count": 51
+  },
+  "05-memory": {
+    "name": "Memory",
+    "files": [
+      {
+        "file": "ASSOCIATIVE_MEMORY.md",
+        "name": "ASSOCIATIVE MEMORY",
+        "size": 1391
+      },
+      {
+        "file": "BUFFER_MEMORY.md",
+        "name": "BUFFER MEMORY",
+        "size": 1356
+      },
+      {
+        "file": "CHROMA_INTEGRATION.md",
+        "name": "CHROMA INTEGRATION",
+        "size": 1391
+      },
+      {
+        "file": "CONTEXTUAL_MEMORY.md",
+        "name": "CONTEXTUAL MEMORY",
+        "size": 1384
+      },
+      {
+        "file": "CONVERSATION_MEMORY.md",
+        "name": "CONVERSATION MEMORY",
+        "size": 1398
+      },
+      {
+        "file": "CORRECTIVE_RAG.md",
+        "name": "CORRECTIVE RAG",
+        "size": 1363
+      },
+      {
+        "file": "EMBEDDING_STRATEGIES.md",
+        "name": "EMBEDDING STRATEGIES",
+        "size": 1405
+      },
+      {
+        "file": "ENTITY_MEMORY.md",
+        "name": "ENTITY MEMORY",
+        "size": 1356
+      },
+      {
+        "file": "EPISODIC_MEMORY.md",
+        "name": "EPISODIC MEMORY",
+        "size": 1370
+      },
+      {
+        "file": "FAISS_INTEGRATION.md",
+        "name": "FAISS INTEGRATION",
+        "size": 1384
+      },
+      {
+        "file": "FLASH_MEMORY.md",
+        "name": "FLASH MEMORY",
+        "size": 1349
+      },
+      {
+        "file": "HIERARCHICAL_MEMORY.md",
+        "name": "HIERARCHICAL MEMORY",
+        "size": 1398
+      },
+      {
+        "file": "HYBRID_MEMORY.md",
+        "name": "HYBRID MEMORY",
+        "size": 1356
+      },
+      {
+        "file": "HYBRID_SEARCH.md",
+        "name": "HYBRID SEARCH",
+        "size": 1356
+      },
+      {
+        "file": "KNOWLEDGE_GRAPH_MEMORY.md",
+        "name": "KNOWLEDGE GRAPH MEMORY",
+        "size": 1418
+      },
+      {
+        "file": "LONG_TERM_MEMORY.md",
+        "name": "LONG TERM MEMORY",
+        "size": 1376
+      },
+      {
+        "file": "MEMORY_COMPRESSION.md",
+        "name": "MEMORY COMPRESSION",
+        "size": 1391
+      },
+      {
+        "file": "MEMORY_CONSOLIDATION.md",
+        "name": "MEMORY CONSOLIDATION",
+        "size": 1405
+      },
+      {
+        "file": "MEMORY_DECAY.md",
+        "name": "MEMORY DECAY",
+        "size": 1349
+      },
+      {
+        "file": "MEMORY_IMPORTANCE_SCORING.md",
+        "name": "MEMORY IMPORTANCE SCORING",
+        "size": 1439
+      },
+      {
+        "file": "MEMORY_INDEXING.md",
+        "name": "MEMORY INDEXING",
+        "size": 1370
+      },
+      {
+        "file": "MEMORY_PRUNING.md",
+        "name": "MEMORY PRUNING",
+        "size": 1363
+      },
+      {
+        "file": "MEMORY_RECENCY_SCORING.md",
+        "name": "MEMORY RECENCY SCORING",
+        "size": 1418
+      },
+      {
+        "file": "MEMORY_RELEVANCE_SCORING.md",
+        "name": "MEMORY RELEVANCE SCORING",
+        "size": 1432
+      },
+      {
+        "file": "MEMORY_RETRIEVAL.md",
+        "name": "MEMORY RETRIEVAL",
+        "size": 1377
+      },
+      {
+        "file": "MEMORY_SUMMARIZATION.md",
+        "name": "MEMORY SUMMARIZATION",
+        "size": 1405
+      },
+      {
+        "file": "MEMORY_TYPES_OVERVIEW.md",
+        "name": "MEMORY TYPES OVERVIEW",
+        "size": 1411
+      },
+      {
+        "file": "MILVUS_INTEGRATION.md",
+        "name": "MILVUS INTEGRATION",
+        "size": 1391
+      },
+      {
+        "file": "MULTI_HOP_RAG.md",
+        "name": "MULTI HOP RAG",
+        "size": 1355
+      },
+      {
+        "file": "PGVECTOR_INTEGRATION.md",
+        "name": "PGVECTOR INTEGRATION",
+        "size": 1405
+      },
+      {
+        "file": "PINECONE_INTEGRATION.md",
+        "name": "PINECONE INTEGRATION",
+        "size": 1405
+      },
+      {
+        "file": "PROCEDURAL_MEMORY.md",
+        "name": "PROCEDURAL MEMORY",
+        "size": 1384
+      },
+      {
+        "file": "PROSPECTIVE_MEMORY.md",
+        "name": "PROSPECTIVE MEMORY",
+        "size": 1391
+      },
+      {
+        "file": "QDRANT_INTEGRATION.md",
+        "name": "QDRANT INTEGRATION",
+        "size": 1391
+      },
+      {
+        "file": "RAG_ARCHITECTURE.md",
+        "name": "RAG ARCHITECTURE",
+        "size": 1377
+      },
+      {
+        "file": "RAG_CHUNKING.md",
+        "name": "RAG CHUNKING",
+        "size": 1349
+      },
+      {
+        "file": "RAG_EVALUATION.md",
+        "name": "RAG EVALUATION",
+        "size": 1363
+      },
+      {
+        "file": "RAG_FUNDAMENTALS.md",
+        "name": "RAG FUNDAMENTALS",
+        "size": 1377
+      },
+      {
+        "file": "RAG_GENERATION.md",
+        "name": "RAG GENERATION",
+        "size": 1363
+      },
+      {
+        "file": "RAG_OPTIMIZATION.md",
+        "name": "RAG OPTIMIZATION",
+        "size": 1377
+      },
+      {
+        "file": "RAG_RERANKING.md",
+        "name": "RAG RERANKING",
+        "size": 1356
+      },
+      {
+        "file": "RAG_RETRIEVAL.md",
+        "name": "RAG RETRIEVAL",
+        "size": 1356
+      },
+      {
+        "file": "SELF_RAG.md",
+        "name": "SELF RAG",
+        "size": 1321
+      },
+      {
+        "file": "SEMANTIC_MEMORY.md",
+        "name": "SEMANTIC MEMORY",
+        "size": 1370
+      },
+      {
+        "file": "SENSORY_MEMORY.md",
+        "name": "SENSORY MEMORY",
+        "size": 1363
+      },
+      {
+        "file": "SHORT_TERM_MEMORY.md",
+        "name": "SHORT TERM MEMORY",
+        "size": 1383
+      },
+      {
+        "file": "SIMILARITY_SEARCH.md",
+        "name": "SIMILARITY SEARCH",
+        "size": 1384
+      },
+      {
+        "file": "SUMMARY_MEMORY.md",
+        "name": "SUMMARY MEMORY",
+        "size": 1363
+      },
+      {
+        "file": "VECTORDB_OVERVIEW.md",
+        "name": "VECTORDB OVERVIEW",
+        "size": 1384
+      },
+      {
+        "file": "VECTOR_MEMORY.md",
+        "name": "VECTOR MEMORY",
+        "size": 1356
+      },
+      {
+        "file": "WEAVIATE_INTEGRATION.md",
+        "name": "WEAVIATE INTEGRATION",
+        "size": 1405
+      },
+      {
+        "file": "WORKING_MEMORY.md",
+        "name": "WORKING MEMORY",
+        "size": 1363
+      }
+    ],
+    "count": 52
+  },
+  "06-prompts": {
+    "name": "Prompts",
+    "files": [
+      {
+        "file": "ASSISTANT_PROMPTS.md",
+        "name": "ASSISTANT PROMPTS",
+        "size": 1384
+      },
+      {
+        "file": "BEHAVIOR_GUIDELINES.md",
+        "name": "BEHAVIOR GUIDELINES",
+        "size": 1398
+      },
+      {
+        "file": "CHAIN_OF_THOUGHT.md",
+        "name": "CHAIN OF THOUGHT",
+        "size": 1376
+      },
+      {
+        "file": "COMMUNICATION_PREFERENCES.md",
+        "name": "COMMUNICATION PREFERENCES",
+        "size": 1440
+      },
+      {
+        "file": "CONSTRAINT_SPECIFICATION.md",
+        "name": "CONSTRAINT SPECIFICATION",
+        "size": 1433
+      },
+      {
+        "file": "CONTEXT_INJECTION.md",
+        "name": "CONTEXT INJECTION",
+        "size": 1384
+      },
+      {
+        "file": "CONVERSATION_STYLE.md",
+        "name": "CONVERSATION STYLE",
+        "size": 1391
+      },
+      {
+        "file": "DOMAIN_EXPERTISE.md",
+        "name": "DOMAIN EXPERTISE",
+        "size": 1377
+      },
+      {
+        "file": "EXPERTISE_SPECIFICATION.md",
+        "name": "EXPERTISE SPECIFICATION",
+        "size": 1426
+      },
+      {
+        "file": "FEW_SHOT_PROMPTING.md",
+        "name": "FEW SHOT PROMPTING",
+        "size": 1390
+      },
+      {
+        "file": "GRAPH_OF_THOUGHT.md",
+        "name": "GRAPH OF THOUGHT",
+        "size": 1376
+      },
+      {
+        "file": "INSTRUCTION_DESIGN.md",
+        "name": "INSTRUCTION DESIGN",
+        "size": 1391
+      },
+      {
+        "file": "LEAST_TO_MOST_PROMPTING.md",
+        "name": "LEAST TO MOST PROMPTING",
+        "size": 1424
+      },
+      {
+        "file": "META_PROMPTING.md",
+        "name": "META PROMPTING",
+        "size": 1363
+      },
+      {
+        "file": "OUTPUT_FORMATTING.md",
+        "name": "OUTPUT FORMATTING",
+        "size": 1384
+      },
+      {
+        "file": "PERSONALITY_TRAITS.md",
+        "name": "PERSONALITY TRAITS",
+        "size": 1391
+      },
+      {
+        "file": "PERSONA_DESIGN.md",
+        "name": "PERSONA DESIGN",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_ANATOMY.md",
+        "name": "PROMPT ANATOMY",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_A_B_TESTING.md",
+        "name": "PROMPT A B TESTING",
+        "size": 1389
+      },
+      {
+        "file": "PROMPT_BENCHMARKING.md",
+        "name": "PROMPT BENCHMARKING",
+        "size": 1398
+      },
+      {
+        "file": "PROMPT_CHAINING.md",
+        "name": "PROMPT CHAINING",
+        "size": 1370
+      },
+      {
+        "file": "PROMPT_COMPONENTS.md",
+        "name": "PROMPT COMPONENTS",
+        "size": 1384
+      },
+      {
+        "file": "PROMPT_COMPOSITION.md",
+        "name": "PROMPT COMPOSITION",
+        "size": 1391
+      },
+      {
+        "file": "PROMPT_CONDITIONALS.md",
+        "name": "PROMPT CONDITIONALS",
+        "size": 1398
+      },
+      {
+        "file": "PROMPT_DEBUGGING.md",
+        "name": "PROMPT DEBUGGING",
+        "size": 1377
+      },
+      {
+        "file": "PROMPT_DECOMPOSITION.md",
+        "name": "PROMPT DECOMPOSITION",
+        "size": 1405
+      },
+      {
+        "file": "PROMPT_EVALUATION.md",
+        "name": "PROMPT EVALUATION",
+        "size": 1384
+      },
+      {
+        "file": "PROMPT_FUNCTIONS.md",
+        "name": "PROMPT FUNCTIONS",
+        "size": 1377
+      },
+      {
+        "file": "PROMPT_FUNDAMENTALS.md",
+        "name": "PROMPT FUNDAMENTALS",
+        "size": 1398
+      },
+      {
+        "file": "PROMPT_ITERATION.md",
+        "name": "PROMPT ITERATION",
+        "size": 1377
+      },
+      {
+        "file": "PROMPT_LOOPS.md",
+        "name": "PROMPT LOOPS",
+        "size": 1349
+      },
+      {
+        "file": "PROMPT_METRICS.md",
+        "name": "PROMPT METRICS",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_OPTIMIZATION.md",
+        "name": "PROMPT OPTIMIZATION",
+        "size": 1398
+      },
+      {
+        "file": "PROMPT_QUALITY.md",
+        "name": "PROMPT QUALITY",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_REGRESSION.md",
+        "name": "PROMPT REGRESSION",
+        "size": 1384
+      },
+      {
+        "file": "PROMPT_TEMPLATING.md",
+        "name": "PROMPT TEMPLATING",
+        "size": 1384
+      },
+      {
+        "file": "PROMPT_TESTING.md",
+        "name": "PROMPT TESTING",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_VARIABLES.md",
+        "name": "PROMPT VARIABLES",
+        "size": 1377
+      },
+      {
+        "file": "PROMPT_VERSIONING.md",
+        "name": "PROMPT VERSIONING",
+        "size": 1384
+      },
+      {
+        "file": "REACT_PROMPTING.md",
+        "name": "REACT PROMPTING",
+        "size": 1370
+      },
+      {
+        "file": "REFLEXION_PROMPTING.md",
+        "name": "REFLEXION PROMPTING",
+        "size": 1398
+      },
+      {
+        "file": "RESPONSE_PATTERNS.md",
+        "name": "RESPONSE PATTERNS",
+        "size": 1384
+      },
+      {
+        "file": "ROLE_DEFINITION.md",
+        "name": "ROLE DEFINITION",
+        "size": 1370
+      },
+      {
+        "file": "SELF_ASK_PROMPTING.md",
+        "name": "SELF ASK PROMPTING",
+        "size": 1390
+      },
+      {
+        "file": "SELF_CONSISTENCY.md",
+        "name": "SELF CONSISTENCY",
+        "size": 1377
+      },
+      {
+        "file": "SYSTEM_PROMPTS.md",
+        "name": "SYSTEM PROMPTS",
+        "size": 1363
+      },
+      {
+        "file": "TONE_AND_STYLE.md",
+        "name": "TONE AND STYLE",
+        "size": 1362
+      },
+      {
+        "file": "TREE_OF_THOUGHT.md",
+        "name": "TREE OF THOUGHT",
+        "size": 1369
+      },
+      {
+        "file": "USER_PROMPTS.md",
+        "name": "USER PROMPTS",
+        "size": 1349
+      },
+      {
+        "file": "ZERO_SHOT_PROMPTING.md",
+        "name": "ZERO SHOT PROMPTING",
+        "size": 1397
+      }
+    ],
+    "count": 50
+  },
+  "07-workflows": {
+    "name": "Workflows",
+    "files": [
+      {
+        "file": "ADAPTIVE_WORKFLOW.md",
+        "name": "ADAPTIVE WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "APPROVAL_WORKFLOW.md",
+        "name": "APPROVAL WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "BRANCHING_WORKFLOW.md",
+        "name": "BRANCHING WORKFLOW",
+        "size": 2985
+      },
+      {
+        "file": "CHANGE_MANAGEMENT_WORKFLOW.md",
+        "name": "CHANGE MANAGEMENT WORKFLOW",
+        "size": 3033
+      },
+      {
+        "file": "CODE_REVIEW_WORKFLOW.md",
+        "name": "CODE REVIEW WORKFLOW",
+        "size": 2997
+      },
+      {
+        "file": "CONDITIONAL_WORKFLOW.md",
+        "name": "CONDITIONAL WORKFLOW",
+        "size": 2997
+      },
+      {
+        "file": "CONTENT_CREATION_WORKFLOW.md",
+        "name": "CONTENT CREATION WORKFLOW",
+        "size": 3027
+      },
+      {
+        "file": "CONTENT_WORKFLOW.md",
+        "name": "CONTENT WORKFLOW",
+        "size": 2973
+      },
+      {
+        "file": "CUSTOMER_SUPPORT_WORKFLOW.md",
+        "name": "CUSTOMER SUPPORT WORKFLOW",
+        "size": 3027
+      },
+      {
+        "file": "DATA_ANALYSIS_WORKFLOW.md",
+        "name": "DATA ANALYSIS WORKFLOW",
+        "size": 3009
+      },
+      {
+        "file": "DATA_PIPELINE_WORKFLOW.md",
+        "name": "DATA PIPELINE WORKFLOW",
+        "size": 3009
+      },
+      {
+        "file": "DYNAMIC_WORKFLOW.md",
+        "name": "DYNAMIC WORKFLOW",
+        "size": 2973
+      },
+      {
+        "file": "ESCALATION_WORKFLOW.md",
+        "name": "ESCALATION WORKFLOW",
+        "size": 2991
+      },
+      {
+        "file": "ETL_WORKFLOW.md",
+        "name": "ETL WORKFLOW",
+        "size": 2949
+      },
+      {
+        "file": "FINANCE_WORKFLOW.md",
+        "name": "FINANCE WORKFLOW",
+        "size": 2973
+      },
+      {
+        "file": "HR_WORKFLOW.md",
+        "name": "HR WORKFLOW",
+        "size": 2943
+      },
+      {
+        "file": "INCIDENT_WORKFLOW.md",
+        "name": "INCIDENT WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "ITERATIVE_WORKFLOW.md",
+        "name": "ITERATIVE WORKFLOW",
+        "size": 2985
+      },
+      {
+        "file": "LEGAL_WORKFLOW.md",
+        "name": "LEGAL WORKFLOW",
+        "size": 2961
+      },
+      {
+        "file": "LINEAR_WORKFLOW.md",
+        "name": "LINEAR WORKFLOW",
+        "size": 2967
+      },
+      {
+        "file": "LOOP_WORKFLOW.md",
+        "name": "LOOP WORKFLOW",
+        "size": 2955
+      },
+      {
+        "file": "MARKETING_WORKFLOW.md",
+        "name": "MARKETING WORKFLOW",
+        "size": 2985
+      },
+      {
+        "file": "NOTIFICATION_WORKFLOW.md",
+        "name": "NOTIFICATION WORKFLOW",
+        "size": 3003
+      },
+      {
+        "file": "ONBOARDING_WORKFLOW.md",
+        "name": "ONBOARDING WORKFLOW",
+        "size": 2991
+      },
+      {
+        "file": "PARALLEL_WORKFLOW.md",
+        "name": "PARALLEL WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "RECURSIVE_WORKFLOW.md",
+        "name": "RECURSIVE WORKFLOW",
+        "size": 2985
+      },
+      {
+        "file": "RESEARCH_WORKFLOW.md",
+        "name": "RESEARCH WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "REVIEW_WORKFLOW.md",
+        "name": "REVIEW WORKFLOW",
+        "size": 2967
+      },
+      {
+        "file": "SALES_WORKFLOW.md",
+        "name": "SALES WORKFLOW",
+        "size": 2961
+      },
+      {
+        "file": "STATEFUL_WORKFLOW.md",
+        "name": "STATEFUL WORKFLOW",
+        "size": 2979
+      },
+      {
+        "file": "WORKFLOW_ACTIONS.md",
+        "name": "WORKFLOW ACTIONS",
+        "size": 2973
+      },
+      {
+        "file": "WORKFLOW_ANALYTICS.md",
+        "name": "WORKFLOW ANALYTICS",
+        "size": 2985
+      },
+      {
+        "file": "WORKFLOW_COMPONENTS.md",
+        "name": "WORKFLOW COMPONENTS",
+        "size": 2991
+      },
+      {
+        "file": "WORKFLOW_CONDITIONS.md",
+        "name": "WORKFLOW CONDITIONS",
+        "size": 2991
+      },
+      {
+        "file": "WORKFLOW_DEBUGGING.md",
+        "name": "WORKFLOW DEBUGGING",
+        "size": 2985
+      },
+      {
+        "file": "WORKFLOW_DEFINITION.md",
+        "name": "WORKFLOW DEFINITION",
+        "size": 2991
+      },
+      {
+        "file": "WORKFLOW_EVENTS.md",
+        "name": "WORKFLOW EVENTS",
+        "size": 2967
+      },
+      {
+        "file": "WORKFLOW_EXECUTION.md",
+        "name": "WORKFLOW EXECUTION",
+        "size": 2985
+      },
+      {
+        "file": "WORKFLOW_FUNDAMENTALS.md",
+        "name": "WORKFLOW FUNDAMENTALS",
+        "size": 3003
+      },
+      {
+        "file": "WORKFLOW_LOGGING.md",
+        "name": "WORKFLOW LOGGING",
+        "size": 2973
+      },
+      {
+        "file": "WORKFLOW_MONITORING.md",
+        "name": "WORKFLOW MONITORING",
+        "size": 2991
+      },
+      {
+        "file": "WORKFLOW_OPTIMIZATION.md",
+        "name": "WORKFLOW OPTIMIZATION",
+        "size": 3003
+      },
+      {
+        "file": "WORKFLOW_RECOVERY.md",
+        "name": "WORKFLOW RECOVERY",
+        "size": 2979
+      },
+      {
+        "file": "WORKFLOW_ROLLBACK.md",
+        "name": "WORKFLOW ROLLBACK",
+        "size": 2979
+      },
+      {
+        "file": "WORKFLOW_SCALING.md",
+        "name": "WORKFLOW SCALING",
+        "size": 2973
+      },
+      {
+        "file": "WORKFLOW_STATES.md",
+        "name": "WORKFLOW STATES",
+        "size": 2967
+      },
+      {
+        "file": "WORKFLOW_STEPS.md",
+        "name": "WORKFLOW STEPS",
+        "size": 2961
+      },
+      {
+        "file": "WORKFLOW_TRANSITIONS.md",
+        "name": "WORKFLOW TRANSITIONS",
+        "size": 2997
+      },
+      {
+        "file": "WORKFLOW_TRIGGERS.md",
+        "name": "WORKFLOW TRIGGERS",
+        "size": 2979
+      },
+      {
+        "file": "WORKFLOW_VERSIONING.md",
+        "name": "WORKFLOW VERSIONING",
+        "size": 2991
+      }
+    ],
+    "count": 50
+  },
+  "08-evaluation": {
+    "name": "Evaluation",
+    "files": [
+      {
+        "file": "ACCURACY_METRICS.md",
+        "name": "ACCURACY METRICS",
+        "size": 1377
+      },
+      {
+        "file": "ADVERSARIAL_TESTING.md",
+        "name": "ADVERSARIAL TESTING",
+        "size": 1398
+      },
+      {
+        "file": "AGENT_BENCHMARKS.md",
+        "name": "AGENT BENCHMARKS",
+        "size": 1377
+      },
+      {
+        "file": "AUTOMATED_EVALUATION.md",
+        "name": "AUTOMATED EVALUATION",
+        "size": 1405
+      },
+      {
+        "file": "BENCHMARK_COMPARISON.md",
+        "name": "BENCHMARK COMPARISON",
+        "size": 1405
+      },
+      {
+        "file": "BENCHMARK_DATASETS.md",
+        "name": "BENCHMARK DATASETS",
+        "size": 1391
+      },
+      {
+        "file": "BENCHMARK_DESIGN.md",
+        "name": "BENCHMARK DESIGN",
+        "size": 1377
+      },
+      {
+        "file": "BENCHMARK_EXECUTION.md",
+        "name": "BENCHMARK EXECUTION",
+        "size": 1398
+      },
+      {
+        "file": "BENCHMARK_REPORTING.md",
+        "name": "BENCHMARK REPORTING",
+        "size": 1398
+      },
+      {
+        "file": "BIAS_TESTING.md",
+        "name": "BIAS TESTING",
+        "size": 1349
+      },
+      {
+        "file": "BLEU_SCORE.md",
+        "name": "BLEU SCORE",
+        "size": 1335
+      },
+      {
+        "file": "CHAOS_TESTING.md",
+        "name": "CHAOS TESTING",
+        "size": 1356
+      },
+      {
+        "file": "COHERENCE_METRICS.md",
+        "name": "COHERENCE METRICS",
+        "size": 1384
+      },
+      {
+        "file": "COMPLIANCE_TESTING.md",
+        "name": "COMPLIANCE TESTING",
+        "size": 1391
+      },
+      {
+        "file": "CUSTOM_EVALUATION.md",
+        "name": "CUSTOM EVALUATION",
+        "size": 1384
+      },
+      {
+        "file": "DEEPEVAL_EVALUATION.md",
+        "name": "DEEPEVAL EVALUATION",
+        "size": 1398
+      },
+      {
+        "file": "END_TO_END_TESTING.md",
+        "name": "END TO END TESTING",
+        "size": 1389
+      },
+      {
+        "file": "EVALUATION_METRICS_OVERVIEW.md",
+        "name": "EVALUATION METRICS OVERVIEW",
+        "size": 1453
+      },
+      {
+        "file": "F1_SCORE.md",
+        "name": "F1 SCORE",
+        "size": 1321
+      },
+      {
+        "file": "FACTUALITY_TESTING.md",
+        "name": "FACTUALITY TESTING",
+        "size": 1391
+      },
+      {
+        "file": "FAIRNESS_TESTING.md",
+        "name": "FAIRNESS TESTING",
+        "size": 1377
+      },
+      {
+        "file": "FAITHFULNESS_METRICS.md",
+        "name": "FAITHFULNESS METRICS",
+        "size": 1405
+      },
+      {
+        "file": "GROUNDEDNESS_TESTING.md",
+        "name": "GROUNDEDNESS TESTING",
+        "size": 1405
+      },
+      {
+        "file": "HALLUCINATION_TESTING.md",
+        "name": "HALLUCINATION TESTING",
+        "size": 1412
+      },
+      {
+        "file": "HUMAN_EVALUATION.md",
+        "name": "HUMAN EVALUATION",
+        "size": 1377
+      },
+      {
+        "file": "INTEGRATION_TESTING.md",
+        "name": "INTEGRATION TESTING",
+        "size": 1398
+      },
+      {
+        "file": "LANGSMITH_EVALUATION.md",
+        "name": "LANGSMITH EVALUATION",
+        "size": 1405
+      },
+      {
+        "file": "LOAD_TESTING.md",
+        "name": "LOAD TESTING",
+        "size": 1349
+      },
+      {
+        "file": "MLFLOW_EVALUATION.md",
+        "name": "MLFLOW EVALUATION",
+        "size": 1384
+      },
+      {
+        "file": "PERPLEXITY.md",
+        "name": "PERPLEXITY",
+        "size": 1336
+      },
+      {
+        "file": "PRECISION_RECALL.md",
+        "name": "PRECISION RECALL",
+        "size": 1377
+      },
+      {
+        "file": "PROMPTFOO_EVALUATION.md",
+        "name": "PROMPTFOO EVALUATION",
+        "size": 1405
+      },
+      {
+        "file": "QUALITY_ASSURANCE.md",
+        "name": "QUALITY ASSURANCE",
+        "size": 1384
+      },
+      {
+        "file": "QUALITY_GATES.md",
+        "name": "QUALITY GATES",
+        "size": 1356
+      },
+      {
+        "file": "QUALITY_METRICS.md",
+        "name": "QUALITY METRICS",
+        "size": 1370
+      },
+      {
+        "file": "RAGAS_EVALUATION.md",
+        "name": "RAGAS EVALUATION",
+        "size": 1377
+      },
+      {
+        "file": "RAG_BENCHMARKS.md",
+        "name": "RAG BENCHMARKS",
+        "size": 1363
+      },
+      {
+        "file": "REASONING_BENCHMARKS.md",
+        "name": "REASONING BENCHMARKS",
+        "size": 1405
+      },
+      {
+        "file": "RED_TEAMING.md",
+        "name": "RED TEAMING",
+        "size": 1342
+      },
+      {
+        "file": "REGRESSION_TESTING.md",
+        "name": "REGRESSION TESTING",
+        "size": 1391
+      },
+      {
+        "file": "RELEVANCE_METRICS.md",
+        "name": "RELEVANCE METRICS",
+        "size": 1384
+      },
+      {
+        "file": "ROUGE_SCORE.md",
+        "name": "ROUGE SCORE",
+        "size": 1342
+      },
+      {
+        "file": "SAFETY_BENCHMARKS.md",
+        "name": "SAFETY BENCHMARKS",
+        "size": 1384
+      },
+      {
+        "file": "SMOKE_TESTING.md",
+        "name": "SMOKE TESTING",
+        "size": 1356
+      },
+      {
+        "file": "STRESS_TESTING.md",
+        "name": "STRESS TESTING",
+        "size": 1363
+      },
+      {
+        "file": "TOOL_USE_BENCHMARKS.md",
+        "name": "TOOL USE BENCHMARKS",
+        "size": 1397
+      },
+      {
+        "file": "TOXICITY_TESTING.md",
+        "name": "TOXICITY TESTING",
+        "size": 1377
+      },
+      {
+        "file": "TRULENS_EVALUATION.md",
+        "name": "TRULENS EVALUATION",
+        "size": 1391
+      },
+      {
+        "file": "UNIT_TESTING_AGENTS.md",
+        "name": "UNIT TESTING AGENTS",
+        "size": 1397
+      },
+      {
+        "file": "WEIGHTS_BIASES_EVAL.md",
+        "name": "WEIGHTS BIASES EVAL",
+        "size": 1397
+      }
+    ],
+    "count": 50
+  },
+  "09-security": {
+    "name": "Security",
+    "files": [
+      {
+        "file": "ABAC.md",
+        "name": "ABAC",
+        "size": 1294
+      },
+      {
+        "file": "API_KEY_MANAGEMENT.md",
+        "name": "API KEY MANAGEMENT",
+        "size": 1390
+      },
+      {
+        "file": "ATTACK_VECTORS.md",
+        "name": "ATTACK VECTORS",
+        "size": 1363
+      },
+      {
+        "file": "AUDIT_LOGGING.md",
+        "name": "AUDIT LOGGING",
+        "size": 1356
+      },
+      {
+        "file": "AUTHENTICATION.md",
+        "name": "AUTHENTICATION",
+        "size": 1364
+      },
+      {
+        "file": "AUTHORIZATION.md",
+        "name": "AUTHORIZATION",
+        "size": 1357
+      },
+      {
+        "file": "COMPLIANCE_FRAMEWORKS.md",
+        "name": "COMPLIANCE FRAMEWORKS",
+        "size": 1412
+      },
+      {
+        "file": "CONTENT_FILTERING.md",
+        "name": "CONTENT FILTERING",
+        "size": 1384
+      },
+      {
+        "file": "CONTEXT_MANIPULATION.md",
+        "name": "CONTEXT MANIPULATION",
+        "size": 1405
+      },
+      {
+        "file": "DATA_ANONYMIZATION.md",
+        "name": "DATA ANONYMIZATION",
+        "size": 1391
+      },
+      {
+        "file": "DATA_CLASSIFICATION.md",
+        "name": "DATA CLASSIFICATION",
+        "size": 1398
+      },
+      {
+        "file": "DATA_DELETION.md",
+        "name": "DATA DELETION",
+        "size": 1356
+      },
+      {
+        "file": "DATA_ENCRYPTION.md",
+        "name": "DATA ENCRYPTION",
+        "size": 1370
+      },
+      {
+        "file": "DATA_GOVERNANCE.md",
+        "name": "DATA GOVERNANCE",
+        "size": 1370
+      },
+      {
+        "file": "DATA_MASKING.md",
+        "name": "DATA MASKING",
+        "size": 1349
+      },
+      {
+        "file": "DATA_RETENTION.md",
+        "name": "DATA RETENTION",
+        "size": 1363
+      },
+      {
+        "file": "DEFENSE_IN_DEPTH.md",
+        "name": "DEFENSE IN DEPTH",
+        "size": 1376
+      },
+      {
+        "file": "DEFENSE_STRATEGIES.md",
+        "name": "DEFENSE STRATEGIES",
+        "size": 1391
+      },
+      {
+        "file": "GDPR_COMPLIANCE.md",
+        "name": "GDPR COMPLIANCE",
+        "size": 1370
+      },
+      {
+        "file": "GUARDRAILS.md",
+        "name": "GUARDRAILS",
+        "size": 1336
+      },
+      {
+        "file": "HIPAA_COMPLIANCE.md",
+        "name": "HIPAA COMPLIANCE",
+        "size": 1377
+      },
+      {
+        "file": "IDENTITY_MANAGEMENT.md",
+        "name": "IDENTITY MANAGEMENT",
+        "size": 1398
+      },
+      {
+        "file": "INCIDENT_RESPONSE.md",
+        "name": "INCIDENT RESPONSE",
+        "size": 1384
+      },
+      {
+        "file": "INDIRECT_INJECTION.md",
+        "name": "INDIRECT INJECTION",
+        "size": 1391
+      },
+      {
+        "file": "INPUT_VALIDATION.md",
+        "name": "INPUT VALIDATION",
+        "size": 1377
+      },
+      {
+        "file": "ISO27001_COMPLIANCE.md",
+        "name": "ISO27001 COMPLIANCE",
+        "size": 1398
+      },
+      {
+        "file": "JAILBREAKING.md",
+        "name": "JAILBREAKING",
+        "size": 1350
+      },
+      {
+        "file": "LEAST_PRIVILEGE.md",
+        "name": "LEAST PRIVILEGE",
+        "size": 1370
+      },
+      {
+        "file": "OAUTH_INTEGRATION.md",
+        "name": "OAUTH INTEGRATION",
+        "size": 1384
+      },
+      {
+        "file": "OUTPUT_VALIDATION.md",
+        "name": "OUTPUT VALIDATION",
+        "size": 1384
+      },
+      {
+        "file": "PENETRATION_TESTING.md",
+        "name": "PENETRATION TESTING",
+        "size": 1398
+      },
+      {
+        "file": "PII_PROTECTION.md",
+        "name": "PII PROTECTION",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_INJECTION.md",
+        "name": "PROMPT INJECTION",
+        "size": 1377
+      },
+      {
+        "file": "PROMPT_LEAKING.md",
+        "name": "PROMPT LEAKING",
+        "size": 1363
+      },
+      {
+        "file": "PROMPT_SANITIZATION.md",
+        "name": "PROMPT SANITIZATION",
+        "size": 1398
+      },
+      {
+        "file": "RBAC.md",
+        "name": "RBAC",
+        "size": 1294
+      },
+      {
+        "file": "SECURE_STORAGE.md",
+        "name": "SECURE STORAGE",
+        "size": 1363
+      },
+      {
+        "file": "SECURE_TRANSMISSION.md",
+        "name": "SECURE TRANSMISSION",
+        "size": 1398
+      },
+      {
+        "file": "SECURITY_BY_DESIGN.md",
+        "name": "SECURITY BY DESIGN",
+        "size": 1390
+      },
+      {
+        "file": "SECURITY_FUNDAMENTALS.md",
+        "name": "SECURITY FUNDAMENTALS",
+        "size": 1412
+      },
+      {
+        "file": "SECURITY_LAYERS.md",
+        "name": "SECURITY LAYERS",
+        "size": 1370
+      },
+      {
+        "file": "SECURITY_MONITORING.md",
+        "name": "SECURITY MONITORING",
+        "size": 1398
+      },
+      {
+        "file": "SECURITY_PRINCIPLES.md",
+        "name": "SECURITY PRINCIPLES",
+        "size": 1398
+      },
+      {
+        "file": "SESSION_MANAGEMENT.md",
+        "name": "SESSION MANAGEMENT",
+        "size": 1391
+      },
+      {
+        "file": "SOC2_COMPLIANCE.md",
+        "name": "SOC2 COMPLIANCE",
+        "size": 1370
+      },
+      {
+        "file": "SSO_INTEGRATION.md",
+        "name": "SSO INTEGRATION",
+        "size": 1370
+      },
+      {
+        "file": "THREAT_MODELING.md",
+        "name": "THREAT MODELING",
+        "size": 1370
+      },
+      {
+        "file": "TOKEN_MANAGEMENT.md",
+        "name": "TOKEN MANAGEMENT",
+        "size": 1377
+      },
+      {
+        "file": "VULNERABILITY_MANAGEMENT.md",
+        "name": "VULNERABILITY MANAGEMENT",
+        "size": 1433
+      },
+      {
+        "file": "ZERO_TRUST_ARCHITECTURE.md",
+        "name": "ZERO TRUST ARCHITECTURE",
+        "size": 1425
+      }
+    ],
+    "count": 50
+  },
+  "10-deployment": {
+    "name": "Deployment",
+    "files": [
+      {
+        "file": "ARTIFACT_MANAGEMENT.md",
+        "name": "ARTIFACT MANAGEMENT",
+        "size": 1398
+      },
+      {
+        "file": "AUTOMATED_TESTING.md",
+        "name": "AUTOMATED TESTING",
+        "size": 1384
+      },
+      {
+        "file": "AUTO_SCALING.md",
+        "name": "AUTO SCALING",
+        "size": 1349
+      },
+      {
+        "file": "A_B_DEPLOYMENT.md",
+        "name": "A B DEPLOYMENT",
+        "size": 1362
+      },
+      {
+        "file": "BLUE_GREEN_DEPLOYMENT.md",
+        "name": "BLUE GREEN DEPLOYMENT",
+        "size": 1411
+      },
+      {
+        "file": "BUILD_PIPELINES.md",
+        "name": "BUILD PIPELINES",
+        "size": 1370
+      },
+      {
+        "file": "CACHING_STRATEGIES.md",
+        "name": "CACHING STRATEGIES",
+        "size": 1391
+      },
+      {
+        "file": "CANARY_DEPLOYMENT.md",
+        "name": "CANARY DEPLOYMENT",
+        "size": 1384
+      },
+      {
+        "file": "CIRCLECI.md",
+        "name": "CIRCLECI",
+        "size": 1322
+      },
+      {
+        "file": "CI_CD_OVERVIEW.md",
+        "name": "CI CD OVERVIEW",
+        "size": 1362
+      },
+      {
+        "file": "CLOUD_DEPLOYMENT.md",
+        "name": "CLOUD DEPLOYMENT",
+        "size": 1377
+      },
+      {
+        "file": "CONTAINERIZATION.md",
+        "name": "CONTAINERIZATION",
+        "size": 1378
+      },
+      {
+        "file": "DATABASE_SCALING.md",
+        "name": "DATABASE SCALING",
+        "size": 1377
+      },
+      {
+        "file": "DEPLOYMENT_STRATEGIES.md",
+        "name": "DEPLOYMENT STRATEGIES",
+        "size": 1412
+      },
+      {
+        "file": "DOCKER_DEPLOYMENT.md",
+        "name": "DOCKER DEPLOYMENT",
+        "size": 1384
+      },
+      {
+        "file": "EDGE_DEPLOYMENT.md",
+        "name": "EDGE DEPLOYMENT",
+        "size": 1370
+      },
+      {
+        "file": "ENVIRONMENT_MANAGEMENT.md",
+        "name": "ENVIRONMENT MANAGEMENT",
+        "size": 1419
+      },
+      {
+        "file": "FEATURE_FLAGS.md",
+        "name": "FEATURE FLAGS",
+        "size": 1356
+      },
+      {
+        "file": "GITHUB_ACTIONS.md",
+        "name": "GITHUB ACTIONS",
+        "size": 1363
+      },
+      {
+        "file": "GITLAB_CI.md",
+        "name": "GITLAB CI",
+        "size": 1328
+      },
+      {
+        "file": "GRADUAL_ROLLOUT.md",
+        "name": "GRADUAL ROLLOUT",
+        "size": 1370
+      },
+      {
+        "file": "HORIZONTAL_SCALING.md",
+        "name": "HORIZONTAL SCALING",
+        "size": 1391
+      },
+      {
+        "file": "HYBRID_DEPLOYMENT.md",
+        "name": "HYBRID DEPLOYMENT",
+        "size": 1384
+      },
+      {
+        "file": "INFRASTRUCTURE_AS_CODE.md",
+        "name": "INFRASTRUCTURE AS CODE",
+        "size": 1418
+      },
+      {
+        "file": "INFRASTRUCTURE_OVERVIEW.md",
+        "name": "INFRASTRUCTURE OVERVIEW",
+        "size": 1426
+      },
+      {
+        "file": "INSTANT_ROLLBACK.md",
+        "name": "INSTANT ROLLBACK",
+        "size": 1377
+      },
+      {
+        "file": "JENKINS.md",
+        "name": "JENKINS",
+        "size": 1315
+      },
+      {
+        "file": "KUBERNETES_DEPLOYMENT.md",
+        "name": "KUBERNETES DEPLOYMENT",
+        "size": 1412
+      },
+      {
+        "file": "LOAD_BALANCING.md",
+        "name": "LOAD BALANCING",
+        "size": 1363
+      },
+      {
+        "file": "MESSAGE_QUEUE_SCALING.md",
+        "name": "MESSAGE QUEUE SCALING",
+        "size": 1411
+      },
+      {
+        "file": "MULTI_REGION.md",
+        "name": "MULTI REGION",
+        "size": 1349
+      },
+      {
+        "file": "ON_PREMISE_DEPLOYMENT.md",
+        "name": "ON PREMISE DEPLOYMENT",
+        "size": 1411
+      },
+      {
+        "file": "RATE_LIMITING.md",
+        "name": "RATE LIMITING",
+        "size": 1356
+      },
+      {
+        "file": "RELEASE_PIPELINES.md",
+        "name": "RELEASE PIPELINES",
+        "size": 1384
+      },
+      {
+        "file": "ROLLING_DEPLOYMENT.md",
+        "name": "ROLLING DEPLOYMENT",
+        "size": 1391
+      },
+      {
+        "file": "SCALING_STRATEGIES.md",
+        "name": "SCALING STRATEGIES",
+        "size": 1391
+      },
+      {
+        "file": "SERVERLESS_DEPLOYMENT.md",
+        "name": "SERVERLESS DEPLOYMENT",
+        "size": 1412
+      },
+      {
+        "file": "THROTTLING.md",
+        "name": "THROTTLING",
+        "size": 1336
+      },
+      {
+        "file": "VERTICAL_SCALING.md",
+        "name": "VERTICAL SCALING",
+        "size": 1377
+      },
+      {
+        "file": "ZERO_DOWNTIME.md",
+        "name": "ZERO DOWNTIME",
+        "size": 1356
+      }
+    ],
+    "count": 40
+  },
+  "11-monitoring": {
+    "name": "Monitoring",
+    "files": [
+      {
+        "file": "AGENT_METRICS.md",
+        "name": "AGENT METRICS",
+        "size": 1356
+      },
+      {
+        "file": "ALERTING_STRATEGIES.md",
+        "name": "ALERTING STRATEGIES",
+        "size": 1398
+      },
+      {
+        "file": "ALERT_ESCALATION.md",
+        "name": "ALERT ESCALATION",
+        "size": 1377
+      },
+      {
+        "file": "ALERT_ROUTING.md",
+        "name": "ALERT ROUTING",
+        "size": 1356
+      },
+      {
+        "file": "ALERT_RULES.md",
+        "name": "ALERT RULES",
+        "size": 1342
+      },
+      {
+        "file": "ANOMALY_DETECTION.md",
+        "name": "ANOMALY DETECTION",
+        "size": 1384
+      },
+      {
+        "file": "APPLICATION_METRICS.md",
+        "name": "APPLICATION METRICS",
+        "size": 1398
+      },
+      {
+        "file": "AUDIT_LOGGING_DETAIL.md",
+        "name": "AUDIT LOGGING DETAIL",
+        "size": 1404
+      },
+      {
+        "file": "BUSINESS_METRICS.md",
+        "name": "BUSINESS METRICS",
+        "size": 1377
+      },
+      {
+        "file": "CONTEXT_PROPAGATION.md",
+        "name": "CONTEXT PROPAGATION",
+        "size": 1398
+      },
+      {
+        "file": "CONVERSATION_LOGGING.md",
+        "name": "CONVERSATION LOGGING",
+        "size": 1405
+      },
+      {
+        "file": "CORRELATION.md",
+        "name": "CORRELATION",
+        "size": 1343
+      },
+      {
+        "file": "COST_METRICS.md",
+        "name": "COST METRICS",
+        "size": 1349
+      },
+      {
+        "file": "CUSTOM_METRICS.md",
+        "name": "CUSTOM METRICS",
+        "size": 1363
+      },
+      {
+        "file": "DISTRIBUTED_TRACING.md",
+        "name": "DISTRIBUTED TRACING",
+        "size": 1398
+      },
+      {
+        "file": "ERROR_LOGGING.md",
+        "name": "ERROR LOGGING",
+        "size": 1356
+      },
+      {
+        "file": "ERROR_METRICS.md",
+        "name": "ERROR METRICS",
+        "size": 1356
+      },
+      {
+        "file": "INCIDENT_MANAGEMENT.md",
+        "name": "INCIDENT MANAGEMENT",
+        "size": 1398
+      },
+      {
+        "file": "INSTRUMENTATION.md",
+        "name": "INSTRUMENTATION",
+        "size": 1371
+      },
+      {
+        "file": "JAEGER.md",
+        "name": "JAEGER",
+        "size": 1308
+      },
+      {
+        "file": "LANGFUSE.md",
+        "name": "LANGFUSE",
+        "size": 1322
+      },
+      {
+        "file": "LANGSMITH_TRACING.md",
+        "name": "LANGSMITH TRACING",
+        "size": 1384
+      },
+      {
+        "file": "LATENCY_METRICS.md",
+        "name": "LATENCY METRICS",
+        "size": 1370
+      },
+      {
+        "file": "LLM_METRICS.md",
+        "name": "LLM METRICS",
+        "size": 1342
+      },
+      {
+        "file": "LOGGING_BEST_PRACTICES.md",
+        "name": "LOGGING BEST PRACTICES",
+        "size": 1418
+      },
+      {
+        "file": "LOGS_OVERVIEW.md",
+        "name": "LOGS OVERVIEW",
+        "size": 1356
+      },
+      {
+        "file": "LOG_AGGREGATION.md",
+        "name": "LOG AGGREGATION",
+        "size": 1370
+      },
+      {
+        "file": "LOG_ANALYSIS.md",
+        "name": "LOG ANALYSIS",
+        "size": 1349
+      },
+      {
+        "file": "LOG_LEVELS.md",
+        "name": "LOG LEVELS",
+        "size": 1335
+      },
+      {
+        "file": "LOG_RETENTION.md",
+        "name": "LOG RETENTION",
+        "size": 1356
+      },
+      {
+        "file": "METRICS_OVERVIEW.md",
+        "name": "METRICS OVERVIEW",
+        "size": 1377
+      },
+      {
+        "file": "OBSERVABILITY_FUNDAMENTALS.md",
+        "name": "OBSERVABILITY FUNDAMENTALS",
+        "size": 1447
+      },
+      {
+        "file": "ON_CALL_MANAGEMENT.md",
+        "name": "ON CALL MANAGEMENT",
+        "size": 1390
+      },
+      {
+        "file": "OPENTELEMETRY.md",
+        "name": "OPENTELEMETRY",
+        "size": 1357
+      },
+      {
+        "file": "POSTMORTEMS.md",
+        "name": "POSTMORTEMS",
+        "size": 1343
+      },
+      {
+        "file": "RUNBOOKS.md",
+        "name": "RUNBOOKS",
+        "size": 1322
+      },
+      {
+        "file": "SERVICE_MESH.md",
+        "name": "SERVICE MESH",
+        "size": 1349
+      },
+      {
+        "file": "SLA_MONITORING.md",
+        "name": "SLA MONITORING",
+        "size": 1363
+      },
+      {
+        "file": "SPAN_MANAGEMENT.md",
+        "name": "SPAN MANAGEMENT",
+        "size": 1370
+      },
+      {
+        "file": "STRUCTURED_LOGGING.md",
+        "name": "STRUCTURED LOGGING",
+        "size": 1391
+      },
+      {
+        "file": "SYSTEM_METRICS.md",
+        "name": "SYSTEM METRICS",
+        "size": 1363
+      },
+      {
+        "file": "TELEMETRY.md",
+        "name": "TELEMETRY",
+        "size": 1329
+      },
+      {
+        "file": "THREE_PILLARS.md",
+        "name": "THREE PILLARS",
+        "size": 1356
+      },
+      {
+        "file": "THROUGHPUT_METRICS.md",
+        "name": "THROUGHPUT METRICS",
+        "size": 1391
+      },
+      {
+        "file": "TOOL_CALL_LOGGING.md",
+        "name": "TOOL CALL LOGGING",
+        "size": 1383
+      },
+      {
+        "file": "TRACES_OVERVIEW.md",
+        "name": "TRACES OVERVIEW",
+        "size": 1370
+      },
+      {
+        "file": "TRACE_ANALYSIS.md",
+        "name": "TRACE ANALYSIS",
+        "size": 1363
+      },
+      {
+        "file": "TRACE_CONTEXT.md",
+        "name": "TRACE CONTEXT",
+        "size": 1356
+      },
+      {
+        "file": "TRACE_SAMPLING.md",
+        "name": "TRACE SAMPLING",
+        "size": 1363
+      },
+      {
+        "file": "ZIPKIN.md",
+        "name": "ZIPKIN",
+        "size": 1308
+      }
+    ],
+    "count": 50
+  },
+  "12-integrations": {
+    "name": "Integrations",
+    "files": [
+      {
+        "file": "AMQP_INTEGRATION.md",
+        "name": "AMQP INTEGRATION",
+        "size": 2305
+      },
+      {
+        "file": "ANALYTICS_INTEGRATIONS.md",
+        "name": "ANALYTICS INTEGRATIONS",
+        "size": 2365
+      },
+      {
+        "file": "ANTHROPIC_INTEGRATION.md",
+        "name": "ANTHROPIC INTEGRATION",
+        "size": 2355
+      },
+      {
+        "file": "API_INTEGRATIONS.md",
+        "name": "API INTEGRATIONS",
+        "size": 2305
+      },
+      {
+        "file": "AUTOGEN_INTEGRATION.md",
+        "name": "AUTOGEN INTEGRATION",
+        "size": 2335
+      },
+      {
+        "file": "AWS_BEDROCK_INTEGRATION.md",
+        "name": "AWS BEDROCK INTEGRATION",
+        "size": 2373
+      },
+      {
+        "file": "AZURE_OPENAI_INTEGRATION.md",
+        "name": "AZURE OPENAI INTEGRATION",
+        "size": 2383
+      },
+      {
+        "file": "CLOUD_STORAGE_INTEGRATION.md",
+        "name": "CLOUD STORAGE INTEGRATION",
+        "size": 2393
+      },
+      {
+        "file": "COHERE_INTEGRATION.md",
+        "name": "COHERE INTEGRATION",
+        "size": 2325
+      },
+      {
+        "file": "COMMUNICATION_INTEGRATIONS.md",
+        "name": "COMMUNICATION INTEGRATIONS",
+        "size": 2405
+      },
+      {
+        "file": "CREWAI_INTEGRATION.md",
+        "name": "CREWAI INTEGRATION",
+        "size": 2325
+      },
+      {
+        "file": "CRM_INTEGRATIONS.md",
+        "name": "CRM INTEGRATIONS",
+        "size": 2305
+      },
+      {
+        "file": "DATABASE_INTEGRATIONS.md",
+        "name": "DATABASE INTEGRATIONS",
+        "size": 2355
+      },
+      {
+        "file": "DATA_LAKE_INTEGRATION.md",
+        "name": "DATA LAKE INTEGRATION",
+        "size": 2353
+      },
+      {
+        "file": "DATA_WAREHOUSE_INTEGRATION.md",
+        "name": "DATA WAREHOUSE INTEGRATION",
+        "size": 2403
+      },
+      {
+        "file": "DOCUMENT_MANAGEMENT_INTEGRATIONS.md",
+        "name": "DOCUMENT MANAGEMENT INTEGRATIONS",
+        "size": 2463
+      },
+      {
+        "file": "DSPY_INTEGRATION.md",
+        "name": "DSPY INTEGRATION",
+        "size": 2305
+      },
+      {
+        "file": "ERP_INTEGRATIONS.md",
+        "name": "ERP INTEGRATIONS",
+        "size": 2305
+      },
+      {
+        "file": "EVENT_BUS_INTEGRATION.md",
+        "name": "EVENT BUS INTEGRATION",
+        "size": 2353
+      },
+      {
+        "file": "FILE_SYSTEM_INTEGRATION.md",
+        "name": "FILE SYSTEM INTEGRATION",
+        "size": 2373
+      },
+      {
+        "file": "FINANCE_INTEGRATIONS.md",
+        "name": "FINANCE INTEGRATIONS",
+        "size": 2345
+      },
+      {
+        "file": "GOOGLE_AI_INTEGRATION.md",
+        "name": "GOOGLE AI INTEGRATION",
+        "size": 2353
+      },
+      {
+        "file": "GRAPHQL_INTEGRATION.md",
+        "name": "GRAPHQL INTEGRATION",
+        "size": 2335
+      },
+      {
+        "file": "GRPC_INTEGRATION.md",
+        "name": "GRPC INTEGRATION",
+        "size": 2305
+      },
+      {
+        "file": "GUIDANCE_INTEGRATION.md",
+        "name": "GUIDANCE INTEGRATION",
+        "size": 2345
+      },
+      {
+        "file": "HAYSTACK_INTEGRATION.md",
+        "name": "HAYSTACK INTEGRATION",
+        "size": 2345
+      },
+      {
+        "file": "HR_INTEGRATIONS.md",
+        "name": "HR INTEGRATIONS",
+        "size": 2295
+      },
+      {
+        "file": "KAFKA_INTEGRATION.md",
+        "name": "KAFKA INTEGRATION",
+        "size": 2315
+      },
+      {
+        "file": "LANGCHAIN_INTEGRATION.md",
+        "name": "LANGCHAIN INTEGRATION",
+        "size": 2355
+      },
+      {
+        "file": "LANGGRAPH_INTEGRATION.md",
+        "name": "LANGGRAPH INTEGRATION",
+        "size": 2355
+      },
+      {
+        "file": "LLAMAINDEX_INTEGRATION.md",
+        "name": "LLAMAINDEX INTEGRATION",
+        "size": 2365
+      },
+      {
+        "file": "LLAMA_INTEGRATION.md",
+        "name": "LLAMA INTEGRATION",
+        "size": 2315
+      },
+      {
+        "file": "LOCAL_LLM_INTEGRATION.md",
+        "name": "LOCAL LLM INTEGRATION",
+        "size": 2353
+      },
+      {
+        "file": "MARKETING_INTEGRATIONS.md",
+        "name": "MARKETING INTEGRATIONS",
+        "size": 2365
+      },
+      {
+        "file": "MESSAGE_QUEUE_INTEGRATION.md",
+        "name": "MESSAGE QUEUE INTEGRATION",
+        "size": 2393
+      },
+      {
+        "file": "MISTRAL_INTEGRATION.md",
+        "name": "MISTRAL INTEGRATION",
+        "size": 2335
+      },
+      {
+        "file": "MQTT_INTEGRATION.md",
+        "name": "MQTT INTEGRATION",
+        "size": 2305
+      },
+      {
+        "file": "NATS_INTEGRATION.md",
+        "name": "NATS INTEGRATION",
+        "size": 2305
+      },
+      {
+        "file": "OLLAMA_INTEGRATION.md",
+        "name": "OLLAMA INTEGRATION",
+        "size": 2325
+      },
+      {
+        "file": "OPENAI_INTEGRATION.md",
+        "name": "OPENAI INTEGRATION",
+        "size": 2325
+      },
+      {
+        "file": "OUTLINES_INTEGRATION.md",
+        "name": "OUTLINES INTEGRATION",
+        "size": 2345
+      },
+      {
+        "file": "PROJECT_MANAGEMENT_INTEGRATIONS.md",
+        "name": "PROJECT MANAGEMENT INTEGRATIONS",
+        "size": 2453
+      },
+      {
+        "file": "REDIS_PUBSUB_INTEGRATION.md",
+        "name": "REDIS PUBSUB INTEGRATION",
+        "size": 2383
+      },
+      {
+        "file": "REST_API_INTEGRATION.md",
+        "name": "REST API INTEGRATION",
+        "size": 2343
+      },
+      {
+        "file": "SEMANTIC_KERNEL_INTEGRATION.md",
+        "name": "SEMANTIC KERNEL INTEGRATION",
+        "size": 2413
+      },
+      {
+        "file": "SSE_INTEGRATION.md",
+        "name": "SSE INTEGRATION",
+        "size": 2295
+      },
+      {
+        "file": "STREAMING_INTEGRATION.md",
+        "name": "STREAMING INTEGRATION",
+        "size": 2355
+      },
+      {
+        "file": "TICKETING_INTEGRATIONS.md",
+        "name": "TICKETING INTEGRATIONS",
+        "size": 2365
+      },
+      {
+        "file": "WEBHOOK_INTEGRATION.md",
+        "name": "WEBHOOK INTEGRATION",
+        "size": 2335
+      },
+      {
+        "file": "WEBSOCKET_INTEGRATION.md",
+        "name": "WEBSOCKET INTEGRATION",
+        "size": 2355
+      }
+    ],
+    "count": 50
+  },
+  "13-patterns": {
+    "name": "Patterns",
+    "files": [
+      {
+        "file": "ABSTRACT_FACTORY_PATTERN.md",
+        "name": "ABSTRACT FACTORY PATTERN",
+        "size": 3021
+      },
+      {
+        "file": "ACTOR_MODEL_PATTERN.md",
+        "name": "ACTOR MODEL PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "ADAPTER_PATTERN.md",
+        "name": "ADAPTER PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "BRIDGE_PATTERN.md",
+        "name": "BRIDGE PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "BUILDER_PATTERN.md",
+        "name": "BUILDER PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "CHAIN_OF_RESPONSIBILITY.md",
+        "name": "CHAIN OF RESPONSIBILITY",
+        "size": 3015
+      },
+      {
+        "file": "CLEAN_ARCHITECTURE.md",
+        "name": "CLEAN ARCHITECTURE",
+        "size": 2985
+      },
+      {
+        "file": "COMMAND_PATTERN.md",
+        "name": "COMMAND PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "COMPOSITE_PATTERN.md",
+        "name": "COMPOSITE PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "CQRS_PATTERN.md",
+        "name": "CQRS PATTERN",
+        "size": 2949
+      },
+      {
+        "file": "DECORATOR_PATTERN.md",
+        "name": "DECORATOR PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "DELIBERATIVE_AGENT_PATTERN.md",
+        "name": "DELIBERATIVE AGENT PATTERN",
+        "size": 3033
+      },
+      {
+        "file": "DEPENDENCY_INJECTION.md",
+        "name": "DEPENDENCY INJECTION",
+        "size": 2997
+      },
+      {
+        "file": "DOMAIN_DRIVEN_DESIGN.md",
+        "name": "DOMAIN DRIVEN DESIGN",
+        "size": 2997
+      },
+      {
+        "file": "EVENT_SOURCING_PATTERN.md",
+        "name": "EVENT SOURCING PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "EXTENSION_PATTERN.md",
+        "name": "EXTENSION PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "FACADE_PATTERN.md",
+        "name": "FACADE PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "FACTORY_PATTERN.md",
+        "name": "FACTORY PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "FLYWEIGHT_PATTERN.md",
+        "name": "FLYWEIGHT PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "GOAL_ORIENTED_PATTERN.md",
+        "name": "GOAL ORIENTED PATTERN",
+        "size": 3003
+      },
+      {
+        "file": "HEXAGONAL_ARCHITECTURE.md",
+        "name": "HEXAGONAL ARCHITECTURE",
+        "size": 3009
+      },
+      {
+        "file": "HYBRID_AGENT_PATTERN.md",
+        "name": "HYBRID AGENT PATTERN",
+        "size": 2997
+      },
+      {
+        "file": "INTERPRETER_PATTERN.md",
+        "name": "INTERPRETER PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "LAYERED_ARCHITECTURE.md",
+        "name": "LAYERED ARCHITECTURE",
+        "size": 2997
+      },
+      {
+        "file": "LAZY_INITIALIZATION_PATTERN.md",
+        "name": "LAZY INITIALIZATION PATTERN",
+        "size": 3039
+      },
+      {
+        "file": "MEDIATOR_PATTERN.md",
+        "name": "MEDIATOR PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "MEMENTO_PATTERN.md",
+        "name": "MEMENTO PATTERN",
+        "size": 2967
+      },
+      {
+        "file": "MEMORY_PATTERN.md",
+        "name": "MEMORY PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "MICROSERVICES_PATTERN.md",
+        "name": "MICROSERVICES PATTERN",
+        "size": 3003
+      },
+      {
+        "file": "MODULAR_MONOLITH_PATTERN.md",
+        "name": "MODULAR MONOLITH PATTERN",
+        "size": 3021
+      },
+      {
+        "file": "MODULE_PATTERN.md",
+        "name": "MODULE PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "MONOLITH_PATTERN.md",
+        "name": "MONOLITH PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "MULTITON_PATTERN.md",
+        "name": "MULTITON PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "MULTI_AGENT_PATTERN.md",
+        "name": "MULTI AGENT PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "OBJECT_POOL_PATTERN.md",
+        "name": "OBJECT POOL PATTERN",
+        "size": 2991
+      },
+      {
+        "file": "OBSERVER_PATTERN.md",
+        "name": "OBSERVER PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "PLANNING_PATTERN.md",
+        "name": "PLANNING PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "PLUGIN_PATTERN.md",
+        "name": "PLUGIN PATTERN",
+        "size": 2961
+      },
+      {
+        "file": "PROTOTYPE_PATTERN.md",
+        "name": "PROTOTYPE PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "PROXY_PATTERN.md",
+        "name": "PROXY PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "REACTIVE_AGENT_PATTERN.md",
+        "name": "REACTIVE AGENT PATTERN",
+        "size": 3009
+      },
+      {
+        "file": "REFLECTION_PATTERN.md",
+        "name": "REFLECTION PATTERN",
+        "size": 2985
+      },
+      {
+        "file": "SELF_IMPROVEMENT_PATTERN.md",
+        "name": "SELF IMPROVEMENT PATTERN",
+        "size": 3021
+      },
+      {
+        "file": "SERVICE_LOCATOR_PATTERN.md",
+        "name": "SERVICE LOCATOR PATTERN",
+        "size": 3015
+      },
+      {
+        "file": "SINGLETON_PATTERN.md",
+        "name": "SINGLETON PATTERN",
+        "size": 2979
+      },
+      {
+        "file": "STATE_PATTERN.md",
+        "name": "STATE PATTERN",
+        "size": 2955
+      },
+      {
+        "file": "STRATEGY_PATTERN.md",
+        "name": "STRATEGY PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "TEMPLATE_METHOD_PATTERN.md",
+        "name": "TEMPLATE METHOD PATTERN",
+        "size": 3015
+      },
+      {
+        "file": "TOOL_USE_PATTERN.md",
+        "name": "TOOL USE PATTERN",
+        "size": 2973
+      },
+      {
+        "file": "VISITOR_PATTERN.md",
+        "name": "VISITOR PATTERN",
+        "size": 2967
+      }
+    ],
+    "count": 50
+  },
+  "14-templates": {
+    "name": "Templates",
+    "files": [
+      {
+        "file": "ANALYSIS_AGENT_TEMPLATE.md",
+        "name": "ANALYSIS AGENT TEMPLATE",
+        "size": 1425
+      },
+      {
+        "file": "APPROVAL_WORKFLOW_TEMPLATE.md",
+        "name": "APPROVAL WORKFLOW TEMPLATE",
+        "size": 1446
+      },
+      {
+        "file": "BASIC_AGENT_TEMPLATE.md",
+        "name": "BASIC AGENT TEMPLATE",
+        "size": 1404
+      },
+      {
+        "file": "BRANCHING_WORKFLOW_TEMPLATE.md",
+        "name": "BRANCHING WORKFLOW TEMPLATE",
+        "size": 1453
+      },
+      {
+        "file": "CODING_AGENT_TEMPLATE.md",
+        "name": "CODING AGENT TEMPLATE",
+        "size": 1411
+      },
+      {
+        "file": "CONVERSATIONAL_AGENT_TEMPLATE.md",
+        "name": "CONVERSATIONAL AGENT TEMPLATE",
+        "size": 1467
+      },
+      {
+        "file": "COT_TEMPLATE.md",
+        "name": "COT TEMPLATE",
+        "size": 1349
+      },
+      {
+        "file": "CREATIVE_AGENT_TEMPLATE.md",
+        "name": "CREATIVE AGENT TEMPLATE",
+        "size": 1425
+      },
+      {
+        "file": "DATA_PIPELINE_TEMPLATE.md",
+        "name": "DATA PIPELINE TEMPLATE",
+        "size": 1418
+      },
+      {
+        "file": "ERROR_PROMPT_TEMPLATE.md",
+        "name": "ERROR PROMPT TEMPLATE",
+        "size": 1411
+      },
+      {
+        "file": "ESCALATION_WORKFLOW_TEMPLATE.md",
+        "name": "ESCALATION WORKFLOW TEMPLATE",
+        "size": 1460
+      },
+      {
+        "file": "ETL_WORKFLOW_TEMPLATE.md",
+        "name": "ETL WORKFLOW TEMPLATE",
+        "size": 1411
+      },
+      {
+        "file": "FEW_SHOT_TEMPLATE.md",
+        "name": "FEW SHOT TEMPLATE",
+        "size": 1383
+      },
+      {
+        "file": "GENERALIST_AGENT_TEMPLATE.md",
+        "name": "GENERALIST AGENT TEMPLATE",
+        "size": 1439
+      },
+      {
+        "file": "INSTRUCTION_PROMPT_TEMPLATE.md",
+        "name": "INSTRUCTION PROMPT TEMPLATE",
+        "size": 1453
+      },
+      {
+        "file": "LINEAR_WORKFLOW_TEMPLATE.md",
+        "name": "LINEAR WORKFLOW TEMPLATE",
+        "size": 1432
+      },
+      {
+        "file": "MULTI_AGENT_WORKFLOW_TEMPLATE.md",
+        "name": "MULTI AGENT WORKFLOW TEMPLATE",
+        "size": 1466
+      },
+      {
+        "file": "NOTIFICATION_WORKFLOW_TEMPLATE.md",
+        "name": "NOTIFICATION WORKFLOW TEMPLATE",
+        "size": 1474
+      },
+      {
+        "file": "OUTPUT_PROMPT_TEMPLATE.md",
+        "name": "OUTPUT PROMPT TEMPLATE",
+        "size": 1418
+      },
+      {
+        "file": "PARALLEL_WORKFLOW_TEMPLATE.md",
+        "name": "PARALLEL WORKFLOW TEMPLATE",
+        "size": 1446
+      },
+      {
+        "file": "REACT_TEMPLATE.md",
+        "name": "REACT TEMPLATE",
+        "size": 1363
+      },
+      {
+        "file": "RESEARCH_AGENT_TEMPLATE.md",
+        "name": "RESEARCH AGENT TEMPLATE",
+        "size": 1425
+      },
+      {
+        "file": "REVIEW_WORKFLOW_TEMPLATE.md",
+        "name": "REVIEW WORKFLOW TEMPLATE",
+        "size": 1432
+      },
+      {
+        "file": "ROLE_PROMPT_TEMPLATE.md",
+        "name": "ROLE PROMPT TEMPLATE",
+        "size": 1404
+      },
+      {
+        "file": "SPECIALIST_AGENT_TEMPLATE.md",
+        "name": "SPECIALIST AGENT TEMPLATE",
+        "size": 1439
+      },
+      {
+        "file": "SUPERVISOR_AGENT_TEMPLATE.md",
+        "name": "SUPERVISOR AGENT TEMPLATE",
+        "size": 1439
+      },
+      {
+        "file": "SYSTEM_PROMPT_TEMPLATE.md",
+        "name": "SYSTEM PROMPT TEMPLATE",
+        "size": 1418
+      },
+      {
+        "file": "TASK_AGENT_TEMPLATE.md",
+        "name": "TASK AGENT TEMPLATE",
+        "size": 1397
+      },
+      {
+        "file": "TASK_PROMPT_TEMPLATE.md",
+        "name": "TASK PROMPT TEMPLATE",
+        "size": 1404
+      },
+      {
+        "file": "VALIDATION_PROMPT_TEMPLATE.md",
+        "name": "VALIDATION PROMPT TEMPLATE",
+        "size": 1446
+      }
+    ],
+    "count": 30
+  },
+  "15-examples": {
+    "name": "Examples",
+    "files": [
+      {
+        "file": "ADAPTIVE_ASSISTANT.md",
+        "name": "ADAPTIVE ASSISTANT",
+        "size": 1391
+      },
+      {
+        "file": "AUTONOMOUS_CODER.md",
+        "name": "AUTONOMOUS CODER",
+        "size": 1377
+      },
+      {
+        "file": "AUTONOMOUS_RESEARCHER.md",
+        "name": "AUTONOMOUS RESEARCHER",
+        "size": 1412
+      },
+      {
+        "file": "CODE_ASSISTANT.md",
+        "name": "CODE ASSISTANT",
+        "size": 1363
+      },
+      {
+        "file": "CODE_REVIEW_AUTOMATION.md",
+        "name": "CODE REVIEW AUTOMATION",
+        "size": 1418
+      },
+      {
+        "file": "COMPLEX_WORKFLOW.md",
+        "name": "COMPLEX WORKFLOW",
+        "size": 1377
+      },
+      {
+        "file": "CONTENT_MODERATION.md",
+        "name": "CONTENT MODERATION",
+        "size": 1391
+      },
+      {
+        "file": "CUSTOMER_SUPPORT_BOT.md",
+        "name": "CUSTOMER SUPPORT BOT",
+        "size": 1404
+      },
+      {
+        "file": "DATA_ANALYST_EXAMPLE.md",
+        "name": "DATA ANALYST EXAMPLE",
+        "size": 1404
+      },
+      {
+        "file": "DOCUMENT_PROCESSING.md",
+        "name": "DOCUMENT PROCESSING",
+        "size": 1398
+      },
+      {
+        "file": "EMAIL_AUTOMATION.md",
+        "name": "EMAIL AUTOMATION",
+        "size": 1377
+      },
+      {
+        "file": "ENTERPRISE_AGENT.md",
+        "name": "ENTERPRISE AGENT",
+        "size": 1377
+      },
+      {
+        "file": "FINANCE_ASSISTANT.md",
+        "name": "FINANCE ASSISTANT",
+        "size": 1384
+      },
+      {
+        "file": "FRAUD_DETECTION.md",
+        "name": "FRAUD DETECTION",
+        "size": 1370
+      },
+      {
+        "file": "HELLO_WORLD_AGENT.md",
+        "name": "HELLO WORLD AGENT",
+        "size": 1383
+      },
+      {
+        "file": "HR_ASSISTANT.md",
+        "name": "HR ASSISTANT",
+        "size": 1349
+      },
+      {
+        "file": "INCIDENT_RESPONSE.md",
+        "name": "INCIDENT RESPONSE",
+        "size": 1384
+      },
+      {
+        "file": "KNOWLEDGE_BASE_QA.md",
+        "name": "KNOWLEDGE BASE QA",
+        "size": 1383
+      },
+      {
+        "file": "LEAD_QUALIFICATION.md",
+        "name": "LEAD QUALIFICATION",
+        "size": 1391
+      },
+      {
+        "file": "LEGAL_ASSISTANT.md",
+        "name": "LEGAL ASSISTANT",
+        "size": 1370
+      },
+      {
+        "file": "MARKETING_ASSISTANT.md",
+        "name": "MARKETING ASSISTANT",
+        "size": 1398
+      },
+      {
+        "file": "MEETING_SUMMARIZATION.md",
+        "name": "MEETING SUMMARIZATION",
+        "size": 1412
+      },
+      {
+        "file": "MULTI_AGENT_DEVELOPMENT.md",
+        "name": "MULTI AGENT DEVELOPMENT",
+        "size": 1425
+      },
+      {
+        "file": "MULTI_AGENT_RESEARCH.md",
+        "name": "MULTI AGENT RESEARCH",
+        "size": 1404
+      },
+      {
+        "file": "PRODUCTION_READY_AGENT.md",
+        "name": "PRODUCTION READY AGENT",
+        "size": 1418
+      },
+      {
+        "file": "RECOMMENDATION_ENGINE.md",
+        "name": "RECOMMENDATION ENGINE",
+        "size": 1412
+      },
+      {
+        "file": "RESEARCH_ASSISTANT.md",
+        "name": "RESEARCH ASSISTANT",
+        "size": 1391
+      },
+      {
+        "file": "SALES_ASSISTANT.md",
+        "name": "SALES ASSISTANT",
+        "size": 1370
+      },
+      {
+        "file": "SCALABLE_MULTI_AGENT.md",
+        "name": "SCALABLE MULTI AGENT",
+        "size": 1404
+      },
+      {
+        "file": "SELF_IMPROVING_AGENT.md",
+        "name": "SELF IMPROVING AGENT",
+        "size": 1404
+      },
+      {
+        "file": "SIMPLE_CALCULATOR.md",
+        "name": "SIMPLE CALCULATOR",
+        "size": 1384
+      },
+      {
+        "file": "SIMPLE_CHATBOT.md",
+        "name": "SIMPLE CHATBOT",
+        "size": 1363
+      },
+      {
+        "file": "SIMPLE_CLASSIFIER.md",
+        "name": "SIMPLE CLASSIFIER",
+        "size": 1384
+      },
+      {
+        "file": "SIMPLE_EXTRACTOR.md",
+        "name": "SIMPLE EXTRACTOR",
+        "size": 1377
+      },
+      {
+        "file": "SIMPLE_GENERATOR.md",
+        "name": "SIMPLE GENERATOR",
+        "size": 1377
+      },
+      {
+        "file": "SIMPLE_QA_BOT.md",
+        "name": "SIMPLE QA BOT",
+        "size": 1355
+      },
+      {
+        "file": "SIMPLE_SUMMARIZER.md",
+        "name": "SIMPLE SUMMARIZER",
+        "size": 1384
+      },
+      {
+        "file": "SIMPLE_TRANSLATOR.md",
+        "name": "SIMPLE TRANSLATOR",
+        "size": 1384
+      },
+      {
+        "file": "SIMPLE_VALIDATOR.md",
+        "name": "SIMPLE VALIDATOR",
+        "size": 1377
+      },
+      {
+        "file": "WRITING_ASSISTANT.md",
+        "name": "WRITING ASSISTANT",
+        "size": 1384
+      }
+    ],
+    "count": 40
+  },
+  "16-config": {
+    "name": "Config",
+    "files": [
+      {
+        "file": "ACTION_CONFIG.md",
+        "name": "ACTION CONFIG",
+        "size": 1356
+      },
+      {
+        "file": "AGENT_CONFIG_SCHEMA.md",
+        "name": "AGENT CONFIG SCHEMA",
+        "size": 1397
+      },
+      {
+        "file": "ALERTING_CONFIG.md",
+        "name": "ALERTING CONFIG",
+        "size": 1370
+      },
+      {
+        "file": "ANSIBLE_CONFIG.md",
+        "name": "ANSIBLE CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "CI_CD_CONFIG.md",
+        "name": "CI CD CONFIG",
+        "size": 1348
+      },
+      {
+        "file": "CONDITION_CONFIG.md",
+        "name": "CONDITION CONFIG",
+        "size": 1377
+      },
+      {
+        "file": "COST_LIMITS.md",
+        "name": "COST LIMITS",
+        "size": 1342
+      },
+      {
+        "file": "DOCKER_CONFIG.md",
+        "name": "DOCKER CONFIG",
+        "size": 1356
+      },
+      {
+        "file": "ENVIRONMENT_CONFIG.md",
+        "name": "ENVIRONMENT CONFIG",
+        "size": 1391
+      },
+      {
+        "file": "FEATURE_FLAGS_CONFIG.md",
+        "name": "FEATURE FLAGS CONFIG",
+        "size": 1404
+      },
+      {
+        "file": "INTEGRATION_CONFIG.md",
+        "name": "INTEGRATION CONFIG",
+        "size": 1391
+      },
+      {
+        "file": "KUBERNETES_CONFIG.md",
+        "name": "KUBERNETES CONFIG",
+        "size": 1384
+      },
+      {
+        "file": "LOGGING_CONFIG.md",
+        "name": "LOGGING CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "METRICS_CONFIG.md",
+        "name": "METRICS CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "MODEL_CONFIG.md",
+        "name": "MODEL CONFIG",
+        "size": 1349
+      },
+      {
+        "file": "MONITORING_CONFIG.md",
+        "name": "MONITORING CONFIG",
+        "size": 1384
+      },
+      {
+        "file": "NOTIFICATION_CONFIG.md",
+        "name": "NOTIFICATION CONFIG",
+        "size": 1398
+      },
+      {
+        "file": "RATE_LIMIT_CONFIG.md",
+        "name": "RATE LIMIT CONFIG",
+        "size": 1383
+      },
+      {
+        "file": "RETRY_CONFIG.md",
+        "name": "RETRY CONFIG",
+        "size": 1349
+      },
+      {
+        "file": "SCALING_CONFIG.md",
+        "name": "SCALING CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "SCHEDULE_CONFIG.md",
+        "name": "SCHEDULE CONFIG",
+        "size": 1370
+      },
+      {
+        "file": "SECRETS_CONFIG.md",
+        "name": "SECRETS CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "STEP_CONFIG.md",
+        "name": "STEP CONFIG",
+        "size": 1342
+      },
+      {
+        "file": "TEMPERATURE_SETTINGS.md",
+        "name": "TEMPERATURE SETTINGS",
+        "size": 1405
+      },
+      {
+        "file": "TERRAFORM_CONFIG.md",
+        "name": "TERRAFORM CONFIG",
+        "size": 1377
+      },
+      {
+        "file": "TIMEOUT_CONFIG.md",
+        "name": "TIMEOUT CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "TOKEN_LIMITS.md",
+        "name": "TOKEN LIMITS",
+        "size": 1349
+      },
+      {
+        "file": "TRANSITION_CONFIG.md",
+        "name": "TRANSITION CONFIG",
+        "size": 1384
+      },
+      {
+        "file": "TRIGGER_CONFIG.md",
+        "name": "TRIGGER CONFIG",
+        "size": 1363
+      },
+      {
+        "file": "WORKFLOW_CONFIG_SCHEMA.md",
+        "name": "WORKFLOW CONFIG SCHEMA",
+        "size": 1418
+      }
+    ],
+    "count": 30
+  },
+  "17-knowledge": {
+    "name": "Knowledge",
+    "files": [
+      {
+        "file": "API_DATA_INGESTION.md",
+        "name": "API DATA INGESTION",
+        "size": 1390
+      },
+      {
+        "file": "ATTRIBUTE_MODELING.md",
+        "name": "ATTRIBUTE MODELING",
+        "size": 1391
+      },
+      {
+        "file": "CONSTRAINT_MODELING.md",
+        "name": "CONSTRAINT MODELING",
+        "size": 1398
+      },
+      {
+        "file": "COREFERENCE_RESOLUTION.md",
+        "name": "COREFERENCE RESOLUTION",
+        "size": 1419
+      },
+      {
+        "file": "CROWDSOURCING.md",
+        "name": "CROWDSOURCING",
+        "size": 1357
+      },
+      {
+        "file": "DATABASE_INTEGRATION.md",
+        "name": "DATABASE INTEGRATION",
+        "size": 1405
+      },
+      {
+        "file": "DOCUMENT_PARSING.md",
+        "name": "DOCUMENT PARSING",
+        "size": 1377
+      },
+      {
+        "file": "ENTITY_EXTRACTION.md",
+        "name": "ENTITY EXTRACTION",
+        "size": 1384
+      },
+      {
+        "file": "ENTITY_LINKING.md",
+        "name": "ENTITY LINKING",
+        "size": 1363
+      },
+      {
+        "file": "ENTITY_MODELING.md",
+        "name": "ENTITY MODELING",
+        "size": 1370
+      },
+      {
+        "file": "EXPERT_ELICITATION.md",
+        "name": "EXPERT ELICITATION",
+        "size": 1391
+      },
+      {
+        "file": "GRAPH_COMPLETION.md",
+        "name": "GRAPH COMPLETION",
+        "size": 1377
+      },
+      {
+        "file": "GRAPH_CONSTRUCTION.md",
+        "name": "GRAPH CONSTRUCTION",
+        "size": 1391
+      },
+      {
+        "file": "GRAPH_EMBEDDING.md",
+        "name": "GRAPH EMBEDDING",
+        "size": 1370
+      },
+      {
+        "file": "GRAPH_QUERYING.md",
+        "name": "GRAPH QUERYING",
+        "size": 1363
+      },
+      {
+        "file": "GRAPH_REASONING.md",
+        "name": "GRAPH REASONING",
+        "size": 1370
+      },
+      {
+        "file": "KNOWLEDGE_ARCHIVAL.md",
+        "name": "KNOWLEDGE ARCHIVAL",
+        "size": 1391
+      },
+      {
+        "file": "KNOWLEDGE_BASE_DESIGN.md",
+        "name": "KNOWLEDGE BASE DESIGN",
+        "size": 1411
+      },
+      {
+        "file": "KNOWLEDGE_COMPLETENESS.md",
+        "name": "KNOWLEDGE COMPLETENESS",
+        "size": 1419
+      },
+      {
+        "file": "KNOWLEDGE_CONSISTENCY.md",
+        "name": "KNOWLEDGE CONSISTENCY",
+        "size": 1412
+      },
+      {
+        "file": "KNOWLEDGE_DEPRECATION.md",
+        "name": "KNOWLEDGE DEPRECATION",
+        "size": 1412
+      },
+      {
+        "file": "KNOWLEDGE_EXTRACTION.md",
+        "name": "KNOWLEDGE EXTRACTION",
+        "size": 1405
+      },
+      {
+        "file": "KNOWLEDGE_FRESHNESS.md",
+        "name": "KNOWLEDGE FRESHNESS",
+        "size": 1398
+      },
+      {
+        "file": "KNOWLEDGE_GOVERNANCE.md",
+        "name": "KNOWLEDGE GOVERNANCE",
+        "size": 1405
+      },
+      {
+        "file": "KNOWLEDGE_GRAPH_FUNDAMENTALS.md",
+        "name": "KNOWLEDGE GRAPH FUNDAMENTALS",
+        "size": 1460
+      },
+      {
+        "file": "KNOWLEDGE_ORGANIZATION.md",
+        "name": "KNOWLEDGE ORGANIZATION",
+        "size": 1419
+      },
+      {
+        "file": "KNOWLEDGE_QUALITY.md",
+        "name": "KNOWLEDGE QUALITY",
+        "size": 1384
+      },
+      {
+        "file": "KNOWLEDGE_REPRESENTATION.md",
+        "name": "KNOWLEDGE REPRESENTATION",
+        "size": 1433
+      },
+      {
+        "file": "KNOWLEDGE_UPDATE.md",
+        "name": "KNOWLEDGE UPDATE",
+        "size": 1377
+      },
+      {
+        "file": "KNOWLEDGE_VALIDATION.md",
+        "name": "KNOWLEDGE VALIDATION",
+        "size": 1405
+      },
+      {
+        "file": "KNOWLEDGE_VERSIONING.md",
+        "name": "KNOWLEDGE VERSIONING",
+        "size": 1405
+      },
+      {
+        "file": "MANUAL_CURATION.md",
+        "name": "MANUAL CURATION",
+        "size": 1370
+      },
+      {
+        "file": "ONTOLOGY_DESIGN.md",
+        "name": "ONTOLOGY DESIGN",
+        "size": 1370
+      },
+      {
+        "file": "RELATIONSHIP_MODELING.md",
+        "name": "RELATIONSHIP MODELING",
+        "size": 1412
+      },
+      {
+        "file": "RELATION_EXTRACTION.md",
+        "name": "RELATION EXTRACTION",
+        "size": 1398
+      },
+      {
+        "file": "SCHEMA_DESIGN.md",
+        "name": "SCHEMA DESIGN",
+        "size": 1356
+      },
+      {
+        "file": "STRUCTURED_DATA_EXTRACTION.md",
+        "name": "STRUCTURED DATA EXTRACTION",
+        "size": 1446
+      },
+      {
+        "file": "TAXONOMY_DESIGN.md",
+        "name": "TAXONOMY DESIGN",
+        "size": 1370
+      },
+      {
+        "file": "UNSTRUCTURED_DATA_EXTRACTION.md",
+        "name": "UNSTRUCTURED DATA EXTRACTION",
+        "size": 1460
+      },
+      {
+        "file": "WEB_SCRAPING_KNOWLEDGE.md",
+        "name": "WEB SCRAPING KNOWLEDGE",
+        "size": 1418
+      }
+    ],
+    "count": 40
+  },
+  "18-human-loop": {
+    "name": "Human Loop",
+    "files": [
+      {
+        "file": "ACTIVE_LEARNING.md",
+        "name": "ACTIVE LEARNING",
+        "size": 1370
+      },
+      {
+        "file": "ANALYTICS_UI.md",
+        "name": "ANALYTICS UI",
+        "size": 1349
+      },
+      {
+        "file": "APPROVAL_INTERFACES.md",
+        "name": "APPROVAL INTERFACES",
+        "size": 1398
+      },
+      {
+        "file": "APPROVAL_WORKFLOWS.md",
+        "name": "APPROVAL WORKFLOWS",
+        "size": 1391
+      },
+      {
+        "file": "A_B_TESTING_HITL.md",
+        "name": "A B TESTING HITL",
+        "size": 1375
+      },
+      {
+        "file": "CHAT_INTERFACES.md",
+        "name": "CHAT INTERFACES",
+        "size": 1370
+      },
+      {
+        "file": "CONFIGURATION_UI.md",
+        "name": "CONFIGURATION UI",
+        "size": 1377
+      },
+      {
+        "file": "CONTINUOUS_IMPROVEMENT.md",
+        "name": "CONTINUOUS IMPROVEMENT",
+        "size": 1419
+      },
+      {
+        "file": "CORRECTION_MECHANISMS.md",
+        "name": "CORRECTION MECHANISMS",
+        "size": 1412
+      },
+      {
+        "file": "DASHBOARD_DESIGN.md",
+        "name": "DASHBOARD DESIGN",
+        "size": 1377
+      },
+      {
+        "file": "ESCALATION_DESIGN.md",
+        "name": "ESCALATION DESIGN",
+        "size": 1384
+      },
+      {
+        "file": "EXPLICIT_FEEDBACK.md",
+        "name": "EXPLICIT FEEDBACK",
+        "size": 1384
+      },
+      {
+        "file": "FALLBACK_STRATEGIES.md",
+        "name": "FALLBACK STRATEGIES",
+        "size": 1398
+      },
+      {
+        "file": "FEEDBACK_COLLECTION.md",
+        "name": "FEEDBACK COLLECTION",
+        "size": 1398
+      },
+      {
+        "file": "FEEDBACK_LOOPS.md",
+        "name": "FEEDBACK LOOPS",
+        "size": 1363
+      },
+      {
+        "file": "FORM_DESIGN.md",
+        "name": "FORM DESIGN",
+        "size": 1342
+      },
+      {
+        "file": "HANDOFF_PROTOCOLS.md",
+        "name": "HANDOFF PROTOCOLS",
+        "size": 1384
+      },
+      {
+        "file": "HITL_FUNDAMENTALS.md",
+        "name": "HITL FUNDAMENTALS",
+        "size": 1384
+      },
+      {
+        "file": "HITL_PATTERNS.md",
+        "name": "HITL PATTERNS",
+        "size": 1356
+      },
+      {
+        "file": "HUMAN_AGENT_INTERACTION.md",
+        "name": "HUMAN AGENT INTERACTION",
+        "size": 1425
+      },
+      {
+        "file": "IMPLICIT_FEEDBACK.md",
+        "name": "IMPLICIT FEEDBACK",
+        "size": 1384
+      },
+      {
+        "file": "MONITORING_UI.md",
+        "name": "MONITORING UI",
+        "size": 1356
+      },
+      {
+        "file": "NOTIFICATION_DESIGN.md",
+        "name": "NOTIFICATION DESIGN",
+        "size": 1398
+      },
+      {
+        "file": "OVERRIDE_MECHANISMS.md",
+        "name": "OVERRIDE MECHANISMS",
+        "size": 1398
+      },
+      {
+        "file": "PREFERENCE_LEARNING.md",
+        "name": "PREFERENCE LEARNING",
+        "size": 1398
+      },
+      {
+        "file": "REVIEW_INTERFACES.md",
+        "name": "REVIEW INTERFACES",
+        "size": 1384
+      },
+      {
+        "file": "REVIEW_PROCESSES.md",
+        "name": "REVIEW PROCESSES",
+        "size": 1377
+      },
+      {
+        "file": "RLHF_BASICS.md",
+        "name": "RLHF BASICS",
+        "size": 1342
+      },
+      {
+        "file": "USER_RESEARCH.md",
+        "name": "USER RESEARCH",
+        "size": 1356
+      },
+      {
+        "file": "WIZARD_DESIGN.md",
+        "name": "WIZARD DESIGN",
+        "size": 1356
+      }
+    ],
+    "count": 30
+  },
+  "19-multimodal": {
+    "name": "Multimodal",
+    "files": [
+      {
+        "file": "ACTION_RECOGNITION.md",
+        "name": "ACTION RECOGNITION",
+        "size": 3049
+      },
+      {
+        "file": "AUDIO_CLASSIFICATION.md",
+        "name": "AUDIO CLASSIFICATION",
+        "size": 3061
+      },
+      {
+        "file": "AUDIO_FUNDAMENTALS.md",
+        "name": "AUDIO FUNDAMENTALS",
+        "size": 3049
+      },
+      {
+        "file": "AUDIO_GENERATION.md",
+        "name": "AUDIO GENERATION",
+        "size": 3037
+      },
+      {
+        "file": "CHART_UNDERSTANDING.md",
+        "name": "CHART UNDERSTANDING",
+        "size": 3055
+      },
+      {
+        "file": "CROSS_MODAL_ATTENTION.md",
+        "name": "CROSS MODAL ATTENTION",
+        "size": 3067
+      },
+      {
+        "file": "DIAGRAM_UNDERSTANDING.md",
+        "name": "DIAGRAM UNDERSTANDING",
+        "size": 3067
+      },
+      {
+        "file": "DOCUMENT_VISION.md",
+        "name": "DOCUMENT VISION",
+        "size": 3031
+      },
+      {
+        "file": "EARLY_FUSION.md",
+        "name": "EARLY FUSION",
+        "size": 3013
+      },
+      {
+        "file": "EMOTION_DETECTION.md",
+        "name": "EMOTION DETECTION",
+        "size": 3043
+      },
+      {
+        "file": "IMAGE_CLASSIFICATION.md",
+        "name": "IMAGE CLASSIFICATION",
+        "size": 3061
+      },
+      {
+        "file": "IMAGE_SEGMENTATION.md",
+        "name": "IMAGE SEGMENTATION",
+        "size": 3049
+      },
+      {
+        "file": "IMAGE_UNDERSTANDING.md",
+        "name": "IMAGE UNDERSTANDING",
+        "size": 3055
+      },
+      {
+        "file": "LATE_FUSION.md",
+        "name": "LATE FUSION",
+        "size": 3007
+      },
+      {
+        "file": "LIVE_VIDEO_PROCESSING.md",
+        "name": "LIVE VIDEO PROCESSING",
+        "size": 3067
+      },
+      {
+        "file": "MULTIMODAL_AGENTS.md",
+        "name": "MULTIMODAL AGENTS",
+        "size": 3043
+      },
+      {
+        "file": "MULTIMODAL_EMBEDDING.md",
+        "name": "MULTIMODAL EMBEDDING",
+        "size": 3061
+      },
+      {
+        "file": "MULTIMODAL_FUSION.md",
+        "name": "MULTIMODAL FUSION",
+        "size": 3043
+      },
+      {
+        "file": "MULTIMODAL_GENERATION.md",
+        "name": "MULTIMODAL GENERATION",
+        "size": 3067
+      },
+      {
+        "file": "MULTIMODAL_REASONING.md",
+        "name": "MULTIMODAL REASONING",
+        "size": 3061
+      },
+      {
+        "file": "MULTIMODAL_RETRIEVAL.md",
+        "name": "MULTIMODAL RETRIEVAL",
+        "size": 3061
+      },
+      {
+        "file": "MULTIMODAL_WORKFLOWS.md",
+        "name": "MULTIMODAL WORKFLOWS",
+        "size": 3061
+      },
+      {
+        "file": "MUSIC_ANALYSIS.md",
+        "name": "MUSIC ANALYSIS",
+        "size": 3025
+      },
+      {
+        "file": "OBJECT_DETECTION.md",
+        "name": "OBJECT DETECTION",
+        "size": 3037
+      },
+      {
+        "file": "OCR_INTEGRATION.md",
+        "name": "OCR INTEGRATION",
+        "size": 3031
+      },
+      {
+        "file": "SCENE_DETECTION.md",
+        "name": "SCENE DETECTION",
+        "size": 3031
+      },
+      {
+        "file": "SCREENSHOT_ANALYSIS.md",
+        "name": "SCREENSHOT ANALYSIS",
+        "size": 3055
+      },
+      {
+        "file": "SOUND_DETECTION.md",
+        "name": "SOUND DETECTION",
+        "size": 3031
+      },
+      {
+        "file": "SPEAKER_IDENTIFICATION.md",
+        "name": "SPEAKER IDENTIFICATION",
+        "size": 3073
+      },
+      {
+        "file": "SPEECH_RECOGNITION.md",
+        "name": "SPEECH RECOGNITION",
+        "size": 3049
+      },
+      {
+        "file": "TEMPORAL_ANALYSIS.md",
+        "name": "TEMPORAL ANALYSIS",
+        "size": 3043
+      },
+      {
+        "file": "TEXT_TO_SPEECH.md",
+        "name": "TEXT TO SPEECH",
+        "size": 3025
+      },
+      {
+        "file": "TRANSCRIPTION.md",
+        "name": "TRANSCRIPTION",
+        "size": 3019
+      },
+      {
+        "file": "VIDEO_FUNDAMENTALS.md",
+        "name": "VIDEO FUNDAMENTALS",
+        "size": 3049
+      },
+      {
+        "file": "VIDEO_GENERATION.md",
+        "name": "VIDEO GENERATION",
+        "size": 3037
+      },
+      {
+        "file": "VIDEO_QA.md",
+        "name": "VIDEO QA",
+        "size": 2989
+      },
+      {
+        "file": "VIDEO_SEARCH.md",
+        "name": "VIDEO SEARCH",
+        "size": 3013
+      },
+      {
+        "file": "VIDEO_SUMMARIZATION.md",
+        "name": "VIDEO SUMMARIZATION",
+        "size": 3055
+      },
+      {
+        "file": "VIDEO_UNDERSTANDING.md",
+        "name": "VIDEO UNDERSTANDING",
+        "size": 3055
+      },
+      {
+        "file": "VISION_FUNDAMENTALS.md",
+        "name": "VISION FUNDAMENTALS",
+        "size": 3055
+      }
+    ],
+    "count": 40
+  },
+  "20-advanced": {
+    "name": "Advanced",
+    "files": [
+      {
+        "file": "ABDUCTIVE_REASONING.md",
+        "name": "ABDUCTIVE REASONING",
+        "size": 1398
+      },
+      {
+        "file": "ADAPTIVE_BEHAVIOR.md",
+        "name": "ADAPTIVE BEHAVIOR",
+        "size": 1384
+      },
+      {
+        "file": "ALIGNMENT_FUNDAMENTALS.md",
+        "name": "ALIGNMENT FUNDAMENTALS",
+        "size": 1419
+      },
+      {
+        "file": "ANALOGICAL_REASONING.md",
+        "name": "ANALOGICAL REASONING",
+        "size": 1405
+      },
+      {
+        "file": "AUTONOMY_LEVELS.md",
+        "name": "AUTONOMY LEVELS",
+        "size": 1370
+      },
+      {
+        "file": "CAUSAL_REASONING.md",
+        "name": "CAUSAL REASONING",
+        "size": 1377
+      },
+      {
+        "file": "COMMON_SENSE_REASONING.md",
+        "name": "COMMON SENSE REASONING",
+        "size": 1418
+      },
+      {
+        "file": "CONTINGENCY_PLANNING.md",
+        "name": "CONTINGENCY PLANNING",
+        "size": 1405
+      },
+      {
+        "file": "CONTINUAL_LEARNING.md",
+        "name": "CONTINUAL LEARNING",
+        "size": 1391
+      },
+      {
+        "file": "CORRIGIBILITY.md",
+        "name": "CORRIGIBILITY",
+        "size": 1357
+      },
+      {
+        "file": "CURRICULUM_LEARNING.md",
+        "name": "CURRICULUM LEARNING",
+        "size": 1398
+      },
+      {
+        "file": "DECISION_MAKING.md",
+        "name": "DECISION MAKING",
+        "size": 1370
+      },
+      {
+        "file": "DEDUCTIVE_REASONING.md",
+        "name": "DEDUCTIVE REASONING",
+        "size": 1398
+      },
+      {
+        "file": "EXPLAINABILITY.md",
+        "name": "EXPLAINABILITY",
+        "size": 1364
+      },
+      {
+        "file": "FEW_SHOT_LEARNING.md",
+        "name": "FEW SHOT LEARNING",
+        "size": 1383
+      },
+      {
+        "file": "GOAL_ALIGNMENT.md",
+        "name": "GOAL ALIGNMENT",
+        "size": 1363
+      },
+      {
+        "file": "GOAL_DECOMPOSITION.md",
+        "name": "GOAL DECOMPOSITION",
+        "size": 1391
+      },
+      {
+        "file": "GOAL_SETTING.md",
+        "name": "GOAL SETTING",
+        "size": 1349
+      },
+      {
+        "file": "HIERARCHICAL_PLANNING.md",
+        "name": "HIERARCHICAL PLANNING",
+        "size": 1412
+      },
+      {
+        "file": "INDUCTIVE_REASONING.md",
+        "name": "INDUCTIVE REASONING",
+        "size": 1398
+      },
+      {
+        "file": "INITIATIVE_TAKING.md",
+        "name": "INITIATIVE TAKING",
+        "size": 1384
+      },
+      {
+        "file": "INTERPRETABILITY.md",
+        "name": "INTERPRETABILITY",
+        "size": 1378
+      },
+      {
+        "file": "META_LEARNING.md",
+        "name": "META LEARNING",
+        "size": 1356
+      },
+      {
+        "file": "PLANNING_FUNDAMENTALS.md",
+        "name": "PLANNING FUNDAMENTALS",
+        "size": 1412
+      },
+      {
+        "file": "PLAN_EXECUTION.md",
+        "name": "PLAN EXECUTION",
+        "size": 1363
+      },
+      {
+        "file": "PLAN_MONITORING.md",
+        "name": "PLAN MONITORING",
+        "size": 1370
+      },
+      {
+        "file": "PRIORITY_MANAGEMENT.md",
+        "name": "PRIORITY MANAGEMENT",
+        "size": 1398
+      },
+      {
+        "file": "PROACTIVE_BEHAVIOR.md",
+        "name": "PROACTIVE BEHAVIOR",
+        "size": 1391
+      },
+      {
+        "file": "PROBABILISTIC_REASONING.md",
+        "name": "PROBABILISTIC REASONING",
+        "size": 1426
+      },
+      {
+        "file": "REASONING_FUNDAMENTALS.md",
+        "name": "REASONING FUNDAMENTALS",
+        "size": 1419
+      },
+      {
+        "file": "REPLANNING.md",
+        "name": "REPLANNING",
+        "size": 1336
+      },
+      {
+        "file": "RESOURCE_MANAGEMENT.md",
+        "name": "RESOURCE MANAGEMENT",
+        "size": 1398
+      },
+      {
+        "file": "RESOURCE_PLANNING.md",
+        "name": "RESOURCE PLANNING",
+        "size": 1384
+      },
+      {
+        "file": "REWARD_HACKING.md",
+        "name": "REWARD HACKING",
+        "size": 1363
+      },
+      {
+        "file": "SELF_CORRECTION.md",
+        "name": "SELF CORRECTION",
+        "size": 1370
+      },
+      {
+        "file": "SELF_CRITIQUE.md",
+        "name": "SELF CRITIQUE",
+        "size": 1356
+      },
+      {
+        "file": "SELF_DIRECTION.md",
+        "name": "SELF DIRECTION",
+        "size": 1363
+      },
+      {
+        "file": "SELF_IMPROVEMENT.md",
+        "name": "SELF IMPROVEMENT",
+        "size": 1377
+      },
+      {
+        "file": "SELF_REFLECTION.md",
+        "name": "SELF REFLECTION",
+        "size": 1370
+      },
+      {
+        "file": "SIDE_EFFECTS.md",
+        "name": "SIDE EFFECTS",
+        "size": 1349
+      },
+      {
+        "file": "SPATIAL_REASONING.md",
+        "name": "SPATIAL REASONING",
+        "size": 1384
+      },
+      {
+        "file": "SPECIFICATION_GAMING.md",
+        "name": "SPECIFICATION GAMING",
+        "size": 1405
+      },
+      {
+        "file": "TASK_PLANNING.md",
+        "name": "TASK PLANNING",
+        "size": 1356
+      },
+      {
+        "file": "TEMPORAL_PLANNING.md",
+        "name": "TEMPORAL PLANNING",
+        "size": 1384
+      },
+      {
+        "file": "TEMPORAL_REASONING.md",
+        "name": "TEMPORAL REASONING",
+        "size": 1391
+      },
+      {
+        "file": "TIME_MANAGEMENT.md",
+        "name": "TIME MANAGEMENT",
+        "size": 1370
+      },
+      {
+        "file": "TRANSFER_LEARNING.md",
+        "name": "TRANSFER LEARNING",
+        "size": 1384
+      },
+      {
+        "file": "TRANSPARENCY.md",
+        "name": "TRANSPARENCY",
+        "size": 1350
+      },
+      {
+        "file": "VALUE_ALIGNMENT.md",
+        "name": "VALUE ALIGNMENT",
+        "size": 1370
+      },
+      {
+        "file": "ZERO_SHOT_LEARNING.md",
+        "name": "ZERO SHOT LEARNING",
+        "size": 1390
+      }
+    ],
+    "count": 50
+  },
+  "21-domain-specific": {
+    "name": "Domain Specific",
+    "files": [
+      {
+        "file": "ADAPTIVE_LEARNING_AGENT.md",
+        "name": "ADAPTIVE LEARNING AGENT",
+        "size": 3084
+      },
+      {
+        "file": "ASSESSMENT_AGENT.md",
+        "name": "ASSESSMENT AGENT",
+        "size": 3042
+      },
+      {
+        "file": "CART_ABANDONMENT_AGENT.md",
+        "name": "CART ABANDONMENT AGENT",
+        "size": 3078
+      },
+      {
+        "file": "CASE_ANALYSIS_AGENT.md",
+        "name": "CASE ANALYSIS AGENT",
+        "size": 3060
+      },
+      {
+        "file": "CLINICAL_DECISION_SUPPORT.md",
+        "name": "CLINICAL DECISION SUPPORT",
+        "size": 3096
+      },
+      {
+        "file": "COMPLIANCE_AGENT.md",
+        "name": "COMPLIANCE AGENT",
+        "size": 3042
+      },
+      {
+        "file": "CONTRACT_REVIEW_AGENT.md",
+        "name": "CONTRACT REVIEW AGENT",
+        "size": 3072
+      },
+      {
+        "file": "CREDIT_SCORING_AGENT.md",
+        "name": "CREDIT SCORING AGENT",
+        "size": 3066
+      },
+      {
+        "file": "CURRICULUM_AGENT.md",
+        "name": "CURRICULUM AGENT",
+        "size": 3042
+      },
+      {
+        "file": "CUSTOMER_SERVICE_AGENT.md",
+        "name": "CUSTOMER SERVICE AGENT",
+        "size": 3078
+      },
+      {
+        "file": "DEFECT_DETECTION_AGENT.md",
+        "name": "DEFECT DETECTION AGENT",
+        "size": 3078
+      },
+      {
+        "file": "DOCUMENT_DRAFTING_AGENT.md",
+        "name": "DOCUMENT DRAFTING AGENT",
+        "size": 3084
+      },
+      {
+        "file": "DRUG_INTERACTION.md",
+        "name": "DRUG INTERACTION",
+        "size": 3042
+      },
+      {
+        "file": "DUE_DILIGENCE_AGENT.md",
+        "name": "DUE DILIGENCE AGENT",
+        "size": 3060
+      },
+      {
+        "file": "ECOMMERCE_AGENTS.md",
+        "name": "ECOMMERCE AGENTS",
+        "size": 3042
+      },
+      {
+        "file": "EDUCATION_AGENTS.md",
+        "name": "EDUCATION AGENTS",
+        "size": 3042
+      },
+      {
+        "file": "EXPLANATION_AGENT.md",
+        "name": "EXPLANATION AGENT",
+        "size": 3048
+      },
+      {
+        "file": "E_DISCOVERY_AGENT.md",
+        "name": "E DISCOVERY AGENT",
+        "size": 3048
+      },
+      {
+        "file": "FEEDBACK_AGENT.md",
+        "name": "FEEDBACK AGENT",
+        "size": 3030
+      },
+      {
+        "file": "FINANCE_AGENTS.md",
+        "name": "FINANCE AGENTS",
+        "size": 3030
+      },
+      {
+        "file": "FINANCIAL_ANALYSIS_AGENT.md",
+        "name": "FINANCIAL ANALYSIS AGENT",
+        "size": 3090
+      },
+      {
+        "file": "FRAUD_DETECTION_AGENT.md",
+        "name": "FRAUD DETECTION AGENT",
+        "size": 3072
+      },
+      {
+        "file": "HEALTHCARE_AGENTS.md",
+        "name": "HEALTHCARE AGENTS",
+        "size": 3048
+      },
+      {
+        "file": "HEALTHCARE_COMPLIANCE.md",
+        "name": "HEALTHCARE COMPLIANCE",
+        "size": 3072
+      },
+      {
+        "file": "INSURANCE_AGENT.md",
+        "name": "INSURANCE AGENT",
+        "size": 3036
+      },
+      {
+        "file": "INVENTORY_AGENT.md",
+        "name": "INVENTORY AGENT",
+        "size": 3036
+      },
+      {
+        "file": "INVENTORY_OPTIMIZATION_AGENT.md",
+        "name": "INVENTORY OPTIMIZATION AGENT",
+        "size": 3114
+      },
+      {
+        "file": "IP_ANALYSIS_AGENT.md",
+        "name": "IP ANALYSIS AGENT",
+        "size": 3048
+      },
+      {
+        "file": "LANGUAGE_LEARNING_AGENT.md",
+        "name": "LANGUAGE LEARNING AGENT",
+        "size": 3084
+      },
+      {
+        "file": "LEGAL_AGENTS.md",
+        "name": "LEGAL AGENTS",
+        "size": 3018
+      },
+      {
+        "file": "LEGAL_QA_AGENT.md",
+        "name": "LEGAL QA AGENT",
+        "size": 3030
+      },
+      {
+        "file": "LEGAL_RESEARCH_AGENT.md",
+        "name": "LEGAL RESEARCH AGENT",
+        "size": 3066
+      },
+      {
+        "file": "LOGISTICS_AGENT.md",
+        "name": "LOGISTICS AGENT",
+        "size": 3036
+      },
+      {
+        "file": "MANUFACTURING_AGENTS.md",
+        "name": "MANUFACTURING AGENTS",
+        "size": 3066
+      },
+      {
+        "file": "MEDICAL_CODING.md",
+        "name": "MEDICAL CODING",
+        "size": 3030
+      },
+      {
+        "file": "MEDICAL_QA_AGENT.md",
+        "name": "MEDICAL QA AGENT",
+        "size": 3042
+      },
+      {
+        "file": "ORDER_MANAGEMENT_AGENT.md",
+        "name": "ORDER MANAGEMENT AGENT",
+        "size": 3078
+      },
+      {
+        "file": "PATHOLOGY_ASSISTANT.md",
+        "name": "PATHOLOGY ASSISTANT",
+        "size": 3060
+      },
+      {
+        "file": "PATIENT_TRIAGE.md",
+        "name": "PATIENT TRIAGE",
+        "size": 3030
+      },
+      {
+        "file": "PERSONALIZATION_AGENT.md",
+        "name": "PERSONALIZATION AGENT",
+        "size": 3072
+      },
+      {
+        "file": "PORTFOLIO_MANAGEMENT.md",
+        "name": "PORTFOLIO MANAGEMENT",
+        "size": 3066
+      },
+      {
+        "file": "PREDICTIVE_MAINTENANCE_AGENT.md",
+        "name": "PREDICTIVE MAINTENANCE AGENT",
+        "size": 3114
+      },
+      {
+        "file": "PRICING_AGENT.md",
+        "name": "PRICING AGENT",
+        "size": 3024
+      },
+      {
+        "file": "PROCESS_OPTIMIZATION_AGENT.md",
+        "name": "PROCESS OPTIMIZATION AGENT",
+        "size": 3102
+      },
+      {
+        "file": "PRODUCTION_PLANNING_AGENT.md",
+        "name": "PRODUCTION PLANNING AGENT",
+        "size": 3096
+      },
+      {
+        "file": "PRODUCT_RECOMMENDATION_AGENT.md",
+        "name": "PRODUCT RECOMMENDATION AGENT",
+        "size": 3114
+      },
+      {
+        "file": "QUALITY_CONTROL_AGENT.md",
+        "name": "QUALITY CONTROL AGENT",
+        "size": 3072
+      },
+      {
+        "file": "QUESTION_GENERATION_AGENT.md",
+        "name": "QUESTION GENERATION AGENT",
+        "size": 3096
+      },
+      {
+        "file": "RADIOLOGY_ASSISTANT.md",
+        "name": "RADIOLOGY ASSISTANT",
+        "size": 3060
+      },
+      {
+        "file": "REGULATORY_COMPLIANCE_AGENT.md",
+        "name": "REGULATORY COMPLIANCE AGENT",
+        "size": 3108
+      },
+      {
+        "file": "RETURNS_AGENT.md",
+        "name": "RETURNS AGENT",
+        "size": 3024
+      },
+      {
+        "file": "REVIEW_ANALYSIS_AGENT.md",
+        "name": "REVIEW ANALYSIS AGENT",
+        "size": 3072
+      },
+      {
+        "file": "RISK_MANAGEMENT_AGENT.md",
+        "name": "RISK MANAGEMENT AGENT",
+        "size": 3072
+      },
+      {
+        "file": "SAFETY_MONITORING_AGENT.md",
+        "name": "SAFETY MONITORING AGENT",
+        "size": 3084
+      },
+      {
+        "file": "STUDY_PLANNER_AGENT.md",
+        "name": "STUDY PLANNER AGENT",
+        "size": 3060
+      },
+      {
+        "file": "SUPPLY_CHAIN_AGENT.md",
+        "name": "SUPPLY CHAIN AGENT",
+        "size": 3054
+      },
+      {
+        "file": "SYMPTOM_CHECKER.md",
+        "name": "SYMPTOM CHECKER",
+        "size": 3036
+      },
+      {
+        "file": "TAX_ASSISTANT.md",
+        "name": "TAX ASSISTANT",
+        "size": 3024
+      },
+      {
+        "file": "TRADING_AGENT.md",
+        "name": "TRADING AGENT",
+        "size": 3024
+      },
+      {
+        "file": "TUTORING_AGENT.md",
+        "name": "TUTORING AGENT",
+        "size": 3030
+      }
+    ],
+    "count": 60
+  }
+}

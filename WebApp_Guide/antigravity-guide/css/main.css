@@ -262,6 +262,21 @@ body::after {
     color: var(--p1-accent);
 }
 
+/* Library Button */
+.library-trigger {
+    margin-top: 0;
+}
+
+.library-count {
+    background: linear-gradient(135deg, var(--p1-accent), var(--p1-accent-secondary, var(--p1-accent)));
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--p1-bg-primary);
+    box-shadow: 0 0 10px var(--p1-accent-glow);
+}
+
 /* Progress Bar */
 .progress-container {
     padding: 0 var(--space-lg);

@@ -271,6 +271,22 @@ body::after {
     color: var(--p2-accent);
 }
 
+/* Library Button */
+.library-trigger {
+    margin-top: 0;
+}
+
+.library-count {
+    background: var(--p2-accent);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--p2-bg-primary);
+    box-shadow: 0 0 10px var(--p2-accent-glow);
+    font-family: var(--font-family-mono);
+}
+
 /* Progress Bar */
 .progress-container { padding: 0 var(--space-lg); margin-bottom: var(--space-md); }
 

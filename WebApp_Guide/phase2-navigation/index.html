@@ -57,6 +57,13 @@
                 <kbd class="search-trigger-kbd">⌘K</kbd>
             </button>
 
+            <!-- Prompt Library Button -->
+            <button id="library-btn" class="search-trigger library-trigger" onclick="PromptLibrary.open()">
+                <span class="search-trigger-icon">📚</span>
+                <span class="search-trigger-text">Prompt Library</span>
+                <span class="library-count">1116</span>
+            </button>
+
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
@@ -94,6 +101,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="js/modules/prompt-library.js"></script>
     <script type="module" src="js/app.js"></script>
 </body>
 
