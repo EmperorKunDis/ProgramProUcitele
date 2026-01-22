@@ -1,0 +1,107 @@
+<h1>Testování s AI</h1>
+
+<p>AI agent může dramaticky zrychlit psaní testů. Naučte se efektivní prompty pro různé typy testů.</p>
+
+<h2>Proč testovat?</h2>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Důležité:</strong> AI generovaný kód potřebuje testy více než ručně psaný kód. Agent může udělat subtilní chyby, které odhalí až testy.
+    </div>
+</div>
+
+<h2>Typy testů</h2>
+
+<table>
+    <thead>
+        <tr><th>Typ</th><th>Účel</th><th>Rychlost</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Unit testy</strong></td><td>Testují jednotlivé funkce</td><td>⚡ Velmi rychlé</td></tr>
+        <tr><td><strong>Integration testy</strong></td><td>Testují spolupráci komponent</td><td>🔄 Střední</td></tr>
+        <tr><td><strong>E2E testy</strong></td><td>Testují celou aplikaci</td><td>🐢 Pomalé</td></tr>
+    </tbody>
+</table>
+
+<h2>Generování Unit testů</h2>
+
+<h3>Prompt pro unit testy</h3>
+
+<pre><code class="language-markdown"># Prompt
+Napiš unit testy pro funkci v souboru @src/utils/validation.ts
+
+Požadavky:
+- Použij Jest
+- Testuj happy path i edge cases
+- Zahrň testy pro: prázdný vstup, neplatný formát, hraniční hodnoty
+- Mockuj externí závislosti</code></pre>
+
+<h3>Příklad vygenerovaného testu</h3>
+
+<pre><code class="language-javascript">// validation.test.ts
+import { validateEmail } from './validation';
+
+describe('validateEmail', () => {
+  it('should return true for valid email', () => {
+    expect(validateEmail('test@example.com')).toBe(true);
+  });
+
+  it('should return false for empty string', () => {
+    expect(validateEmail('')).toBe(false);
+  });
+
+  it('should return false for email without @', () => {
+    expect(validateEmail('testexample.com')).toBe(false);
+  });
+
+  it('should handle unicode characters', () => {
+    expect(validateEmail('tëst@example.com')).toBe(true);
+  });
+});</code></pre>
+
+<h2>Test-Driven Development s AI</h2>
+
+<p>AI agent podporuje TDD workflow:</p>
+
+<ol>
+    <li><strong>Napište test</strong> - Řekněte agentovi, co má funkce dělat</li>
+    <li><strong>Agent implementuje</strong> - Vytvoří kód, který test projde</li>
+    <li><strong>Refaktorujte</strong> - Společně vylepšete implementaci</li>
+</ol>
+
+<pre><code class="language-markdown"># TDD Prompt
+Chci funkci `calculateDiscount(price, couponCode)`.
+
+Napřed napiš testy pro tyto scénáře:
+- couponCode "SAVE10" = 10% sleva
+- couponCode "SAVE20" = 20% sleva
+- neplatný couponCode = žádná sleva
+- záporná cena = vyhoď chybu
+
+Pak implementuj funkci tak, aby testy prošly.</code></pre>
+
+<h2>Spouštění testů</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+Shift+T</strong> - Spustit testy v aktuálním souboru<br>
+        <strong>Cmd+; A</strong> - Spustit všechny testy
+    </div>
+</div>
+
+<h2>Coverage Report</h2>
+
+<p>Požádejte agenta o analýzu pokrytí:</p>
+
+<pre><code class="language-markdown">Analyzuj test coverage v projektu.
+Identifikuj soubory s pokrytím pod 80%.
+Pro každý navrhni, jaké testy přidat.</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Nastavte minimální coverage v CI/CD pipeline. Agent pak automaticky navrhne chybějící testy při každém PR.
+    </div>
+</div>

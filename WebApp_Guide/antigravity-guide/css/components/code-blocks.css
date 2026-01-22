@@ -1,0 +1,162 @@
+/* Code Blocks Styling */
+
+pre {
+    background: #1e1e2e;
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    padding-top: calc(var(--space-lg) + 8px);
+    overflow-x: auto;
+    margin: var(--space-lg) 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+pre[class*="language-"] {
+    margin: 0;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cdd6f4;
+    font-family: var(--font-family-mono);
+}
+
+/* Inline code in callouts and paragraphs */
+:not(pre) > code {
+    background: rgba(91, 44, 157, 0.1);
+    color: var(--color-brand-primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: var(--font-family-mono);
+}
+
+[data-theme="dark"] :not(pre) > code {
+    background: rgba(124, 77, 255, 0.15);
+    color: var(--color-brand-secondary);
+}
+
+/* Code block container styling */
+.code-block {
+    margin: var(--space-lg) 0;
+}
+
+.code-block pre {
+    margin: 0;
+}
+
+/* PrismJS Theme - Catppuccin inspired for readability */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6c7086;
+}
+
+.token.punctuation {
+    color: #cdd6f4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #fab387;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e3a1;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #94e2d5;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #cba6f7;
+}
+
+.token.function,
+.token.class-name {
+    color: #89b4fa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #f9e2af;
+}
+
+/* Selection */
+pre::selection,
+pre *::selection,
+code::selection,
+code *::selection {
+    background: rgba(124, 77, 255, 0.3);
+}
+
+/* Scrollbar for code blocks */
+pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(135deg, rgba(91, 44, 157, 0.1), rgba(124, 77, 255, 0.05));
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}

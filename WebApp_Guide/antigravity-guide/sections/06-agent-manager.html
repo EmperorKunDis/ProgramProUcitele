@@ -1,0 +1,41 @@
+<h1>Agent Manager</h1>
+
+<p>Agent Manager je mozkem operací. Zde zadáváte komplexní úkoly, které vyžadují práci s více soubory, terminálem nebo
+    prohlížečem.</p>
+
+<div class="visual-placeholder">
+    <div class="icon">🤖</div>
+    <div class="desc">Screenshot: Agent Manager Chat</div>
+    <div class="specs">Ukázat běžící konverzaci s agentem a seznam nástrojů</div>
+</div>
+
+<h2>Jak zadávat úkoly?</h2>
+<p>Buďte specifičtí, ale nechte prostor pro autonomii.</p>
+
+<div class="code-block">
+    <pre><code class="language-markdown"># Špatně
+Udělej mi web.
+
+# Dobře (PRAUT Standard)
+Vytvoř jednostránkovou prezentaci pro produkt "SuperBot".
+- Použij HTML/CSS (žádný framework).
+- Hlavní barvy: fialová a zelená.
+- Sekce: Hero, Features, Pricing, Contact.
+- Vytvoř soubory v adresáři `/landing`.</code></pre>
+</div>
+
+<h2>Mode: Planning vs. Quick</h2>
+<ul>
+    <li><strong>Planning Mode:</strong> Agent nejprve napíše plán (`implementation_plan.md`) k odsouhlasení. Použijte
+        pro úkoly nad 15 minut práce.</li>
+    <li><strong>Quick Mode:</strong> Agent začne rovnou pracovat. Vhodné pro malé opravy nebo "write me a script" úkoly.
+    </li>
+</ul>
+
+<h2>Feedback Loop (Smyčka zpětné vazby)</h2>
+<p>Když agent dokončí úkol, požádá vás o kontrolu. </p>
+<ul>
+    <li>Pokud je vše OK, napište <em>"Looks good"</em> nebo <em>"Pokračuj"</em>.</li>
+    <li>Pokud vidíte chybu, napište jen <em>"Ten nadpis je moc malý"</em> nebo <em>"Testy neprošly"</em>. Agent se
+        opraví sám.</li>
+</ul>

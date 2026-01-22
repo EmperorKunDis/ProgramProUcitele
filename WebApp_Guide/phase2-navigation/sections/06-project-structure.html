@@ -1,0 +1,125 @@
+<h1>Struktura Projektu</h1>
+
+<p>Dobrá struktura projektu není jen o organizaci souborů - přímo ovlivňuje, jak efektivně může AI agent pochopit váš kód.</p>
+
+<h2>Proč struktura záleží pro AI</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">🤖</div>
+    <div class="callout-content">
+        AI agent má omezené "context window" - množství kódu, které vidí najednou. Logická struktura mu pomáhá rychleji najít relevantní soubory.
+    </div>
+</div>
+
+<h2>Doporučené struktury podle typu projektu</h2>
+
+<h3>Frontend (React/Vue/Angular)</h3>
+
+<pre><code class="language-text">src/
+├── components/       # Znovupoužitelné UI komponenty
+│   ├── Button/
+│   │   ├── Button.tsx
+│   │   ├── Button.styles.ts
+│   │   └── Button.test.tsx
+│   └── ...
+├── pages/           # Stránky/views
+├── hooks/           # Custom React hooks
+├── services/        # API volání
+├── utils/           # Pomocné funkce
+├── types/           # TypeScript typy
+└── assets/          # Obrázky, fonty</code></pre>
+
+<h3>Backend (Node.js/Python)</h3>
+
+<pre><code class="language-text">src/
+├── controllers/     # HTTP handlery
+├── services/        # Business logika
+├── models/          # Databázové modely
+├── middleware/      # Express/Koa middleware
+├── utils/           # Pomocné funkce
+├── config/          # Konfigurace
+└── tests/           # Testy</code></pre>
+
+<h3>Full-stack Monorepo</h3>
+
+<pre><code class="language-text">project/
+├── apps/
+│   ├── web/         # Frontend aplikace
+│   ├── api/         # Backend API
+│   └── admin/       # Admin panel
+├── packages/
+│   ├── ui/          # Sdílené komponenty
+│   ├── utils/       # Sdílené utility
+│   └── types/       # Sdílené typy
+└── tools/           # Build skripty</code></pre>
+
+<h2>Speciální soubory pro AI</h2>
+
+<p>Antigravity rozpoznává tyto soubory a používá je jako kontext:</p>
+
+<table>
+    <thead>
+        <tr><th>Soubor</th><th>Účel</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><code>.gemini/</code></td><td>Složka s kontextem pro AI (rules, memory)</td></tr>
+        <tr><td><code>README.md</code></td><td>Popis projektu - agent čte jako první</td></tr>
+        <tr><td><code>.antigravity-rules</code></td><td>Pravidla pro chování agenta</td></tr>
+        <tr><td><code>ARCHITECTURE.md</code></td><td>Popis architektury</td></tr>
+    </tbody>
+</table>
+
+<h2>Vytvoření .antigravity-rules</h2>
+
+<p>Tento soubor říká agentovi, jak má pracovat s vaším projektem:</p>
+
+<pre><code class="language-markdown"># .antigravity-rules
+
+## Projekt
+Toto je e-commerce aplikace v Next.js 14 s App Router.
+
+## Struktura
+- Komponenty jsou v /components s co-located styles
+- API routes jsou v /app/api
+- Používáme Prisma pro databázi
+
+## Konvence
+- Komponenty pojmenováváme PascalCase
+- Hooks začínají "use" (useCart, useAuth)
+- Všechny API responses mají formát { success, data, error }
+
+## Zakázané
+- Nepoužívej jQuery
+- Nepiš inline styles
+- Vždy používej TypeScript (žádné any)</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Čím podrobnější pravidla, tím lepší výsledky od agenta. Investice do dobrého <code>.antigravity-rules</code> se mnohonásobně vrátí.
+    </div>
+</div>
+
+<h2>Organizace testů</h2>
+
+<p>Dva běžné přístupy:</p>
+
+<h3>1. Co-located testy (doporučeno)</h3>
+<pre><code class="language-text">components/
+└── Button/
+    ├── Button.tsx
+    └── Button.test.tsx  # Test vedle komponenty</code></pre>
+
+<h3>2. Centrální složka testů</h3>
+<pre><code class="language-text">src/
+├── components/
+└── __tests__/
+    └── components/
+        └── Button.test.tsx</code></pre>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Upozornění:</strong> Pokud měníte strukturu existujícího projektu, řekněte to agentovi. Jinak může hledat soubory na starých místech.
+    </div>
+</div>

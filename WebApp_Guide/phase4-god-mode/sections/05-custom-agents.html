@@ -1,0 +1,230 @@
+<h1>Vlastní Agenti</h1>
+
+<p>Vytvořte specializované AI asistenty přesně pro vaše potřeby. Custom agenti jsou klíčem k maximální produktivitě.</p>
+
+<h2>Proč vlastní agenti?</h2>
+
+<ul>
+    <li><strong>Specializace</strong> - Agent optimalizovaný pro konkrétní úkol</li>
+    <li><strong>Konzistence</strong> - Vždy stejný styl a přístup</li>
+    <li><strong>Efektivita</strong> - Méně instrukcí, rychlejší výsledky</li>
+    <li><strong>Škálovatelnost</strong> - Sdílení napříč týmem</li>
+</ul>
+
+<h2>Architektura custom agenta</h2>
+
+<pre><code class="language-text">.gemini/agents/
+├── code-reviewer/
+│   ├── agent.yaml       # Konfigurace agenta
+│   ├── system-prompt.md # Základní instrukce
+│   ├── examples/        # Few-shot příklady
+│   │   ├── good-review.md
+│   │   └── bad-review.md
+│   └── tools/           # Custom nástroje
+│       └── check-coverage.js
+├── docs-writer/
+│   ├── agent.yaml
+│   └── system-prompt.md
+└── bug-hunter/
+    ├── agent.yaml
+    └── system-prompt.md</code></pre>
+
+<h2>Vytvoření agenta</h2>
+
+<h3>1. Konfigurace (agent.yaml)</h3>
+
+<pre><code class="language-yaml"># .gemini/agents/code-reviewer/agent.yaml
+name: Code Reviewer Pro
+version: "1.0.0"
+description: Specializovaný agent pro code review
+
+model:
+  primary: gemini-3-pro
+  fallback: gemini-3-flash
+
+capabilities:
+  - code_analysis
+  - security_scan
+  - performance_check
+
+tools:
+  - filesystem
+  - git
+
+context:
+  max_tokens: 32000
+  include:
+    - "src/**/*.ts"
+    - "tests/**/*.ts"
+  exclude:
+    - "node_modules/**"
+    - "dist/**"
+
+triggers:
+  - on: pull_request
+    action: auto_review
+  - on: command
+    pattern: "@reviewer"</code></pre>
+
+<h3>2. System Prompt</h3>
+
+<pre><code class="language-markdown"># .gemini/agents/code-reviewer/system-prompt.md
+
+# Code Reviewer Pro
+
+## Role
+Jsi senior code reviewer s 10+ lety zkušeností v enterprise vývoji.
+Tvým cílem je zajistit kvalitu, bezpečnost a udržitelnost kódu.
+
+## Hodnotící kritéria
+
+### 🔒 Bezpečnost (Priorita 1)
+- SQL injection, XSS, CSRF
+- Hardcoded credentials
+- Unsafe deserialization
+- Path traversal
+
+### ⚡ Performance (Priorita 2)
+- N+1 queries
+- Memory leaks
+- Unnecessary re-renders
+- Missing memoization
+
+### 📖 Čitelnost (Priorita 3)
+- Naming conventions
+- Function complexity
+- Code duplication
+- Missing documentation
+
+### 🧪 Testovatelnost (Priorita 4)
+- Test coverage
+- Mocking strategy
+- Edge cases
+
+## Formát odpovědi
+
+```markdown
+## 📋 Code Review Summary
+
+**Overall Rating:** ⭐⭐⭐⭐☆ (4/5)
+
+### 🚨 Critical Issues (must fix)
+- [File:Line] Description
+
+### ⚠️ Warnings (should fix)
+- [File:Line] Description
+
+### 💡 Suggestions (nice to have)
+- [File:Line] Description
+
+### ✅ What's Good
+- Positive observations
+```
+
+## Pravidla
+- Buď konstruktivní, ne kritický
+- Vždy navrhni konkrétní řešení
+- Oceň dobré praktiky
+- Prioritizuj podle severity</code></pre>
+
+<h3>3. Few-Shot příklady</h3>
+
+<pre><code class="language-markdown"># examples/good-review.md
+
+## Input
+```typescript
+const user = await db.query(`SELECT * FROM users WHERE id = ${userId}`);
+```
+
+## Output
+### 🚨 Critical: SQL Injection Vulnerability
+
+**Soubor:** src/services/user.ts:45
+
+**Problém:**
+Přímá interpolace `userId` do SQL dotazu umožňuje SQL injection útok.
+
+**Riziko:**
+Útočník může manipulovat dotaz a získat/smazat data.
+
+**Oprava:**
+```typescript
+const user = await db.query(
+  'SELECT * FROM users WHERE id = $1',
+  [userId]
+);
+```
+
+**Reference:** OWASP SQL Injection Prevention</code></pre>
+
+<h2>Specializovaní agenti</h2>
+
+<h3>Documentation Writer</h3>
+
+<pre><code class="language-yaml"># docs-writer/agent.yaml
+name: Docs Writer
+description: Generuje technickou dokumentaci
+
+style:
+  language: cs
+  tone: professional
+  format: markdown
+
+templates:
+  - api-reference
+  - user-guide
+  - architecture-decision
+
+output:
+  directory: docs/
+  naming: kebab-case</code></pre>
+
+<h3>Bug Hunter</h3>
+
+<pre><code class="language-yaml"># bug-hunter/agent.yaml
+name: Bug Hunter
+description: Aktivně hledá potenciální bugy
+
+scan_patterns:
+  - null_pointer
+  - race_condition
+  - resource_leak
+  - type_coercion
+
+report_format: github_issue
+
+severity_levels:
+  critical: auto_create_issue
+  high: notify_slack
+  medium: add_to_report
+  low: log_only</code></pre>
+
+<h2>Aktivace agenta</h2>
+
+<pre><code class="language-markdown"># Manuální aktivace
+@code-reviewer Zkontroluj změny v posledním commitu
+
+# Automatická aktivace (trigger)
+# Agent se spustí automaticky při PR do main
+
+# Paralelní agenti
+@code-reviewer @docs-writer
+Zkontroluj kód a aktualizuj dokumentaci</code></pre>
+
+<h2>Sdílení agentů</h2>
+
+<pre><code class="language-bash"># Export agenta
+gemini agent export code-reviewer --output reviewer.zip
+
+# Import do jiného projektu
+gemini agent import reviewer.zip
+
+# Publikování do team registry
+gemini agent publish code-reviewer --team myteam</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Začněte s jednoduchým agentem a postupně přidávejte schopnosti. Komplexní agenti vyžadují více ladění.
+    </div>
+</div>

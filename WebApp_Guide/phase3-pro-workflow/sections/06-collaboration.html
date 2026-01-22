@@ -1,0 +1,100 @@
+<h1>Týmová Spolupráce</h1>
+
+<p>Jak efektivně používat AI agenty v týmovém prostředí a sdílet best practices.</p>
+
+<h2>Sdílená konfigurace</h2>
+
+<p>Commitujte AI konfiguraci do repozitáře:</p>
+
+<pre><code class="language-text">projekt/
+├── .gemini/
+│   ├── rules.md           # Sdílená pravidla
+│   ├── brain/
+│   │   └── architecture.md # Popis architektury
+│   └── templates/
+│       ├── component.md   # Šablona komponenty
+│       └── api-endpoint.md # Šablona API
+├── .antigravity-rules     # Alternativní umístění pravidel
+└── AGENTS.md              # Dokumentace pro kolegy</code></pre>
+
+<h2>AGENTS.md - Dokumentace pro tým</h2>
+
+<pre><code class="language-markdown"># AGENTS.md - Jak používat AI v tomto projektu
+
+## Doporučené prompty
+
+### Nová komponenta
+"Vytvoř React komponentu [název] podle šablony v .gemini/templates/component.md"
+
+### API endpoint
+"Přidej nový endpoint podle vzoru v src/api/users.ts"
+
+### Bug fix
+"Najdi a oprav bug: [popis]. Přidej test, který by bug odhalil."
+
+## Co NEDĚLAT
+- Nepouštět agenta na production databázi
+- Necommitovat AI-generovaný kód bez review
+- Neměnit .env soubory přes agenta
+
+## Kontakty
+- AI Champion: jan.novak@firma.cz
+- Otázky: #ai-help na Slacku</code></pre>
+
+<h2>Code Ownership</h2>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Důležité:</strong> I když kód napsal AI agent, <strong>vy</strong> jste zodpovědní za jeho kvalitu. Vždy udělejte review před commitem.
+    </div>
+</div>
+
+<h2>Pair Programming s AI</h2>
+
+<p>AI může sloužit jako virtuální kolega:</p>
+
+<ul>
+    <li><strong>Driver</strong> - Vy píšete kód</li>
+    <li><strong>Navigator</strong> - AI navrhuje přístup, kontroluje chyby</li>
+</ul>
+
+<pre><code class="language-markdown"># Pair Programming Prompt
+Pojďme společně implementovat autentizaci.
+
+Já budu psát kód, ty:
+1. Navrhuj další kroky
+2. Upozorni na potenciální problémy
+3. Doporuč best practices
+4. Neptej se, jestli mám pokračovat - jen komentuj můj kód</code></pre>
+
+<h2>Knowledge Sharing</h2>
+
+<p>Sdílejte užitečné prompty s týmem:</p>
+
+<pre><code class="language-text">.gemini/
+└── prompts/
+    ├── code-review.md
+    ├── testing.md
+    ├── refactoring.md
+    └── documentation.md</code></pre>
+
+<h2>Onboarding nových členů</h2>
+
+<p>AI může pomoci s onboardingem:</p>
+
+<pre><code class="language-markdown"># Onboarding Prompt
+Jsem nový v tomto projektu. Vysvětli mi:
+
+1. Jaká je architektura aplikace?
+2. Kde najdu hlavní business logiku?
+3. Jak se spouští development server?
+4. Jaké jsou coding conventions?
+5. Kde jsou testy a jak je spustím?</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Vytvořte <code>.gemini/onboarding.md</code> s informacemi pro nové členy. Agent ho použije při odpovídání na onboarding otázky.
+    </div>
+</div>

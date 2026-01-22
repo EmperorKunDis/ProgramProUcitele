@@ -1,0 +1,29 @@
+<h1>Přizpůsobení (Customization)</h1>
+
+<p>Každý tým má jiné standardy. Antigravity se přizpůsobí vám, ne naopak.</p>
+
+<h2>Pravidla (.cursorrules / .antigravityrules)</h2>
+<p>Vytvořte v kořeni projektu soubor <code>.antigravityrules</code>. Zde definujete chování agentů.</p>
+
+<div class="code-block">
+    <pre><code class="language-markdown"># Globální Pravidla
+- Vždy používej TypeScript místo JavaScriptu.
+- Pro stylování používej Tailwind CSS.
+- Každá funkce musí mít JSDoc komentář.
+- Nikdy nemazej soubory v `/legacy` bez explicitního povolení.</code></pre>
+</div>
+
+<h2>Vlastní Paměť</h2>
+<p>Agenti si budují paměť vašeho projektu. Můžete jim ale pomoci nahráním dokumentace.</p>
+<p>Stačí přetáhnout PDF nebo MD soubory do složky <code>.gemini/knowledge/</code>. Agent si je přečte před každým
+    úkolem.</p>
+
+<div class="visual-placeholder">
+    <div class="icon">📚</div>
+    <div class="desc">Screenshot: Knowledge Base Panel</div>
+    <div class="specs">Panel s nahranými PDF dokumenty</div>
+</div>
+
+<h2>Ignore List</h2>
+<p>Chcete, aby agent ignoroval testovací data? Přidejte je do <code>.agignore</code> (funguje stejně jako .gitignore).
+</p>

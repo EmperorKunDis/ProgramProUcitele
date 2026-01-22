@@ -1,0 +1,32 @@
+<h1>Browser Agent</h1>
+
+<p>Browser Agent je specializovaný pod-agent, který umí ovládat headless (nebo viditelný) webový prohlížeč. Nemyslí, jen
+    koná.</p>
+
+<h2>K čemu slouží?</h2>
+<ol>
+    <li><strong>Vizuální kontrola:</strong> Otevře váš lokální web (`localhost:3000`) a "podívá se", jestli CSS vypadá
+        správně.</li>
+    <li><strong>E2E Testování:</strong> Může proklikat celou nákupní flow (vložit do košíku, zaplatit) a ověřit, že
+        nenastala chyba.</li>
+    <li><strong>Rešerše dokumentace:</strong> Umí číst online dokumentaci knihoven, které ve svém projektu používáte.
+    </li>
+</ol>
+
+<div class="visual-placeholder">
+    <div class="icon">🌐</div>
+    <div class="desc">Screenshot: Browser Tool Output</div>
+    <div class="specs">Ukázka logu z browser agenta (screenshot webu)</div>
+</div>
+
+<h2>Bezpečnost</h2>
+<p>Browser Agent běží v izolovaném kontejneru. Nemůže přistupovat k vašim heslům v Chrome ani k souborům mimo projekt.
+</p>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        Nikdy nenechávejte Browser Agenta přihlašovat se do vašich osobních účtů na produkčních webech (Gmail, Banka),
+        pokud mu explicitně nepředáte testovací kredenciály.
+    </div>
+</div>

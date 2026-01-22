@@ -1,0 +1,161 @@
+<h1>Pokročilá Konfigurace</h1>
+
+<p>Přizpůsobte chování AI agenta vašim potřebám pomocí pokročilých nastavení.</p>
+
+<h2>Autonomy Levels</h2>
+
+<p>Nastavte, jak moc samostatně má agent pracovat:</p>
+
+<table>
+    <thead>
+        <tr><th>Level</th><th>Chování</th><th>Kdy použít</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Conservative</strong></td>
+            <td>Ptá se před každou změnou</td>
+            <td>Produkční kód, kritické systémy</td>
+        </tr>
+        <tr>
+            <td><strong>Balanced</strong></td>
+            <td>Ptá se u důležitých rozhodnutí</td>
+            <td>Běžný vývoj (default)</td>
+        </tr>
+        <tr>
+            <td><strong>Autonomous</strong></td>
+            <td>Pracuje samostatně, ptá se minimálně</td>
+            <td>Prototypování, experimenty</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Terminal Policy</h2>
+
+<p>Kontrola nad tím, jak agent používá terminál:</p>
+
+<pre><code class="language-json">// settings.json
+{
+  "antigravity.terminal.policy": "ask",  // off | ask | auto
+  "antigravity.terminal.allowedCommands": [
+    "npm test",
+    "npm run build",
+    "git status"
+  ],
+  "antigravity.terminal.blockedCommands": [
+    "rm -rf",
+    "drop database",
+    "git push --force"
+  ]
+}</code></pre>
+
+<h2>File Access Control</h2>
+
+<p>Omezte, které soubory může agent měnit:</p>
+
+<pre><code class="language-markdown"># .antigravity-rules
+
+## File Access
+### Allowed (může číst i psát)
+- src/**/*
+- tests/**/*
+
+### Read-only (může jen číst)
+- package.json
+- tsconfig.json
+- .env.example
+
+### Blocked (žádný přístup)
+- .env
+- .env.local
+- **/secrets/**
+- **/credentials/**</code></pre>
+
+<h2>Model Selection</h2>
+
+<p>Vyberte správný model pro úlohu:</p>
+
+<table>
+    <thead>
+        <tr><th>Model</th><th>Vhodný pro</th><th>Cena</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Gemini 3 Flash</td>
+            <td>Rychlé úkoly, autocomplete</td>
+            <td>💰</td>
+        </tr>
+        <tr>
+            <td>Gemini 3 Pro</td>
+            <td>Běžný vývoj (default)</td>
+            <td>💰💰</td>
+        </tr>
+        <tr>
+            <td>Gemini 3 Deep Think</td>
+            <td>Architektura, komplexní problémy</td>
+            <td>💰💰💰</td>
+        </tr>
+        <tr>
+            <td>Claude Sonnet 4.5</td>
+            <td>Kreativní úkoly, dokumentace</td>
+            <td>💰💰</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Custom Instructions</h2>
+
+<p>Globální instrukce pro všechny konverzace:</p>
+
+<pre><code class="language-markdown"># .gemini/rules.md
+
+## Vždy
+- Piš komentáře česky
+- Používej TypeScript strict mode
+- Přidávej JSDoc k veřejným funkcím
+- Loguj chyby do Sentry
+
+## Nikdy
+- Nepoužívej any type
+- Nepiš console.log do produkčního kódu
+- Neměň verze dependencies bez vysvětlení
+- Neodstraňuj existující testy
+
+## Styl
+- Preferuj funkcionální přístup
+- Používej named exports
+- Maximální délka řádku: 100 znaků</code></pre>
+
+<h2>Workflows</h2>
+
+<p>Automatizujte opakující se úkoly:</p>
+
+<pre><code class="language-yaml"># .gemini/workflows/new-feature.yml
+name: New Feature
+description: Vytvoření nové funkce podle standardu
+
+steps:
+  - name: Plánování
+    prompt: |
+      Vytvoř implementation plan pro: {{feature_name}}
+      Ulož do .gemini/brain/plans/{{feature_name}}.md
+
+  - name: Implementace
+    prompt: |
+      Implementuj podle plánu.
+      Vytvoř potřebné soubory.
+
+  - name: Testy
+    prompt: |
+      Napiš unit testy pro novou funkcionalitu.
+      Cíl: 80% coverage.
+
+  - name: Dokumentace
+    prompt: |
+      Aktualizuj README a přidej JSDoc.</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Vytvořte si workflow pro vaše nejčastější úkoly. Ušetříte čas a zajistíte konzistenci.
+    </div>
+</div>

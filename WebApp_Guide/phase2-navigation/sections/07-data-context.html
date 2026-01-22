@@ -1,0 +1,115 @@
+<h1>Kontext & Data pro AI</h1>
+
+<p>Kvalita výstupu AI agenta přímo závisí na kvalitě kontextu, který mu poskytnete. Tato sekce vás naučí, jak efektivně předávat informace.</p>
+
+<h2>Jak agent vidí váš projekt</h2>
+
+<p>Agent má přístup k:</p>
+
+<ul>
+    <li>✅ Souborům, které mu explicitně ukážete</li>
+    <li>✅ Souborům v aktivním workspace</li>
+    <li>✅ Obsahu <code>.gemini/</code> složky</li>
+    <li>✅ Historie konverzace v aktuální session</li>
+    <li>❌ <strong>NE</strong> k souborům mimo projekt</li>
+    <li>❌ <strong>NE</strong> k vašim jiným projektům</li>
+</ul>
+
+<h2>Context Window</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">📊</div>
+    <div class="callout-content">
+        <strong>Context window</strong> je maximální množství textu, které AI může zpracovat najednou.
+        Gemini 3 Pro má ~2M tokenů, což je přibližně 1.5 milionu slov nebo ~500 souborů kódu.
+    </div>
+</div>
+
+<p>I když je limit vysoký, efektivní využití kontextu znamená:</p>
+
+<ul>
+    <li>🎯 Posílat jen relevantní soubory</li>
+    <li>📝 Jasně formulovat, co chcete</li>
+    <li>🔍 Být konkrétní v referencích</li>
+</ul>
+
+<h2>Způsoby předávání kontextu</h2>
+
+<h3>1. Drag & Drop souborů</h3>
+
+<p>Přetáhněte soubory z Explorer přímo do chatu s agentem. Antigravity automaticky vloží obsah.</p>
+
+<h3>2. @ mentions</h3>
+
+<p>V chatu použijte <code>@</code> pro reference:</p>
+
+<pre><code class="language-markdown">Podívej se na @src/components/Button.tsx a přidej prop "loading".</code></pre>
+
+<h3>3. Explicitní instrukce</h3>
+
+<pre><code class="language-markdown">Nejprve si přečti tyto soubory:
+1. src/types/user.ts - definice User typu
+2. src/services/api.ts - API client
+3. src/hooks/useUser.ts - existující hook
+
+Pak vytvoř nový hook useUserProfile, který...</code></pre>
+
+<h2>.gemini/ složka</h2>
+
+<p>Speciální složka pro perzistentní kontext:</p>
+
+<pre><code class="language-text">.gemini/
+├── rules.md          # Pravidla pro agenta
+├── brain/
+│   ├── architecture.md   # Popis architektury
+│   ├── decisions.md      # Rozhodnutí a důvody
+│   └── todos.md          # Aktivní úkoly
+└── templates/
+    └── component.md  # Šablony pro generování</code></pre>
+
+<h3>Příklad rules.md</h3>
+
+<pre><code class="language-markdown"># Pravidla projektu
+
+## Stack
+- Next.js 14 s App Router
+- TypeScript strict mode
+- Tailwind CSS
+- Prisma + PostgreSQL
+
+## Styl kódu
+- Funkcionální komponenty
+- Named exports
+- Absolutní importy (@/)
+
+## API
+- Vždy používej try/catch
+- Loguj chyby do Sentry
+- Response formát: { success, data, error }</code></pre>
+
+<h2>Efektivní prompty</h2>
+
+<h3>❌ Špatně (vágní)</h3>
+<pre><code class="language-markdown">Oprav ten bug s uživateli.</code></pre>
+
+<h3>✅ Dobře (specifický)</h3>
+<pre><code class="language-markdown">V souboru src/hooks/useUser.ts je bug na řádku 45.
+Funkce fetchUser() nehandluje případ, kdy API vrátí 404.
+Přidej error handling a zobraz uživateli hlášku "Uživatel nenalezen".</code></pre>
+
+<h2>Knowledge Base</h2>
+
+<p>Antigravity si pamatuje důležité informace mezi sessions:</p>
+
+<ol>
+    <li>Agent se naučí z vašich oprav a preferencí</li>
+    <li>Ukládá rozhodnutí do <code>.gemini/brain/</code></li>
+    <li>Příště podobné úkoly řeší podle naučených vzorů</li>
+</ol>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Když agent udělá něco špatně, řekněte mu proč a požádejte o zapamatování: <em>"Toto byl špatný přístup protože X. Zapamatuj si to pro příště."</em>
+    </div>
+</div>

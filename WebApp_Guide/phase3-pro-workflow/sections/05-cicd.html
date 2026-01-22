@@ -1,0 +1,132 @@
+<h1>CI/CD Integrace</h1>
+
+<p>Continuous Integration a Continuous Deployment zajistí, že váš kód je vždy v nasaditelném stavu.</p>
+
+<h2>Co je CI/CD?</h2>
+
+<ul>
+    <li><strong>CI (Continuous Integration)</strong> - Automatické testování při každém push</li>
+    <li><strong>CD (Continuous Deployment)</strong> - Automatické nasazení po úspěšných testech</li>
+</ul>
+
+<div class="visual-placeholder">
+    <div class="icon">🔄</div>
+    <div class="desc">Diagram: CI/CD Pipeline</div>
+    <div class="specs">Push → Build → Test → Deploy</div>
+</div>
+
+<h2>GitHub Actions Setup</h2>
+
+<p>Požádejte agenta o vytvoření pipeline:</p>
+
+<pre><code class="language-markdown"># Prompt
+Vytvoř GitHub Actions workflow pro můj Next.js projekt.
+
+Pipeline by měl:
+1. Spustit se při push do main a PR
+2. Nainstalovat závislosti (pnpm)
+3. Spustit linting
+4. Spustit testy
+5. Buildnout aplikaci
+6. Deploy na Vercel (jen pro main)</code></pre>
+
+<h3>Vygenerovaný workflow</h3>
+
+<pre><code class="language-yaml"># .github/workflows/ci.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+  deploy:
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}</code></pre>
+
+<h2>Pre-commit Hooks</h2>
+
+<p>Automatická kontrola před commitem:</p>
+
+<pre><code class="language-markdown"># Prompt
+Nastav Husky pre-commit hooks:
+- Lint staged soubory
+- Spusť type check
+- Zablokuj commit s "console.log"</code></pre>
+
+<h2>Branch Protection</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">🛡️</div>
+    <div class="callout-content">
+        Nastavte branch protection rules na GitHubu:
+        <ul style="margin-bottom: 0;">
+            <li>Require PR review before merge</li>
+            <li>Require status checks to pass</li>
+            <li>Require branches to be up to date</li>
+        </ul>
+    </div>
+</div>
+
+<h2>AI v CI/CD</h2>
+
+<p>Antigravity může analyzovat CI failures:</p>
+
+<pre><code class="language-markdown"># Prompt pro CI failure
+CI pipeline selhala. Zde je log:
+
+```
+FAIL src/utils/api.test.ts
+  ● fetchUsers › should return users list
+    expect(received).toEqual(expected)
+    Expected: [{"id": 1, "name": "John"}]
+    Received: undefined
+```
+
+Analyzuj příčinu a navrhni fix.</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Nastavte GitHub Action, který při selhání automaticky vytvoří issue s AI analýzou chyby.
+    </div>
+</div>

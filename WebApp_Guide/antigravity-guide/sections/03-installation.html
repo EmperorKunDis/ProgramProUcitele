@@ -1,0 +1,58 @@
+<h1>Instalace a Požadavky</h1>
+
+<p>Antigravity je dostupné jako desktopová aplikace pro macOS, Windows a Linux. Zde najdete postup pro váš systém.</p>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Licence PRAUT:</strong> Ujistěte se, že máte aktivní licenci nebo pozvánku do Early Access programu od
+        PRAUT s.r.o.
+    </div>
+</div>
+
+<h2>Systémové Požadavky</h2>
+<ul>
+    <li><strong>RAM:</strong> Minimum 16GB (doporučeno 32GB pro běh lokálních modelů)</li>
+    <li><strong>Disk:</strong> SSD s alespoň 10GB volného místa</li>
+    <li><strong>Internet:</strong> Stabilní připojení (pro cloudové modely Gemini)</li>
+</ul>
+
+<h2>Postup Instalace</h2>
+
+<h3 style="color: var(--color-brand-primary)">macOS</h3>
+<ol>
+    <li>Stáhněte <code>Antigravity-x.y.z.dmg</code> z portálu.</li>
+    <li>Otevřete disk image a přetáhněte aplikaci do složky <strong>Applications</strong>.</li>
+    <li>Při prvním spuštění možná budete muset potvrdit bezpečnostní výjimku v <em>System Settings > Privacy &
+            Security</em>.</li>
+</ol>
+
+<h3 style="color: var(--color-brand-primary)">Windows</h3>
+<ol>
+    <li>Stáhněte instalátor <code>Antigravity-Setup.exe</code>.</li>
+    <li>Spusťte instalaci jako správce.</li>
+</ol>
+
+<div class="callout callout-danger">
+    <div class="callout-icon">🛡️</div>
+    <div class="callout-content">
+        <strong>SmartScreen Varování:</strong> Windows Defender může blokovat instalaci, protože aplikace není podepsaná
+        standardním certifikátem. Klikněte na "More info" a poté "Run anyway".
+    </div>
+</div>
+
+<h3 style="color: var(--color-brand-primary)">Linux (Debian/Ubuntu)</h3>
+<pre><code class="language-bash">
+# Stáhněte .deb balíček
+wget https://download.praut.cz/antigravity/latest.deb
+
+# Nainstalujte
+sudo dpkg -i antigravity_latest.deb
+sudo apt-get install -f  # Doplnění závislostí
+</code></pre>
+
+<div class="visual-placeholder">
+    <div class="icon">💻</div>
+    <div class="desc">Screenshot Instalačního Okna</div>
+    <div class="specs">Zachytit moment, kdy je instalace 100% hotová</div>
+</div>

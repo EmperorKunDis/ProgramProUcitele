@@ -1,0 +1,117 @@
+<h1>Hledání & Nahrazování</h1>
+
+<p>Antigravity nabízí výkonné nástroje pro hledání textu v jednotlivých souborech i napříč celým projektem.</p>
+
+<h2>Hledání v aktuálním souboru</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+F</strong> (Mac) / <strong>Ctrl+F</strong> (Windows/Linux)<br>
+        Otevře vyhledávací lištu pro aktuální soubor.
+    </div>
+</div>
+
+<h3>Možnosti hledání</h3>
+
+<table>
+    <thead>
+        <tr><th>Ikona</th><th>Funkce</th><th>Zkratka</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><code>Aa</code></td><td>Case sensitive (rozlišovat velikost)</td><td>Alt+C</td></tr>
+        <tr><td><code>Ab</code></td><td>Whole word (celé slovo)</td><td>Alt+W</td></tr>
+        <tr><td><code>.*</code></td><td>Regular expression (regex)</td><td>Alt+R</td></tr>
+    </tbody>
+</table>
+
+<h2>Nahrazování v souboru</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+H</strong> (Mac) / <strong>Ctrl+H</strong> (Windows/Linux)<br>
+        Otevře hledání s možností nahrazení.
+    </div>
+</div>
+
+<h3>Příklad s regex</h3>
+
+<p>Chcete změnit <code>console.log()</code> na <code>logger.debug()</code>:</p>
+
+<pre><code class="language-text">Hledat:    console\.log\((.*)\)
+Nahradit:  logger.debug($1)</code></pre>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Pozor:</strong> Regex nahrazování je mocné, ale nebezpečné. Vždy nejprve zkontrolujte náhledy změn před potvrzením.
+    </div>
+</div>
+
+<h2>Hledání v celém projektu</h2>
+
+<p>Nejčastěji používaná funkce pro práci s velkými projekty:</p>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+Shift+F</strong> (Mac) / <strong>Ctrl+Shift+F</strong> (Windows/Linux)<br>
+        Globální hledání napříč všemi soubory projektu.
+    </div>
+</div>
+
+<h3>Filtry pro globální hledání</h3>
+
+<ul>
+    <li><strong>files to include:</strong> <code>*.ts, *.tsx</code> - hledá jen v TypeScript souborech</li>
+    <li><strong>files to exclude:</strong> <code>node_modules, dist</code> - ignoruje složky</li>
+</ul>
+
+<div class="visual-placeholder">
+    <div class="icon">🔎</div>
+    <div class="desc">Screenshot: Global Search Panel</div>
+    <div class="specs">Ukázka výsledků hledání s filtry</div>
+</div>
+
+<h2>Multi-cursor Selection</h2>
+
+<p>Editujte více míst současně:</p>
+
+<table>
+    <thead>
+        <tr><th>Zkratka</th><th>Akce</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><kbd>Cmd+D</kbd></td><td>Vybrat další výskyt slova</td></tr>
+        <tr><td><kbd>Cmd+Shift+L</kbd></td><td>Vybrat všechny výskyty slova</td></tr>
+        <tr><td><kbd>Alt+Click</kbd></td><td>Přidat kurzor na kliknuté místo</td></tr>
+        <tr><td><kbd>Cmd+Alt+↑/↓</kbd></td><td>Přidat kurzor nad/pod</td></tr>
+    </tbody>
+</table>
+
+<h3>Příklad: Přejmenování proměnné</h3>
+
+<ol>
+    <li>Vyberte slovo <code>oldName</code></li>
+    <li>Stiskněte <kbd>Cmd+Shift+L</kbd> pro výběr všech výskytů</li>
+    <li>Začněte psát <code>newName</code></li>
+    <li>Všechny výskyty se změní současně</li>
+</ol>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Pro bezpečné přejmenování použijte <kbd>F2</kbd> (Rename Symbol) - Antigravity automaticky najde a přejmenuje všechny reference včetně importů.
+    </div>
+</div>
+
+<h2>AI-Assisted Search</h2>
+
+<p>Využijte AI agenta pro složitější hledání:</p>
+
+<pre><code class="language-markdown"># Prompt pro agenta
+Najdi všechna místa v projektu, kde se volá API endpoint
+/users bez ověření tokenu. Ukaž mi seznam souborů a řádků.</code></pre>
+
+<p>Agent dokáže pochopit kontext a najít i nepřímé reference, které by jednoduché textové hledání přehlédlo.</p>

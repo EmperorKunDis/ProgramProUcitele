@@ -1,0 +1,114 @@
+<h1>Debugging & Troubleshooting</h1>
+
+<p>AI agent může dramaticky zrychlit debugging. Naučte se efektivně komunikovat problémy a interpretovat řešení.</p>
+
+<h2>Debugging Workflow</h2>
+
+<ol>
+    <li><strong>Popište symptom</strong> - Co se děje vs. co by se mělo dít</li>
+    <li><strong>Poskytněte kontext</strong> - Error message, stack trace, relevantní kód</li>
+    <li><strong>Agent analyzuje</strong> - Navrhne možné příčiny</li>
+    <li><strong>Společně opravte</strong> - Implementujte fix</li>
+    <li><strong>Ověřte</strong> - Potvrďte, že problém je vyřešen</li>
+</ol>
+
+<h2>Efektivní Bug Report</h2>
+
+<pre><code class="language-markdown"># Špatně ❌
+Nefunguje přihlášení.
+
+# Dobře ✅
+## Bug: Přihlášení selhává pro uživatele s diakritikou
+
+**Očekávané chování:**
+Uživatel se přihlásí s emailem "müller@example.com"
+
+**Aktuální chování:**
+Chyba "Invalid email format"
+
+**Reprodukce:**
+1. Jdi na /login
+2. Zadej email: müller@example.com
+3. Zadej heslo: test123
+4. Klikni "Přihlásit"
+
+**Error log:**
+```
+ValidationError: Email does not match pattern
+  at validateEmail (src/utils/validation.ts:23)
+```
+
+**Relevantní soubory:**
+- @src/utils/validation.ts
+- @src/pages/login.tsx</code></pre>
+
+<h2>Práce s Error Messages</h2>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        Zkopírujte celou error message včetně stack trace. Agent dokáže identifikovat problém z řádku, kde chyba vznikla.
+    </div>
+</div>
+
+<pre><code class="language-markdown"># Prompt s error message
+Mám tuto chybu při buildu:
+
+```
+TypeError: Cannot read property 'map' of undefined
+    at UserList (src/components/UserList.tsx:15:23)
+    at renderWithHooks (node_modules/react-dom/...)
+```
+
+Co je špatně a jak to opravit?</code></pre>
+
+<h2>Browser Agent pro UI debugging</h2>
+
+<p>Pro vizuální bugy použijte Browser Agent:</p>
+
+<pre><code class="language-markdown"># Browser Debugging Prompt
+Otevři http://localhost:3000/dashboard v prohlížeči.
+
+Problém: Tabulka uživatelů se nezobrazuje správně na mobilu.
+- Řádky přetékají
+- Horizontální scroll nefunguje
+
+Najdi příčinu v CSS a navrhni fix.</code></pre>
+
+<div class="visual-placeholder">
+    <div class="icon">🔍</div>
+    <div class="desc">Screenshot: Browser Agent debugging</div>
+    <div class="specs">Agent kontroluje responsivitu v DevTools</div>
+</div>
+
+<h2>Performance Debugging</h2>
+
+<pre><code class="language-markdown"># Performance Prompt
+Stránka /products se načítá 8 sekund.
+
+Analyzuj:
+1. Network waterfall
+2. React component re-renders
+3. API response times
+4. Bundle size
+
+Identifikuj bottlenecky a navrhni optimalizace.</code></pre>
+
+<h2>Memory Leak Detection</h2>
+
+<pre><code class="language-markdown"># Memory Leak Prompt
+Aplikace po 30 minutách používání zpomaluje.
+Heap v Chrome DevTools roste kontinuálně.
+
+Projdi komponenty a najdi:
+- Event listenery bez cleanup
+- Setinterval/setTimeout bez clearance
+- Subscriptions bez unsubscribe
+- Velké objekty v closure</code></pre>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Pozor:</strong> Agent může navrhnout řešení, které opraví symptom, ale ne příčinu. Vždy se ptejte "proč" a pochopte root cause.
+    </div>
+</div>

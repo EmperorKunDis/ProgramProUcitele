@@ -1,0 +1,175 @@
+<h1>Multi-Agent Orchestrace</h1>
+
+<p>Jeden agent je silný. Více agentů pracujících společně je revolucí. Naučte se orchestrovat komplexní úkoly.</p>
+
+<h2>Proč více agentů?</h2>
+
+<table>
+    <thead>
+        <tr><th>Single Agent</th><th>Multi-Agent</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sekvenční zpracování</td>
+            <td>Paralelní zpracování</td>
+        </tr>
+        <tr>
+            <td>Jeden úhel pohledu</td>
+            <td>Různé perspektivy</td>
+        </tr>
+        <tr>
+            <td>Omezený kontext</td>
+            <td>Specializované znalosti</td>
+        </tr>
+        <tr>
+            <td>Lineární workflow</td>
+            <td>Komplexní orchestrace</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Vzory Multi-Agent architektury</h2>
+
+<h3>1. Pipeline Pattern</h3>
+
+<p>Agenti pracují sekvenčně, každý přidává hodnotu:</p>
+
+<pre><code class="language-text">Agent 1 (Analyst)     Agent 2 (Developer)    Agent 3 (Reviewer)
+      │                      │                      │
+      ▼                      ▼                      ▼
+  Analýza         →      Implementace    →     Code Review
+  požadavků              funkcionality         a testy</code></pre>
+
+<pre><code class="language-markdown"># Pipeline Prompt
+Vytvoř tři agenty pro implementaci nové funkce:
+
+**Agent 1 - Analyst:**
+- Analyzuj požadavek: "přidat export do PDF"
+- Navrhni technický přístup
+- Předej výstup Agent 2
+
+**Agent 2 - Developer:**
+- Implementuj podle návrhu
+- Napiš kód a základní testy
+- Předej výstup Agent 3
+
+**Agent 3 - Reviewer:**
+- Udělej code review
+- Zkontroluj edge cases
+- Navrhni vylepšení</code></pre>
+
+<h3>2. Parallel Pattern</h3>
+
+<p>Agenti pracují současně na různých částech:</p>
+
+<pre><code class="language-text">           ┌─ Agent A (Frontend) ─┐
+           │                      │
+Požadavek ─┼─ Agent B (Backend) ──┼─ Integrace
+           │                      │
+           └─ Agent C (Tests) ────┘</code></pre>
+
+<pre><code class="language-markdown"># Parallel Execution Prompt
+Potřebuji paralelně zpracovat:
+
+**Agent A - Frontend:**
+Vytvoř React komponentu pro UserProfile
+
+**Agent B - Backend:**
+Vytvoř API endpoint GET /api/users/:id
+
+**Agent C - Tests:**
+Napiš E2E testy pro user profile flow
+
+Všichni agenti pracují nezávisle. Koordinátor je spojí.</code></pre>
+
+<h3>3. Debate Pattern</h3>
+
+<p>Agenti diskutují a vyvracejí argumenty:</p>
+
+<pre><code class="language-markdown"># Debate Pattern Prompt
+Téma: Má náš projekt použít GraphQL nebo REST?
+
+**Agent 1 - Advocate GraphQL:**
+Obhajuj GraphQL. Uveď konkrétní výhody pro náš use case.
+
+**Agent 2 - Advocate REST:**
+Obhajuj REST. Uveď konkrétní výhody pro náš use case.
+
+**Agent 3 - Moderator:**
+Shrň argumenty obou stran. Vyber vítěze s odůvodněním.</code></pre>
+
+<h2>Praktická orchestrace</h2>
+
+<h3>Nastavení v Antigravity</h3>
+
+<pre><code class="language-yaml"># .gemini/workflows/multi-agent.yml
+name: Multi-Agent Feature Development
+description: Orchestrace tří agentů pro vývoj feature
+
+agents:
+  - name: planner
+    role: "Plánování a architektura"
+    model: gemini-3-deep-think
+
+  - name: developer
+    role: "Implementace kódu"
+    model: gemini-3-pro
+
+  - name: reviewer
+    role: "Code review a QA"
+    model: gemini-3-pro
+
+flow:
+  - agent: planner
+    input: "{{user_request}}"
+    output: implementation_plan
+
+  - agent: developer
+    input: "{{implementation_plan}}"
+    output: code_changes
+
+  - agent: reviewer
+    input: "{{code_changes}}"
+    output: final_review</code></pre>
+
+<h2>Koordinace kontextu</h2>
+
+<p>Klíčem k úspěchu je sdílení správného kontextu:</p>
+
+<pre><code class="language-markdown"># Kontext pro všechny agenty
+## Sdílený kontext
+- Projekt: E-commerce aplikace v Next.js
+- Stack: React, TypeScript, Prisma, PostgreSQL
+- Konvence: ESLint + Prettier, testy v Jest
+
+## Aktuální úkol
+Implementovat košík s perzistencí
+
+## Omezení
+- Max 3 soubory per agent
+- Dodržovat existující patterns
+- Neměnit databázové schéma</code></pre>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Pozor na context window:</strong> Každý agent má omezený kontext. Předávejte jen relevantní informace, ne celou historii.
+    </div>
+</div>
+
+<h2>Best Practices</h2>
+
+<ul>
+    <li><strong>Jasné role</strong> - Každý agent má specifickou odpovědnost</li>
+    <li><strong>Minimální kontext</strong> - Předávejte jen potřebné informace</li>
+    <li><strong>Checkpointy</strong> - Validujte výstupy mezi kroky</li>
+    <li><strong>Fallback</strong> - Mějte plán pro selhání agenta</li>
+    <li><strong>Logging</strong> - Zaznamenávejte rozhodnutí pro audit</li>
+</ul>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Začněte s pipeline pattern - je nejjednodušší na pochopení a debugging.
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.callout {
+    padding: var(--space-md);
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+    display: flex;
+    gap: var(--space-md);
+    background-color: var(--color-bg-secondary);
+}
+
+.callout-icon { font-size: 1.2rem; flex-shrink: 0; }
+.callout-content { flex: 1; }
+
+.callout-tip {
+    border-color: var(--color-brand-success);
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+.callout-warning {
+    border-color: var(--color-brand-warning);
+    background-color: rgba(245, 158, 11, 0.05);
+}
+
+.callout-danger {
+    border-color: var(--color-brand-danger);
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.callout-info {
+    border-color: var(--color-brand-primary);
+    background-color: rgba(5, 150, 105, 0.05);
+}
+
+[data-theme="dark"] .callout {
+    background-color: rgba(255, 255, 255, 0.03);
+}

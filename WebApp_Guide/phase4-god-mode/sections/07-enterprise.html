@@ -1,0 +1,258 @@
+<h1>Enterprise & Škálování</h1>
+
+<p>Nasazení AI agentů v enterprise prostředí vyžaduje specifické přístupy k bezpečnosti, governance a škálování.</p>
+
+<h2>Enterprise požadavky</h2>
+
+<table>
+    <thead>
+        <tr><th>Oblast</th><th>Požadavek</th><th>Řešení</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Security</strong></td>
+            <td>Data protection</td>
+            <td>On-premise deployment, encryption</td>
+        </tr>
+        <tr>
+            <td><strong>Compliance</strong></td>
+            <td>GDPR, SOC2, HIPAA</td>
+            <td>Audit logs, data retention</td>
+        </tr>
+        <tr>
+            <td><strong>Access Control</strong></td>
+            <td>RBAC, SSO</td>
+            <td>Integration s IdP</td>
+        </tr>
+        <tr>
+            <td><strong>Scalability</strong></td>
+            <td>Tisíce uživatelů</td>
+            <td>Load balancing, caching</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Access Control</h2>
+
+<h3>Role-Based Access Control (RBAC)</h3>
+
+<pre><code class="language-yaml"># .gemini/enterprise/rbac.yaml
+roles:
+  developer:
+    agents:
+      - code-reviewer: [read, execute]
+      - docs-writer: [read, execute]
+    mcp:
+      - filesystem: [read]
+      - git: [read, write]
+
+  tech-lead:
+    extends: developer
+    agents:
+      - security-scanner: [read, execute]
+      - deployment-bot: [read, execute]
+    mcp:
+      - postgres: [read]
+
+  admin:
+    extends: tech-lead
+    agents:
+      - "*": [read, write, execute, delete]
+    mcp:
+      - "*": [read, write]
+    settings:
+      - can_modify_rbac: true
+      - can_view_audit_logs: true</code></pre>
+
+<h3>Team Policies</h3>
+
+<pre><code class="language-yaml"># .gemini/enterprise/policies.yaml
+policies:
+  code-execution:
+    require_approval: true
+    approvers:
+      - role: tech-lead
+      - group: security-team
+    timeout: 24h
+
+  data-access:
+    sensitive_tables:
+      - users
+      - payments
+      - api_keys
+    require_justification: true
+    log_all_queries: true
+
+  deployment:
+    production:
+      require_approvals: 2
+      block_on_critical_issues: true
+      notify: [slack:#deployments, email:ops@company.com]</code></pre>
+
+<h2>Audit & Compliance</h2>
+
+<h3>Audit Logging</h3>
+
+<pre><code class="language-yaml"># .gemini/enterprise/audit.yaml
+audit:
+  log_level: detailed
+  retention: 365d
+
+  events:
+    - agent_execution
+    - mcp_tool_call
+    - file_modification
+    - config_change
+    - permission_change
+
+  format:
+    timestamp: ISO8601
+    user: email
+    action: string
+    resource: path
+    result: success|failure
+    metadata: json
+
+  export:
+    - type: elasticsearch
+      endpoint: https://logs.company.com
+    - type: s3
+      bucket: audit-logs-prod</code></pre>
+
+<h3>Compliance Dashboard</h3>
+
+<pre><code class="language-yaml"># .gemini/enterprise/compliance.yaml
+compliance:
+  frameworks:
+    - name: SOC2
+      controls:
+        - id: CC6.1
+          description: "Logical access security"
+          evidence: rbac.yaml
+        - id: CC7.2
+          description: "System monitoring"
+          evidence: audit.yaml
+
+    - name: GDPR
+      controls:
+        - id: Art.30
+          description: "Records of processing"
+          evidence: data-processing-log
+
+  reports:
+    schedule: monthly
+    recipients: [compliance@company.com]
+    format: pdf</code></pre>
+
+<h2>Škálování</h2>
+
+<h3>High Availability Setup</h3>
+
+<pre><code class="language-yaml"># docker-compose.enterprise.yaml
+services:
+  gemini-proxy:
+    image: gemini-enterprise:latest
+    replicas: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DB_URL=postgres://db:5432
+
+  redis:
+    image: redis:7-alpine
+    deploy:
+      replicas: 3
+      mode: replicated
+
+  load-balancer:
+    image: nginx:alpine
+    ports:
+      - "443:443"
+    configs:
+      - source: nginx_config
+        target: /etc/nginx/nginx.conf</code></pre>
+
+<h3>Rate Limiting</h3>
+
+<pre><code class="language-yaml"># .gemini/enterprise/rate-limits.yaml
+rate_limits:
+  default:
+    requests_per_minute: 60
+    tokens_per_day: 100000
+
+  by_role:
+    developer:
+      requests_per_minute: 30
+      tokens_per_day: 50000
+    tech-lead:
+      requests_per_minute: 100
+      tokens_per_day: 200000
+    admin:
+      requests_per_minute: unlimited
+      tokens_per_day: unlimited
+
+  by_agent:
+    code-reviewer:
+      max_concurrent: 5
+      timeout: 300s
+    deployment-bot:
+      max_concurrent: 1
+      timeout: 600s</code></pre>
+
+<h2>Cost Management</h2>
+
+<pre><code class="language-yaml"># .gemini/enterprise/cost-management.yaml
+budgets:
+  monthly_total: 10000  # USD
+  alerts:
+    - at: 50%
+      notify: [finance@company.com]
+    - at: 80%
+      notify: [finance@company.com, cto@company.com]
+    - at: 95%
+      action: throttle
+      notify: [all-stakeholders]
+
+  by_team:
+    engineering:
+      budget: 6000
+      model_preference: gemini-3-flash
+    research:
+      budget: 3000
+      model_preference: gemini-3-deep-think
+    support:
+      budget: 1000
+      model_preference: gemini-3-flash
+
+tracking:
+  granularity: hourly
+  export: bigquery
+  dashboard: grafana</code></pre>
+
+<h2>Onboarding & Training</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">📚</div>
+    <div class="callout-content">
+        <strong>Enterprise Onboarding Checklist:</strong>
+        <ul style="margin-bottom: 0;">
+            <li>Nastavte SSO integraci</li>
+            <li>Definujte RBAC role</li>
+            <li>Konfigurujte audit logging</li>
+            <li>Nastavte cost alerts</li>
+            <li>Vytvořte team-specific rules</li>
+            <li>Proškolte team leads</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Začněte s pilotním týmem, iterujte na policies, a teprve pak rozšiřujte na celou organizaci.
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 4: God Mode | PRAUT Guide</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="mobile-header">
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Otevrit menu">
+                <span></span><span></span><span></span>
+            </button>
+            <span class="mobile-title">Phase 4: God Mode</span>
+            <button id="search-btn" class="search-btn" aria-label="Hledat">🔍</button>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="phase-badge">Phase 4</div>
+                <span class="app-title">God Mode</span>
+            </div>
+
+            <!-- Phase Switcher -->
+            <div class="phase-switcher">
+                <a href="../index.html" class="phase-home" title="Zpět na Roadmap">🏠</a>
+                <a href="../antigravity-guide/index.html" class="phase-dot" data-phase="1" title="Phase 1: Základy">
+                    <span class="phase-number">1</span>
+                    <span class="phase-progress" id="phase1-progress">0%</span>
+                </a>
+                <a href="../phase2-navigation/index.html" class="phase-dot" data-phase="2" title="Phase 2: Navigace">
+                    <span class="phase-number">2</span>
+                    <span class="phase-progress" id="phase2-progress">0%</span>
+                </a>
+                <a href="../phase3-pro-workflow/index.html" class="phase-dot" data-phase="3" title="Phase 3: Pro Workflow">
+                    <span class="phase-number">3</span>
+                    <span class="phase-progress" id="phase3-progress">0%</span>
+                </a>
+                <a href="../phase4-god-mode/index.html" class="phase-dot active" data-phase="4" title="Phase 4: God Mode">
+                    <span class="phase-number">4</span>
+                    <span class="phase-progress" id="phase4-progress">0%</span>
+                </a>
+            </div>
+
+            <button id="search-btn-desktop" class="search-trigger" onclick="App.toggleSearch()">
+                <span class="search-trigger-icon">🔍</span>
+                <span class="search-trigger-text">Hledat...</span>
+                <kbd class="search-trigger-kbd">⌘K</kbd>
+            </button>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">0/8 sekcí</span>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav"></nav>
+
+            <div class="sidebar-footer">
+                <div class="footer-info">
+                    <strong>PRAUT s.r.o.</strong><br>
+                    <span>Antigravity Roadmap</span>
+                </div>
+                <button id="theme-btn" class="theme-btn">
+                    <span>🌙</span> Tmavý režim
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div id="content-container" class="content-wrapper fade-in">
+                <div class="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Načítání průvodce...</p>
+                </div>
+            </div>
+        </main>
+
+        <button id="back-to-top" class="back-to-top" aria-label="Zpět nahoru">↑</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

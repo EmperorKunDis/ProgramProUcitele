@@ -1,0 +1,65 @@
+:root {
+  /* PRAUT Brand Palette */
+  --color-brand-primary: #5B2C9D;
+  /* Deep Purple */
+  --color-brand-secondary: #7C4DFF;
+  /* Lighter Purple for accents */
+  --color-brand-success: #00C853;
+  /* Green */
+  --color-brand-danger: #D50000;
+  /* Red */
+  --color-brand-warning: #FFAB00;
+  /* Amber */
+
+  /* Neutrals - Light */
+  --color-bg-primary: #F4F5F7;
+  /* Slight grey for depth */
+  --color-bg-secondary: #FFFFFF;
+  /* Pure white for cards */
+  --color-bg-glass: rgba(255, 255, 255, 0.7);
+  /* Glass effect */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #5E5E5E;
+  --color-border: #E0E0E0;
+
+  /* Typography - Premium */
+  --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  /* Cleaner modern font */
+  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --font-size-base: 16px;
+  --font-size-header: 28px;
+  --font-size-hero: 52px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+
+  /* UI Elements */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(91, 44, 157, 0.08);
+  /* Purple tinted shadow */
+  --shadow-lg: 0 16px 32px rgba(91, 44, 157, 0.12);
+
+  --glass-blur: blur(12px);
+}
+
+[data-theme="dark"] {
+  /* Neutrals - Dark */
+  --color-bg-primary: #0F0F13;
+  /* Very dark purple-grey */
+  --color-bg-secondary: #1A1B26;
+  --color-bg-glass: rgba(26, 27, 38, 0.7);
+  --color-text-primary: #E8E8E8;
+  --color-text-secondary: #A0A0A0;
+  --color-border: #2E2E3E;
+
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

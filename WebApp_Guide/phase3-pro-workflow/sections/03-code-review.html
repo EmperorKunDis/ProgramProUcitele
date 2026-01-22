@@ -1,0 +1,98 @@
+<h1>Code Review</h1>
+
+<p>AI agent může sloužit jako první úroveň code review, identifikovat problémy dříve, než kód uvidí kolegové.</p>
+
+<h2>AI jako Code Reviewer</h2>
+
+<p>Agent dokáže zkontrolovat:</p>
+
+<ul>
+    <li>🐛 Potenciální bugy a edge cases</li>
+    <li>🔒 Bezpečnostní problémy</li>
+    <li>⚡ Výkonnostní optimalizace</li>
+    <li>📝 Dodržování konvencí</li>
+    <li>♻️ Duplicitní kód</li>
+</ul>
+
+<h2>Prompt pro Code Review</h2>
+
+<pre><code class="language-markdown"># Review Prompt
+Proveď code review změn v tomto PR.
+
+Zaměř se na:
+1. Logické chyby a edge cases
+2. Bezpečnostní problémy (injection, XSS, auth)
+3. Výkonnost (N+1 queries, memory leaks)
+4. Čitelnost a maintainability
+5. Dodržování našich konvencí (viz .antigravity-rules)
+
+Formát odpovědi:
+🔴 Critical - Musí se opravit
+🟡 Warning - Mělo by se opravit
+🟢 Suggestion - Nice to have
+💬 Question - Potřebuji vysvětlení</code></pre>
+
+<h2>Příklad Review výstupu</h2>
+
+<pre><code class="language-markdown">## Code Review: user-auth.ts
+
+🔴 **Critical: SQL Injection riziko** (řádek 45)
+```typescript
+// Problém
+const query = `SELECT * FROM users WHERE id = ${userId}`;
+// Řešení
+const query = `SELECT * FROM users WHERE id = $1`;
+```
+
+🟡 **Warning: Chybí error handling** (řádek 72)
+Funkce `fetchUserData` nehandluje případ, kdy API vrátí 500.
+
+🟢 **Suggestion: Extract constant** (řádek 23)
+Magic number `86400` by měl být konstanta `SECONDS_IN_DAY`.
+
+💬 **Question:** Je záměr, že `isAdmin` se kontroluje až po
+načtení dat? Zdá se to jako race condition.</code></pre>
+
+<h2>Self-Review Workflow</h2>
+
+<p>Před commitem požádejte agenta o review vašich změn:</p>
+
+<ol>
+    <li>Napište kód</li>
+    <li>Spusťte <code>Review moje změny od posledního commitu</code></li>
+    <li>Opravte nalezené problémy</li>
+    <li>Commitněte</li>
+</ol>
+
+<h2>PR Description Generator</h2>
+
+<pre><code class="language-markdown"># Prompt pro PR description
+Analyzuj změny v aktuální větvi oproti main.
+Vygeneruj PR description s:
+- Souhrn změn
+- Seznam modifikovaných souborů
+- Breaking changes (pokud existují)
+- Testovací instrukce</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Vytvořte si vlastní review checklist v <code>.gemini/templates/review-checklist.md</code>. Agent ho pak automaticky použije.
+    </div>
+</div>
+
+<h2>Integrace s GitHub/GitLab</h2>
+
+<p>Antigravity může automaticky:</p>
+
+<ul>
+    <li>Přidávat komentáře k PR</li>
+    <li>Navrhovat změny přímo v GitHub UI</li>
+    <li>Aktualizovat PR description</li>
+</ul>
+
+<pre><code class="language-markdown"># Nastavení v .antigravity-rules
+## GitHub Integration
+- Automaticky reviewuj PR s labelem "needs-ai-review"
+- Přidej komentář s nalezenými problémy
+- Pokud žádné critical issues, přidej approval</code></pre>

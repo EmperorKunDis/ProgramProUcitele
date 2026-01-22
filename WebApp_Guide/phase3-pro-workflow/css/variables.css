@@ -1,0 +1,49 @@
+:root {
+  /* Phase 3 Brand Palette - Green Theme */
+  --color-brand-primary: #059669;
+  --color-brand-secondary: #10B981;
+  --color-brand-accent: #34D399;
+  --color-brand-success: #22C55E;
+  --color-brand-danger: #EF4444;
+  --color-brand-warning: #F59E0B;
+
+  /* Neutrals - Light */
+  --color-bg-primary: #F0FDF4;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-glass: rgba(255, 255, 255, 0.8);
+  --color-text-primary: #14532D;
+  --color-text-secondary: #4D7C5F;
+  --color-border: #D1FAE5;
+
+  /* Typography */
+  --font-family-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-size-base: 16px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+
+  /* UI Elements */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(5, 150, 105, 0.1);
+  --shadow-lg: 0 16px 32px rgba(5, 150, 105, 0.15);
+  --glass-blur: blur(12px);
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #0A1F0F;
+  --color-bg-secondary: #14352A;
+  --color-bg-glass: rgba(20, 53, 42, 0.8);
+  --color-text-primary: #D1FAE5;
+  --color-text-secondary: #86EFAC;
+  --color-border: #166534;
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

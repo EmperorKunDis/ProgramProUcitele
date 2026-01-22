@@ -1,0 +1,121 @@
+<h1>Git & Verzování</h1>
+
+<p>Antigravity má vestavěnou podporu pro Git. Verzování je kritické při práci s AI agenty - umožňuje bezpečně experimentovat a vracet změny.</p>
+
+<h2>Proč je Git důležitý pro AI vývoj?</h2>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Zlaté pravidlo:</strong> Vždy commitujte před tím, než dáte agentovi velký úkol. Pokud něco pokazí, můžete se snadno vrátit.
+    </div>
+</div>
+
+<ul>
+    <li>🔄 <strong>Bezpečné experimentování</strong> - Agent může měnit kód, vy můžete revertovat</li>
+    <li>📝 <strong>Historie změn</strong> - Vidíte, co agent změnil</li>
+    <li>🌿 <strong>Branches</strong> - Testujte AI změny v izolaci</li>
+    <li>👥 <strong>Spolupráce</strong> - Sdílení kódu s týmem</li>
+</ul>
+
+<h2>Source Control Panel</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+Shift+G</strong> - Otevře Source Control panel
+    </div>
+</div>
+
+<p>Panel zobrazuje:</p>
+<ul>
+    <li>Změněné soubory (Modified)</li>
+    <li>Nové soubory (Untracked)</li>
+    <li>Staged změny (připravené k commitu)</li>
+</ul>
+
+<div class="visual-placeholder">
+    <div class="icon">📊</div>
+    <div class="desc">Screenshot: Source Control Panel</div>
+    <div class="specs">Zobrazení změn a staging area</div>
+</div>
+
+<h2>Základní Git operace</h2>
+
+<h3>Stage & Commit</h3>
+
+<table>
+    <thead>
+        <tr><th>Akce</th><th>Jak na to</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Stage soubor</td><td>Klikněte na + u souboru</td></tr>
+        <tr><td>Stage vše</td><td>Klikněte na + u "Changes"</td></tr>
+        <tr><td>Commit</td><td>Napište zprávu a Cmd+Enter</td></tr>
+        <tr><td>Unstage</td><td>Klikněte na - u staged souboru</td></tr>
+    </tbody>
+</table>
+
+<h3>Prohlížení změn</h3>
+
+<p>Kliknutím na změněný soubor zobrazíte diff view - porovnání staré a nové verze vedle sebe.</p>
+
+<pre><code class="language-diff">- const oldValue = "before";
++ const newValue = "after";</code></pre>
+
+<h2>Práce s větvemi (Branches)</h2>
+
+<p>Větve umožňují pracovat na funkcích izolovaně:</p>
+
+<pre><code class="language-bash"># Vytvořit novou větev
+git checkout -b feature/ai-improvements
+
+# Přepnout na existující větev
+git checkout main
+
+# Zobrazit všechny větve
+git branch -a</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Doporučení:</strong> Vytvořte si větev <code>ai-experiments</code> pro testování AI změn. Až budete spokojeni, mergněte do main.
+    </div>
+</div>
+
+<h2>Git s AI Agentem</h2>
+
+<p>Agent může provádět Git operace za vás:</p>
+
+<pre><code class="language-markdown"># Bezpečný prompt
+Před změnami vytvoř novou větev "feature/user-auth".
+Pak implementuj přihlašování uživatelů.
+Po dokončení commitni s popisnou zprávou.</code></pre>
+
+<h3>Kontrola změn agenta</h3>
+
+<p>Po každém velkém úkolu agenta:</p>
+
+<ol>
+    <li>Otevřete Source Control panel (<kbd>Cmd+Shift+G</kbd>)</li>
+    <li>Prohlédněte změněné soubory</li>
+    <li>Klikněte na soubor pro zobrazení diff</li>
+    <li>Pokud OK, commitněte; pokud ne, revertněte</li>
+</ol>
+
+<h2>Git Lens (volitelné rozšíření)</h2>
+
+<p>Pro pokročilou Git integraci doporučujeme nainstalovat GitLens:</p>
+
+<ul>
+    <li><strong>Blame annotations</strong> - Kdo a kdy změnil každý řádek</li>
+    <li><strong>File history</strong> - Kompletní historie souboru</li>
+    <li><strong>Compare branches</strong> - Porovnání větví</li>
+</ul>
+
+<div class="callout callout-info">
+    <div class="callout-icon">ℹ️</div>
+    <div class="callout-content">
+        GitLens nainstalujete přes Command Palette: <code>Extensions: Install Extensions</code> → vyhledejte "GitLens"
+    </div>
+</div>

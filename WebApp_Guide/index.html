@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity: Od Nuly k Power Userovi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Palette: Deep Space & Neon */
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent-cyan: #06b6d4;
+            --accent-pink: #ec4899;
+            --text-light: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-cyan);
+        }
+
+        .chart-container {
+            position: relative;
+            margin: auto;
+            width: 100%;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-cyan);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        }
+
+        a.no-underline {
+            text-decoration: none !important;
+        }
+
+        a.no-underline:hover {
+            text-decoration: none !important;
+        }
+    </style>
+    <!-- 
+        Color Palette: "Cyber Future"
+        Primary: #0f172a (Slate 900)
+        Secondary: #1e293b (Slate 800)
+        Accent 1: #06b6d4 (Cyan 500)
+        Accent 2: #ec4899 (Pink 500)
+        
+        Selected for: High contrast, modern software aesthetic, professional yet vibrant.
+        NO SVG USED. NO MERMAID JS USED.
+    -->
+    <!--
+        Narrative Plan:
+        1. Intro: Define the goal (Browser user -> Power User).
+        2. Analysis: The Skill Gap (Radar Chart).
+        3. Roadmap: 4 Distinct Phases (HTML Process Flow).
+        4. Focus Areas: Where to spend time (Bar Chart).
+        5. The Curve: What to expect (Line Chart).
+        6. Summary: Final checklist.
+    -->
+</head>
+
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header -->
+    <header
+        class="w-full py-12 px-4 text-center border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-800">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 glow-text">ANTIGRAVITY</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-400 font-light max-w-3xl mx-auto">
+            Kompletní průvodce evolucí uživatele: <br>
+            <span class="text-white font-semibold">Od "jen prohlížeč" k systémovému architektovi.</span>
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-20">
+
+        <!-- Introduction Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div
+                    class="inline-block px-3 py-1 rounded-full bg-cyan-900/30 text-cyan-400 text-sm font-semibold border border-cyan-800">
+                    Cíl Mise
+                </div>
+                <h2 class="text-3xl font-bold text-white">Přemostění Digitální Propasti</h2>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                    Cílem není jen naučit ovládat software, ale změnit myšlení. Uživatel Antigravity se musí posunout od
+                    pasivní konzumace obsahu k aktivní manipulaci s daty a workflows. Tento proces jsme rozdělili do 4
+                    kritických fází.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <div class="text-center p-4 bg-slate-800 rounded-lg border border-slate-700 w-1/2">
+                        <div class="text-3xl font-bold text-cyan-400">4</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-wide">Fáze Učení</div>
+                    </div>
+                    <div class="text-center p-4 bg-slate-800 rounded-lg border border-slate-700 w-1/2">
+                        <div class="text-3xl font-bold text-pink-500">6 týdnů</div>
+                        <div class="text-sm text-slate-500 uppercase tracking-wide">K Mistrovství</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization: Skill Gap Radar Chart -->
+            <div class="card p-6 rounded-xl shadow-2xl relative">
+                <h3 class="text-xl font-bold mb-2 text-white border-b border-slate-700 pb-2">Evoluce Dovedností</h3>
+                <p class="text-sm text-slate-400 mb-4">Srovnání profilu začátečníka a cílového Power Usera.</p>
+                <div class="chart-container">
+                    <canvas id="skillRadarChart"></canvas>
+                </div>
+                <!-- Selection Justification: Radar chart effectively compares multivariate data (multiple skills) across two distinct categories (Beginner vs Expert). -->
+            </div>
+        </section>
+
+        <!-- The Roadmap: 4 Phases (Process Flow) -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Strategický Plán Učení</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Postupná cesta rozdělená do logických bloků, aby nedošlo k
+                    zahlcení informacemi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Phase 1 -->
+                <a href="antigravity-guide/index.html" class="card p-6 rounded-xl border-t-4 border-t-purple-500 flex flex-col h-full hover:border-purple-400 transition-all cursor-pointer group no-underline">
+                    <div class="text-4xl mb-4">🥚</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Fáze 1: Základy</h3>
+                    <p class="text-purple-400 text-sm font-mono mb-4">12 sekcí</p>
+                    <ul class="text-slate-300 space-y-2 text-sm flex-grow">
+                        <li class="flex items-start"><span class="mr-2 text-purple-500">▸</span> Instalace a první spuštění</li>
+                        <li class="flex items-start"><span class="mr-2 text-purple-500">▸</span> Základní prompty a konverzace</li>
+                        <li class="flex items-start"><span class="mr-2 text-purple-500">▸</span> Práce s artefakty</li>
+                        <li class="flex items-start"><span class="mr-2 text-purple-500">▸</span> Generování kódu</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700">
+                        <span class="text-purple-400 text-sm font-semibold group-hover:text-purple-300">Začít kurz →</span>
+                    </div>
+                </a>
+
+                <!-- Phase 2 -->
+                <a href="phase2-navigation/index.html" class="card p-6 rounded-xl border-t-4 border-t-blue-500 flex flex-col h-full hover:border-blue-400 transition-all cursor-pointer group no-underline">
+                    <div class="text-4xl mb-4">🐣</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Fáze 2: Navigace & Data</h3>
+                    <p class="text-blue-400 text-sm font-mono mb-4">8 sekcí</p>
+                    <ul class="text-slate-300 space-y-2 text-sm flex-grow">
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">▸</span> Navigace v souborech</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">▸</span> Pokročilé vyhledávání</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">▸</span> Git integrace</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">▸</span> Datový kontext projektu</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700">
+                        <span class="text-blue-400 text-sm font-semibold group-hover:text-blue-300">Začít kurz →</span>
+                    </div>
+                </a>
+
+                <!-- Phase 3 -->
+                <a href="phase3-pro-workflow/index.html" class="card p-6 rounded-xl border-t-4 border-t-emerald-500 flex flex-col h-full hover:border-emerald-400 transition-all cursor-pointer group no-underline">
+                    <div class="text-4xl mb-4">🦅</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Fáze 3: Pro Workflow</h3>
+                    <p class="text-emerald-400 text-sm font-mono mb-4">8 sekcí</p>
+                    <ul class="text-slate-300 space-y-2 text-sm flex-grow">
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">▸</span> AI-assisted testing</li>
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">▸</span> Code review s AI</li>
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">▸</span> CI/CD integrace</li>
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">▸</span> Týmová spolupráce</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700">
+                        <span class="text-emerald-400 text-sm font-semibold group-hover:text-emerald-300">Začít kurz →</span>
+                    </div>
+                </a>
+
+                <!-- Phase 4 -->
+                <a href="phase4-god-mode/index.html" class="card p-6 rounded-xl border-t-4 border-t-red-500 flex flex-col h-full hover:border-red-400 transition-all cursor-pointer group no-underline">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Fáze 4: God Mode</h3>
+                    <p class="text-red-400 text-sm font-mono mb-4">8 sekcí</p>
+                    <ul class="text-slate-300 space-y-2 text-sm flex-grow">
+                        <li class="flex items-start"><span class="mr-2 text-red-500">▸</span> Multi-agent orchestrace</li>
+                        <li class="flex items-start"><span class="mr-2 text-red-500">▸</span> Custom MCP integrace</li>
+                        <li class="flex items-start"><span class="mr-2 text-red-500">▸</span> Vlastní agenti</li>
+                        <li class="flex items-start"><span class="mr-2 text-red-500">▸</span> Enterprise škálování</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700">
+                        <span class="text-red-400 text-sm font-semibold group-hover:text-red-300">Začít kurz →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Complexity & Time Allocation -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Learning Curve Chart -->
+            <div class="card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Křivka Učení (The Dip)</h3>
+                <p class="text-sm text-slate-400 mb-6">Většina uživatelů to vzdá ve 2. týdnu. Antigravity má strmý
+                    začátek, ale pak efektivita roste exponenciálně.</p>
+                <div class="chart-container">
+                    <canvas id="learningCurveChart"></canvas>
+                </div>
+                <!-- Selection Justification: Line chart is ideal for showing continuous change (skill/efficiency) over time. -->
+            </div>
+
+            <!-- Curriculum Breakdown Chart -->
+            <div class="card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-2 text-white">Rozložení Studijního Času</h3>
+                <p class="text-sm text-slate-400 mb-6">Kam investovat nejvíce energie pro maximální návratnost (ROI)
+                    znalostí.</p>
+                <div class="chart-container">
+                    <canvas id="curriculumChart"></canvas>
+                </div>
+                <!-- Selection Justification: Bar chart provides a clear comparison of categorical data (study topics) by value (hours/effort). -->
+            </div>
+        </section>
+
+        <!-- Detailed Use Cases Section -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6 border-l-4 border-pink-500 pl-4">Klíčové Oblasti pro
+                "Professional" Use-Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Use Case 1 -->
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h4 class="text-lg font-bold text-cyan-400 mb-2">1. Projektové Řízení</h4>
+                    <p class="text-slate-400 text-sm mb-4">Přechod z Excelu/Emailu na strukturované tasky.</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Nastavení Stavu (To Do, In Progress)</li>
+                        <li>Přiřazování vlastníků (Assignees)</li>
+                        <li>Sledování termínů (Due Dates)</li>
+                    </ul>
+                </div>
+                <!-- Use Case 2 -->
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h4 class="text-lg font-bold text-cyan-400 mb-2">2. Knowledge Base</h4>
+                    <p class="text-slate-400 text-sm mb-4">Vytvoření firemní wiki přímo v Antigravity.</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Vnořené stránky (Nested Pages)</li>
+                        <li>Embedování Google Docs/Sheets</li>
+                        <li>Verzování dokumentů</li>
+                    </ul>
+                </div>
+                <!-- Use Case 3 -->
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h4 class="text-lg font-bold text-cyan-400 mb-2">3. Data CRM</h4>
+                    <p class="text-slate-400 text-sm mb-4">Sledování klientů a dealů.</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Vlastní pole (Custom Fields)</li>
+                        <li>Propojení záznamů (Relations)</li>
+                        <li>Pipeline zobrazení (Kanban)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Checklist / Call to Action -->
+        <section class="bg-gradient-to-r from-purple-900 to-slate-900 rounded-2xl p-8 border border-purple-700 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Jste připraveni začít?</h2>
+            <p class="text-purple-200 mb-8 text-lg">Začněte s Fází 1 a postupně se propracujte k God Mode.</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4 text-left max-w-4xl mx-auto mb-8">
+                <div class="flex items-center bg-slate-800 p-4 rounded-lg border border-slate-600 flex-1">
+                    <div class="h-6 w-6 rounded-full border-2 border-purple-500 mr-3 flex-shrink-0 flex items-center justify-center text-purple-500 text-xs font-bold">1</div>
+                    <span class="text-slate-300">Projít Phase 1: Základy</span>
+                </div>
+                <div class="flex items-center bg-slate-800 p-4 rounded-lg border border-slate-600 flex-1">
+                    <div class="h-6 w-6 rounded-full border-2 border-blue-500 mr-3 flex-shrink-0 flex items-center justify-center text-blue-500 text-xs font-bold">2</div>
+                    <span class="text-slate-300">Zvládnout navigaci a Git</span>
+                </div>
+                <div class="flex items-center bg-slate-800 p-4 rounded-lg border border-slate-600 flex-1">
+                    <div class="h-6 w-6 rounded-full border-2 border-emerald-500 mr-3 flex-shrink-0 flex items-center justify-center text-emerald-500 text-xs font-bold">3</div>
+                    <span class="text-slate-300">Nastavit Pro Workflow</span>
+                </div>
+            </div>
+
+            <a href="antigravity-guide/index.html" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-purple-500 hover:to-pink-500 transition-all transform hover:scale-105 shadow-lg no-underline">
+                Začít Phase 1 →
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 text-slate-600 text-sm border-t border-slate-800">
+        <p>&copy; 2026 PRAUT s.r.o. | Antigravity Roadmap</p>
+        <p class="mt-2 text-slate-700">36 interaktivních sekcí napříč 4 fázemi učení</p>
+    </footer>
+
+    <script>
+        // --- Helper Function for Label Wrapping (16 chars) ---
+        function wrapLabel(str) {
+            const maxLen = 16;
+            if (str.length <= maxLen) return str;
+
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLen) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Common Chart Options ---
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: { color: '#f1f5f9' }
+                },
+                tooltip: {
+                    backgroundColor: '#1e293b',
+                    titleColor: '#06b6d4',
+                    bodyColor: '#f1f5f9',
+                    borderColor: '#334155',
+                    borderWidth: 1,
+                    padding: 10,
+                    callbacks: {
+                        title: function (tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        // --- 1. Skill Radar Chart ---
+        const ctxRadar = document.getElementById('skillRadarChart').getContext('2d');
+        const labelsRadar = ['Navigace v UI', 'Klávesové Zkratky', 'Analýza Dat', 'Automatizace', 'Administrace', 'Troubleshooting'];
+        const processedLabelsRadar = labelsRadar.map(wrapLabel);
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: processedLabelsRadar,
+                datasets: [{
+                    label: 'Začátečník (Dnes)',
+                    data: [20, 0, 10, 0, 5, 10],
+                    fill: true,
+                    backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                    borderColor: '#94a3b8',
+                    pointBackgroundColor: '#94a3b8',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#94a3b8'
+                }, {
+                    label: 'Power User (Cíl)',
+                    data: [100, 90, 85, 80, 70, 95],
+                    fill: true,
+                    backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                    borderColor: '#06b6d4',
+                    pointBackgroundColor: '#06b6d4',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#06b6d4'
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: { color: '#f1f5f9', font: { size: 12 } },
+                        ticks: { display: false, backdropColor: 'transparent' },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // --- 2. Learning Curve (Line Chart) ---
+        const ctxLine = document.getElementById('learningCurveChart').getContext('2d');
+        const labelsLine = ['Týden 1', 'Týden 2', 'Týden 3', 'Týden 4', 'Týden 5', 'Týden 6', 'Měsíc 3'];
+        // Labels are short enough, no wrapping needed usually, but applying for safety
+        const processedLabelsLine = labelsLine.map(wrapLabel);
+
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: processedLabelsLine,
+                datasets: [{
+                    label: 'Efektivita Práce',
+                    data: [10, 15, 25, 40, 65, 85, 95],
+                    borderColor: '#ec4899', // Pink accent
+                    backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 3,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#ec4899'
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' },
+                        title: { display: true, text: '% Potenciálu', color: '#64748b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#94a3b8' }
+                    }
+                },
+                plugins: {
+                    ...commonOptions.plugins,
+                    annotation: {
+                        // Chart.js annotation plugin might not be loaded, relying on tooltip for "The Dip" explanation context
+                    }
+                }
+            }
+        });
+
+        // --- 3. Curriculum Breakdown (Bar Chart) ---
+        const ctxBar = document.getElementById('curriculumChart').getContext('2d');
+        const labelsBar = ['Základní UI & Nastavení', 'Práce s Daty & Filtry', 'Pokročilé Workflow', 'Integrace & API', 'Týmová Spolupráce'];
+        const processedLabelsBar = labelsBar.map(wrapLabel);
+
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: processedLabelsBar,
+                datasets: [{
+                    label: 'Doporučené Hodiny Studia',
+                    data: [2, 5, 8, 10, 3],
+                    backgroundColor: [
+                        '#3b82f6', // blue
+                        '#06b6d4', // cyan
+                        '#ec4899', // pink
+                        '#8b5cf6', // purple
+                        '#10b981'  // emerald
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                ...commonOptions,
+                indexAxis: 'y', // Horizontal bar for better readability of text
+                scales: {
+                    x: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#f1f5f9' }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

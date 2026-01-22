@@ -1,0 +1,62 @@
+{
+  "title": "Phase 3: Profesionální Workflow",
+  "version": "1.0.0",
+  "phase": 3,
+  "color_scheme": "green",
+  "sections": [
+    {
+      "id": "01-intro",
+      "title": "1. Přehled Phase 3",
+      "file": "sections/01-intro.html",
+      "readingTime": "2 min"
+    },
+    {
+      "id": "02-testing",
+      "title": "2. Testování s AI",
+      "file": "sections/02-testing.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "03-code-review",
+      "title": "3. Code Review",
+      "file": "sections/03-code-review.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "04-debugging",
+      "title": "4. Debugging & Troubleshooting",
+      "file": "sections/04-debugging.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "05-cicd",
+      "title": "5. CI/CD Integrace",
+      "file": "sections/05-cicd.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "06-collaboration",
+      "title": "6. Týmová Spolupráce",
+      "file": "sections/06-collaboration.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "07-agent-config",
+      "title": "7. Pokročilá Konfigurace",
+      "file": "sections/07-agent-config.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "08-summary",
+      "title": "8. Shrnutí & Další Kroky",
+      "file": "sections/08-summary.html",
+      "readingTime": "2 min"
+    }
+  ],
+  "features": {
+    "dark_mode": true,
+    "search": true,
+    "progress_tracking": true,
+    "onboarding": true
+  }
+}

@@ -1,0 +1,202 @@
+<h1>Pokročilý Prompt Engineering</h1>
+
+<p>Kvalita výstupu AI závisí na kvalitě vstupu. Naučte se pokročilé techniky pro maximalizaci efektivity.</p>
+
+<h2>Základní principy</h2>
+
+<ul>
+    <li><strong>Specifičnost</strong> - Čím konkrétnější zadání, tím lepší výstup</li>
+    <li><strong>Kontext</strong> - Poskytněte relevantní background</li>
+    <li><strong>Formát</strong> - Definujte očekávaný formát odpovědi</li>
+    <li><strong>Omezení</strong> - Jasně specifikujte, co NEdělat</li>
+</ul>
+
+<h2>Pokročilé techniky</h2>
+
+<h3>1. Chain of Thought (CoT)</h3>
+
+<p>Nechte AI "přemýšlet nahlas":</p>
+
+<pre><code class="language-markdown"># Bez CoT (špatně)
+Optimalizuj tento SQL dotaz: SELECT * FROM users WHERE ...
+
+# S CoT (dobře)
+Optimalizuj tento SQL dotaz. Postupuj takto:
+
+1. Analyzuj aktuální dotaz a identifikuj problémy
+2. Vysvětli, proč jsou tyto problémy problematické
+3. Navrhni optimalizovanou verzi
+4. Vysvětli, proč je optimalizace lepší
+5. Uveď očekávané zlepšení výkonu
+
+SELECT * FROM users WHERE ...</code></pre>
+
+<h3>2. Few-Shot Learning</h3>
+
+<p>Ukažte příklady požadovaného výstupu:</p>
+
+<pre><code class="language-markdown"># Few-Shot Prompt
+Generuj commit messages podle těchto příkladů:
+
+Příklad 1:
+Změna: Přidání validace emailu
+Commit: feat(auth): add email validation with regex pattern
+
+Příklad 2:
+Změna: Oprava překlepu v dokumentaci
+Commit: docs: fix typo in README installation section
+
+Příklad 3:
+Změna: Refaktoring user service
+Commit: refactor(users): extract validation logic to separate module
+
+Nyní vygeneruj commit message pro:
+Změna: Přidání dark mode do settings</code></pre>
+
+<h3>3. Role-Based Prompting</h3>
+
+<p>Definujte roli a expertise:</p>
+
+<pre><code class="language-markdown"># Role-Based Prompt
+Jsi senior security engineer s 15 lety zkušeností.
+Tvá specializace je web application security a OWASP Top 10.
+
+Proveď security audit tohoto kódu:
+- Hledej SQL injection, XSS, CSRF zranitelnosti
+- Hodnoť podle OWASP guidelines
+- Navrhni konkrétní opravy s ukázkami kódu
+
+```javascript
+app.get('/user', (req, res) => {
+  const userId = req.query.id;
+  db.query(`SELECT * FROM users WHERE id = ${userId}`);
+});
+```</code></pre>
+
+<h3>4. Structured Output</h3>
+
+<p>Vyžadujte strukturovaný výstup:</p>
+
+<pre><code class="language-markdown"># Structured Output Prompt
+Analyzuj tento bug report a vrať JSON:
+
+```json
+{
+  "severity": "critical|high|medium|low",
+  "category": "string",
+  "root_cause": "string",
+  "affected_files": ["array of paths"],
+  "fix_steps": ["array of steps"],
+  "estimated_effort": "hours as number"
+}
+```
+
+Bug report:
+"Aplikace padá při nahrání souboru většího než 10MB..."</code></pre>
+
+<h2>System Prompts</h2>
+
+<p>Definujte základní chování agenta:</p>
+
+<pre><code class="language-markdown"># .gemini/rules.md - System Prompt
+
+## Identita
+Jsi expert na TypeScript a React s důrazem na:
+- Type safety a generics
+- Performance optimalizace
+- Clean code principy
+
+## Styl odpovědí
+- Vždy uváděj TypeScript typy
+- Preferuj funkcionální přístup
+- Komentuj komplexní logiku česky
+- Používej moderní ES2022+ syntax
+
+## Omezení
+- NIKDY nepoužívej `any` type
+- NIKDY nepiš `console.log` do produkčního kódu
+- VŽDY ošetři edge cases
+- VŽDY přidej error handling
+
+## Formát kódu
+- Maximální délka řádku: 100 znaků
+- Odsazení: 2 mezery
+- Používej named exports</code></pre>
+
+<h2>Prompt Templates</h2>
+
+<p>Vytvořte znovupoužitelné šablony:</p>
+
+<pre><code class="language-markdown"># .gemini/prompts/code-review.md
+
+## Code Review Template
+
+### Kontext
+- Jazyk: {{language}}
+- Framework: {{framework}}
+- Typ změny: {{change_type}}
+
+### Kritéria hodnocení
+1. ✅ Správnost logiky
+2. 🔒 Bezpečnost
+3. ⚡ Performance
+4. 📖 Čitelnost
+5. 🧪 Testovatelnost
+
+### Kód k review
+```{{language}}
+{{code}}
+```
+
+### Požadovaný výstup
+Pro každé kritérium uveď:
+- Hodnocení (✅ OK / ⚠️ Pozor / ❌ Problém)
+- Konkrétní nálezy
+- Návrhy na zlepšení</code></pre>
+
+<h2>Anti-Patterns</h2>
+
+<div class="callout callout-danger">
+    <div class="callout-icon">❌</div>
+    <div class="callout-content">
+        <strong>Čemu se vyhnout:</strong>
+        <ul style="margin-bottom: 0;">
+            <li><strong>Vágní zadání:</strong> "Vylepši tento kód"</li>
+            <li><strong>Příliš mnoho najednou:</strong> 10 úkolů v jednom promptu</li>
+            <li><strong>Chybějící kontext:</strong> Kód bez vysvětlení projektu</li>
+            <li><strong>Ignorování formátu:</strong> Nespecifikovaný výstup</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Měření kvality promptů</h2>
+
+<table>
+    <thead>
+        <tr><th>Metrika</th><th>Jak měřit</th><th>Cíl</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First-try success</td>
+            <td>% úspěšných odpovědí bez oprav</td>
+            <td>> 80%</td>
+        </tr>
+        <tr>
+            <td>Iteration count</td>
+            <td>Počet upřesnění potřebných</td>
+            <td>< 2</td>
+        </tr>
+        <tr>
+            <td>Output quality</td>
+            <td>Hodnocení 1-5 na vzorku</td>
+            <td>> 4.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Udržujte knihovnu úspěšných promptů. Když něco funguje, uložte si to jako šablonu.
+    </div>
+</div>

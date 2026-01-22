@@ -1,0 +1,35 @@
+<h1>Artefakty</h1>
+
+<p>Artefakty jsou speciální soubory, které agenti vytvářejí, aby udrželi kontext a dokumentaci. Najdete je ve složce
+    <code>.gemini/brain/</code>, ale Antigravity vám je ukazuje v hezkém UI.</p>
+
+<div class="visual-placeholder">
+    <div class="icon">📄</div>
+    <div class="desc">Screenshot: Artifact Panel</div>
+    <div class="specs">Zobrazený renderovaný markdown soubor</div>
+</div>
+
+<h2>Typy Artefaktů</h2>
+
+<h3 style="color: var(--color-brand-primary)">1. Task Checklist (task.md)</h3>
+<p>Živý seznam úkolů. Agent si zde odškrtává, co už má hotové. Vy tak vždy vidíte progres na první pohled.</p>
+
+<pre><code class="language-markdown">- [x] Inicializace projektu
+- [x] Vytvoření databáze
+- [ ] Implementace API endpointů
+- [ ] Testování</code></pre>
+
+<h3 style="color: var(--color-brand-primary)">2. Implementation Plan</h3>
+<p>Technický návrh řešení. Obsahuje seznam souborů, které se budou měnit, a popis změn. Vždy čtěte tento dokument
+    předtím, než dáte agentovi "zelenou".</p>
+
+<h3 style="color: var(--color-brand-primary)">3. Walkthrough</h3>
+<p>Dokumentace "po akci". Když agent skončí velký úkol, vygeneruje walkthrough, kde popíše, co udělal a jak to otestovat
+    (včetně příkazů do terminálu).</p>
+
+<div class="callout callout-info">
+    <div class="callout-content">
+        <strong>Tip:</strong> Tyto soubory jsou v Markdownu. Můžete je sami editovat a agent si změny přečte a
+        přizpůsobí se jim.
+    </div>
+</div>

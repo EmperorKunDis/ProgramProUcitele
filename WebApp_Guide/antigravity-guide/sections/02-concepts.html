@@ -1,0 +1,64 @@
+<h1>Klíčové Koncepty</h1>
+
+<p>Než začnete psát kód, je důležité pochopit, jak Antigravity mění paradigma vývoje softwaru.</p>
+
+<div class="visual-placeholder">
+    <div class="icon">🖼️</div>
+    <div class="desc">Diagram Architektury Antigravity</div>
+    <div class="specs">Zobrazit vztah: User <-> Agent Manager <-> Editor <-> File System</div>
+</div>
+
+<h2>Editor vs. Agent Manager</h2>
+<p>Antigravity rozděluje vývoj do dvou hlavních režimů:</p>
+
+<div class="table-container">
+    <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background: rgba(91,44,157,0.1); text-align: left;">
+                <th style="padding: 12px; border-bottom: 2px solid var(--color-brand-primary);">Editor View</th>
+                <th style="padding: 12px; border-bottom: 2px solid var(--color-brand-primary);">Agent Manager</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);">Klasické IDE (vychází z VS
+                    Code)</td>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);">Řídicí centrum pro AI agenty
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);">Vy píšete kód, AI našeptává
+                    (Copilot styl)</td>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);">Vy zadáváte úkoly, AI píše a
+                    edituje soubory</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);"><strong>Pro:</strong> Detailní
+                    úpravy, debugging</td>
+                <td style="padding: 12px; border-bottom: 1px solid var(--color-border);"><strong>Pro:</strong>
+                    Refactoring, generování funkcí, testy</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Režimy Práce (Modes)</h2>
+
+<h3>1. Planning (Plánování)</h3>
+<p>Agent nezasahuje do kódu. Pouze čte soubory, analyzuje strukturu a navrhuje <code>implementation_plan.md</code>.
+    Ideální pro velké změny.</p>
+
+<h3>2. Execution (Exekuce)</h3>
+<p>Agent aktivně používá nástroje. Vytváří soubory, spouští terminálové příkazy a edituje kód.</p>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Tip od Martina:</strong> Vždy začněte v režimu <em>Planning</em>. Nechte agenta navrhnout řešení a
+        schvalte ho, než mu dovolíte sáhnout do kódu. Ušetříte si hodiny ladění.
+    </div>
+</div>
+
+<h2>Kontext a Paměť</h2>
+<p>Antigravity si pamatuje vaše předchozí rozhodnutí díky souborům v <code>.gemini/brain/</code>. Tyto soubory (jako
+    <code>task.md</code>) slouží jako sdílená paměť mezi vámi a AI.</p>

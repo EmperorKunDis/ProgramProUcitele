@@ -1,0 +1,71 @@
+{
+  "guide": {
+    "title": "Phase 4: God Mode",
+    "subtitle": "Power User Mastery",
+    "version": "1.0.0",
+    "theme": "god-mode",
+    "phaseNumber": 4,
+    "colorScheme": {
+      "primary": "#DC2626",
+      "secondary": "#EF4444",
+      "accent": "#F87171"
+    }
+  },
+  "sections": [
+    {
+      "id": "01-intro",
+      "title": "1. Úvod do God Mode",
+      "file": "sections/01-intro.html",
+      "readingTime": "3 min"
+    },
+    {
+      "id": "02-multi-agent",
+      "title": "2. Multi-Agent Orchestrace",
+      "file": "sections/02-multi-agent.html",
+      "readingTime": "8 min"
+    },
+    {
+      "id": "03-mcp-integration",
+      "title": "3. Custom MCP Integrace",
+      "file": "sections/03-mcp-integration.html",
+      "readingTime": "10 min"
+    },
+    {
+      "id": "04-prompt-engineering",
+      "title": "4. Pokročilý Prompt Engineering",
+      "file": "sections/04-prompt-engineering.html",
+      "readingTime": "12 min"
+    },
+    {
+      "id": "05-custom-agents",
+      "title": "5. Vlastní Agenti",
+      "file": "sections/05-custom-agents.html",
+      "readingTime": "10 min"
+    },
+    {
+      "id": "06-automation",
+      "title": "6. Automatizace & Skripty",
+      "file": "sections/06-automation.html",
+      "readingTime": "8 min"
+    },
+    {
+      "id": "07-enterprise",
+      "title": "7. Enterprise & Škálování",
+      "file": "sections/07-enterprise.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "08-summary",
+      "title": "8. Shrnutí & Certifikace",
+      "file": "sections/08-summary.html",
+      "readingTime": "4 min"
+    }
+  ],
+  "features": {
+    "search": true,
+    "darkMode": true,
+    "progress": true,
+    "glossary": true,
+    "codeHighlight": true
+  }
+}

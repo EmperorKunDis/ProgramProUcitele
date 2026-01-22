@@ -1,0 +1,225 @@
+<h1>Automatizace & Skripty</h1>
+
+<p>Automatizujte opakující se úkoly a nechte AI pracovat, i když spíte. Skutečná síla je v bezobslužném provozu.</p>
+
+<h2>Typy automatizace</h2>
+
+<table>
+    <thead>
+        <tr><th>Typ</th><th>Trigger</th><th>Příklad</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Scheduled</strong></td>
+            <td>Čas (cron)</td>
+            <td>Denní security scan</td>
+        </tr>
+        <tr>
+            <td><strong>Event-driven</strong></td>
+            <td>Git hook, webhook</td>
+            <td>Review při PR</td>
+        </tr>
+        <tr>
+            <td><strong>Continuous</strong></td>
+            <td>Monitoring</td>
+            <td>Log analysis</td>
+        </tr>
+        <tr>
+            <td><strong>On-demand</strong></td>
+            <td>API volání</td>
+            <td>Slack command</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Scheduled Tasks</h2>
+
+<h3>Cron-based automatizace</h3>
+
+<pre><code class="language-yaml"># .gemini/automation/scheduled.yaml
+schedules:
+  - name: daily-security-scan
+    cron: "0 6 * * *"  # Každý den v 6:00
+    agent: security-scanner
+    prompt: |
+      Proveď security scan projektu:
+      1. Zkontroluj závislosti (npm audit)
+      2. Hledej hardcoded secrets
+      3. Analyzuj OWASP Top 10
+      4. Vytvoř report do security/daily-report.md
+
+  - name: weekly-docs-update
+    cron: "0 9 * * 1"  # Každé pondělí v 9:00
+    agent: docs-writer
+    prompt: |
+      Aktualizuj dokumentaci:
+      1. Sync API docs s kódem
+      2. Aktualizuj changelog
+      3. Zkontroluj broken links
+
+  - name: monthly-refactor-suggestions
+    cron: "0 10 1 * *"  # 1. den v měsíci
+    agent: code-analyzer
+    prompt: |
+      Analyzuj codebase a navrhni refaktoring:
+      1. Identifikuj code smells
+      2. Najdi duplicitní kód
+      3. Navrhni architektonická vylepšení</code></pre>
+
+<h2>Event-Driven Automation</h2>
+
+<h3>Git Hooks</h3>
+
+<pre><code class="language-yaml"># .gemini/automation/git-hooks.yaml
+hooks:
+  pre-commit:
+    - name: lint-check
+      run: npm run lint
+    - name: ai-quick-review
+      agent: code-reviewer
+      mode: fast
+      prompt: "Rychlá kontrola staged změn. Blokuj commit při critical issues."
+
+  pre-push:
+    - name: full-test-suite
+      run: npm test
+    - name: ai-security-check
+      agent: security-scanner
+      prompt: "Zkontroluj změny na security issues před push."
+
+  post-merge:
+    - name: update-docs
+      agent: docs-writer
+      prompt: "Aktualizuj docs pokud se změnilo API."</code></pre>
+
+<h3>Webhook Handlers</h3>
+
+<pre><code class="language-yaml"># .gemini/automation/webhooks.yaml
+webhooks:
+  github:
+    pull_request:
+      opened:
+        - agent: code-reviewer
+          prompt: "Proveď full code review"
+        - agent: docs-writer
+          prompt: "Zkontroluj zda je potřeba docs update"
+
+    issues:
+      opened:
+        - agent: triage-bot
+          prompt: |
+            Analyzuj issue:
+            1. Přiřaď priority label
+            2. Kategorizuj (bug/feature/docs)
+            3. Doporuč assignee
+
+  slack:
+    message:
+      pattern: "@ai-helper"
+      - agent: general-assistant
+        prompt: "Odpověz na dotaz z Slacku"</code></pre>
+
+<h2>Automation Workflows</h2>
+
+<h3>Komplexní workflow</h3>
+
+<pre><code class="language-yaml"># .gemini/workflows/release-automation.yaml
+name: Release Automation
+description: Automatizace release procesu
+
+trigger:
+  - tag: "v*"
+
+steps:
+  - name: validate
+    agent: code-reviewer
+    prompt: "Zkontroluj že všechny testy prochází"
+    on_failure: abort
+
+  - name: changelog
+    agent: docs-writer
+    prompt: |
+      Vygeneruj changelog od posledního release:
+      - Commituj changes
+      - Kategorizuj (Features, Fixes, Breaking)
+      - Přidej do CHANGELOG.md
+
+  - name: release-notes
+    agent: docs-writer
+    prompt: "Vytvoř release notes pro GitHub release"
+    output: release-notes.md
+
+  - name: notify
+    action: slack
+    channel: "#releases"
+    message: "🚀 New release {{tag}} is ready!"
+
+  - name: deploy
+    condition: branch == 'main'
+    action: deploy
+    target: production</code></pre>
+
+<h2>Monitoring & Alerting</h2>
+
+<pre><code class="language-yaml"># .gemini/automation/monitoring.yaml
+monitors:
+  - name: error-spike-detector
+    source: logs
+    pattern: "ERROR|FATAL"
+    threshold: 10/minute
+    agent: incident-responder
+    prompt: |
+      Detekován spike chyb v logách.
+      1. Analyzuj root cause
+      2. Navrhni immediate fix
+      3. Vytvoř incident report
+
+  - name: performance-degradation
+    source: metrics
+    metric: response_time_p95
+    threshold: "> 500ms"
+    agent: performance-analyzer
+    prompt: "Analyzuj příčinu zpomalení a navrhni optimalizace"</code></pre>
+
+<h2>CLI Skripty</h2>
+
+<pre><code class="language-bash">#!/bin/bash
+# scripts/ai-review.sh
+
+# Spustí AI review na aktuálních změnách
+gemini agent run code-reviewer \
+  --prompt "Review staged changes" \
+  --context "$(git diff --staged)" \
+  --output review-report.md
+
+# Kontrola výsledku
+if grep -q "CRITICAL" review-report.md; then
+  echo "❌ Critical issues found. Review report:"
+  cat review-report.md
+  exit 1
+fi
+
+echo "✅ Review passed"</code></pre>
+
+<h2>Best Practices</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">📋</div>
+    <div class="callout-content">
+        <strong>Checklist pro automatizaci:</strong>
+        <ul style="margin-bottom: 0;">
+            <li>✅ Testujte automation lokálně před production</li>
+            <li>✅ Nastavte timeouty pro dlouhé úkoly</li>
+            <li>✅ Implementujte retry logic</li>
+            <li>✅ Logujte všechny akce pro audit</li>
+            <li>✅ Nastavte alerting při selhání</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Začněte s jednoduchou automatizací (např. daily report) a postupně přidávejte komplexnější workflows.
+    </div>
+</div>

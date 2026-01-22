@@ -1,0 +1,124 @@
+<h1>Práce s Více Soubory</h1>
+
+<p>Efektivní práce s více soubory současně je klíčová pro produktivitu. Antigravity nabízí flexibilní systém tabů a split views.</p>
+
+<h2>Systém Tabů</h2>
+
+<h3>Základní operace</h3>
+
+<table>
+    <thead>
+        <tr><th>Zkratka</th><th>Akce</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><kbd>Cmd+W</kbd></td><td>Zavřít aktuální tab</td></tr>
+        <tr><td><kbd>Cmd+Shift+T</kbd></td><td>Znovu otevřít poslední zavřený tab</td></tr>
+        <tr><td><kbd>Ctrl+Tab</kbd></td><td>Přepnout na další tab</td></tr>
+        <tr><td><kbd>Ctrl+Shift+Tab</kbd></td><td>Přepnout na předchozí tab</td></tr>
+        <tr><td><kbd>Cmd+1-9</kbd></td><td>Přepnout na tab podle pozice</td></tr>
+    </tbody>
+</table>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Preview Mode:</strong> Když otevřete soubor jedním klikem, otevře se v preview módu (kurzívou v tabu). Dvojklik nebo editace soubor "připne" natrvalo.
+    </div>
+</div>
+
+<h2>Split View (Rozdělení obrazovky)</h2>
+
+<p>Zobrazení více souborů vedle sebe:</p>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+\</strong> - Rozdělit editor vertikálně<br>
+        <strong>Cmd+K Cmd+\</strong> - Rozdělit editor horizontálně
+    </div>
+</div>
+
+<h3>Navigace mezi skupinami</h3>
+
+<table>
+    <thead>
+        <tr><th>Zkratka</th><th>Akce</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><kbd>Cmd+K ←/→</kbd></td><td>Fokus na sousední skupinu</td></tr>
+        <tr><td><kbd>Cmd+K Cmd+←/→</kbd></td><td>Přesunout soubor do sousední skupiny</td></tr>
+    </tbody>
+</table>
+
+<div class="visual-placeholder">
+    <div class="icon">📱</div>
+    <div class="desc">Screenshot: Split View Layout</div>
+    <div class="specs">2-3 panely s různými soubory</div>
+</div>
+
+<h2>Workspaces</h2>
+
+<p>Pro práci na více projektech současně:</p>
+
+<ul>
+    <li><strong>File → Add Folder to Workspace</strong> - Přidá další složku</li>
+    <li><strong>File → Save Workspace As...</strong> - Uloží konfiguraci</li>
+</ul>
+
+<p>Workspace soubor (<code>.code-workspace</code>) uchovává:</p>
+<ul>
+    <li>Seznam složek projektu</li>
+    <li>Nastavení specifická pro workspace</li>
+    <li>Doporučená rozšíření</li>
+</ul>
+
+<h2>Zen Mode</h2>
+
+<p>Pro maximální soustředění na jeden soubor:</p>
+
+<div class="callout callout-info">
+    <div class="callout-icon">⌨️</div>
+    <div class="callout-content">
+        <strong>Cmd+K Z</strong> - Aktivovat Zen Mode<br>
+        <strong>Esc Esc</strong> - Ukončit Zen Mode (dvojité Escape)
+    </div>
+</div>
+
+<p>Zen Mode skryje všechny panely a zobrazí pouze editor na celou obrazovku.</p>
+
+<h2>Sticky Scroll</h2>
+
+<p>Novinka v Antigravity - při scrollování dlouhých souborů zůstává viditelná aktuální funkce/třída v horní části editoru.</p>
+
+<pre><code class="language-javascript">// Sticky scroll ukáže "class UserService" nahoře,
+// i když scrollujete hluboko uvnitř metody
+
+class UserService {
+    // ... 200 řádků kódu ...
+
+    async updateUser(id, data) {
+        // Jste tady a vidíte, že jste v UserService
+        const user = await this.findById(id);
+        // ...
+    }
+}</code></pre>
+
+<h2>Práce s AI Agentem</h2>
+
+<p>Když pracujete s více soubory, dejte agentovi kontext:</p>
+
+<pre><code class="language-markdown"># Dobrý prompt pro multi-file práci
+Podívej se na soubory:
+- src/services/user.service.ts
+- src/controllers/user.controller.ts
+- src/models/user.model.ts
+
+Potřebuji přidat nové pole "lastLoginAt" do uživatele.
+Uprav všechny relevantní soubory.</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Můžete přetáhnout soubory přímo do chatu s agentem. Antigravity automaticky přidá obsah souboru jako kontext.
+    </div>
+</div>

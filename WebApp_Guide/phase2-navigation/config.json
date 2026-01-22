@@ -1,0 +1,62 @@
+{
+  "title": "Phase 2: Navigace & Data",
+  "version": "1.0.0",
+  "phase": 2,
+  "color_scheme": "blue",
+  "sections": [
+    {
+      "id": "01-intro",
+      "title": "1. Přehled Phase 2",
+      "file": "sections/01-intro.html",
+      "readingTime": "2 min"
+    },
+    {
+      "id": "02-file-navigation",
+      "title": "2. Navigace v Souborech",
+      "file": "sections/02-file-navigation.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "03-search-replace",
+      "title": "3. Hledání & Nahrazování",
+      "file": "sections/03-search-replace.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "04-multi-file",
+      "title": "4. Práce s Více Soubory",
+      "file": "sections/04-multi-file.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "05-git-basics",
+      "title": "5. Git & Verzování",
+      "file": "sections/05-git-basics.html",
+      "readingTime": "7 min"
+    },
+    {
+      "id": "06-project-structure",
+      "title": "6. Struktura Projektu",
+      "file": "sections/06-project-structure.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "07-data-context",
+      "title": "7. Kontext & Data pro AI",
+      "file": "sections/07-data-context.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "08-summary",
+      "title": "8. Shrnutí & Další Kroky",
+      "file": "sections/08-summary.html",
+      "readingTime": "2 min"
+    }
+  ],
+  "features": {
+    "dark_mode": true,
+    "search": true,
+    "progress_tracking": true,
+    "onboarding": true
+  }
+}

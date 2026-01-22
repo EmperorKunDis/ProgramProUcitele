@@ -1,0 +1,194 @@
+<h1>Custom MCP Integrace</h1>
+
+<p>Model Context Protocol (MCP) umožňuje propojit AI agenty s externími nástroji a daty. Odemkněte plný potenciál agentů.</p>
+
+<h2>Co je MCP?</h2>
+
+<p>MCP je otevřený protokol pro rozšíření schopností AI:</p>
+
+<ul>
+    <li><strong>Tools</strong> - Akce, které agent může vykonat</li>
+    <li><strong>Resources</strong> - Data, ke kterým má agent přístup</li>
+    <li><strong>Prompts</strong> - Předdefinované šablony promptů</li>
+</ul>
+
+<div class="visual-placeholder">
+    <div class="icon">🔌</div>
+    <div class="desc">Diagram: MCP Architektura</div>
+    <div class="specs">Agent ↔ MCP Server ↔ External Services</div>
+</div>
+
+<h2>Dostupné MCP servery</h2>
+
+<table>
+    <thead>
+        <tr><th>Server</th><th>Schopnosti</th><th>Use Case</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>filesystem</strong></td>
+            <td>Čtení/zápis souborů</td>
+            <td>Práce s lokálními soubory</td>
+        </tr>
+        <tr>
+            <td><strong>postgres</strong></td>
+            <td>SQL dotazy</td>
+            <td>Databázové operace</td>
+        </tr>
+        <tr>
+            <td><strong>github</strong></td>
+            <td>Issues, PRs, repos</td>
+            <td>GitHub automatizace</td>
+        </tr>
+        <tr>
+            <td><strong>slack</strong></td>
+            <td>Zprávy, kanály</td>
+            <td>Týmová komunikace</td>
+        </tr>
+        <tr>
+            <td><strong>browserbase</strong></td>
+            <td>Web scraping</td>
+            <td>Získávání dat z webu</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Konfigurace MCP</h2>
+
+<h3>Základní setup</h3>
+
+<pre><code class="language-json">// .gemini/mcp.json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-filesystem", "/path/to/project"],
+      "env": {}
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://user:pass@localhost:5432/db"
+      }
+    }
+  }
+}</code></pre>
+
+<h3>GitHub integrace</h3>
+
+<pre><code class="language-json">{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  }
+}</code></pre>
+
+<h2>Vytvoření vlastního MCP serveru</h2>
+
+<p>Potřebujete vlastní integraci? Vytvořte MCP server:</p>
+
+<pre><code class="language-javascript">// my-mcp-server.js
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+
+const server = new Server({
+  name: "my-custom-server",
+  version: "1.0.0"
+}, {
+  capabilities: {
+    tools: {}
+  }
+});
+
+// Definice vlastního nástroje
+server.setRequestHandler("tools/list", async () => ({
+  tools: [{
+    name: "get_weather",
+    description: "Získá aktuální počasí pro město",
+    inputSchema: {
+      type: "object",
+      properties: {
+        city: { type: "string", description: "Název města" }
+      },
+      required: ["city"]
+    }
+  }]
+}));
+
+// Implementace nástroje
+server.setRequestHandler("tools/call", async (request) => {
+  if (request.params.name === "get_weather") {
+    const city = request.params.arguments.city;
+    // Volání weather API
+    const weather = await fetchWeather(city);
+    return { content: [{ type: "text", text: JSON.stringify(weather) }] };
+  }
+});
+
+// Spuštění serveru
+const transport = new StdioServerTransport();
+await server.connect(transport);</code></pre>
+
+<h2>Praktické příklady</h2>
+
+<h3>Database Agent</h3>
+
+<pre><code class="language-markdown"># Prompt s MCP PostgreSQL
+Máš přístup k naší databázi přes MCP.
+
+Analyzuj tabulku "orders" a:
+1. Najdi top 10 zákazníků podle obratu
+2. Identifikuj trendy za poslední měsíc
+3. Navrhni optimalizace dotazů
+
+Používej SELECT pouze - neměň data!</code></pre>
+
+<h3>GitHub Automation</h3>
+
+<pre><code class="language-markdown"># Prompt s MCP GitHub
+Projdi otevřené issues v repo owner/project:
+
+1. Kategorizuj podle priority (bug/feature/docs)
+2. Přidej labely
+3. Vytvoř summary v nové issue
+4. Assignuj issues podle týmových pravidel</code></pre>
+
+<h2>Bezpečnost MCP</h2>
+
+<div class="callout callout-danger">
+    <div class="callout-icon">🔒</div>
+    <div class="callout-content">
+        <strong>Bezpečnostní pravidla:</strong>
+        <ul style="margin-bottom: 0;">
+            <li>Nikdy neukládejte credentials v kódu</li>
+            <li>Používejte environment variables</li>
+            <li>Omezte permissions na minimum</li>
+            <li>Auditujte všechny MCP akce</li>
+        </ul>
+    </div>
+</div>
+
+<pre><code class="language-yaml"># Bezpečná konfigurace
+mcp:
+  postgres:
+    permissions:
+      - SELECT  # pouze čtení
+    tables:
+      - users   # pouze konkrétní tabulky
+      - orders
+    blocked:
+      - passwords
+      - api_keys</code></pre>
+
+<div class="callout callout-tip">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Pro Tip:</strong> Začněte s read-only MCP servery. Teprve po ověření spolehlivosti povolte write operace.
+    </div>
+</div>

@@ -1,0 +1,85 @@
+{
+  "title": "PRAUT Antigravity Průvodce",
+  "version": "1.0.0",
+  "base_url": ".",
+  "sections": [
+    {
+      "id": "01-intro",
+      "title": "1. Úvod",
+      "file": "sections/01-intro.html",
+      "readingTime": "2 min"
+    },
+    {
+      "id": "02-concepts",
+      "title": "2. Klíčové Koncepty",
+      "file": "sections/02-concepts.html",
+      "readingTime": "4 min"
+    },
+    {
+      "id": "03-installation",
+      "title": "3. Instalace",
+      "file": "sections/03-installation.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "04-first-launch",
+      "title": "4. První Spuštění",
+      "file": "sections/04-first-launch.html",
+      "readingTime": "4 min"
+    },
+    {
+      "id": "05-editor-view",
+      "title": "5. Editor View",
+      "file": "sections/05-editor-view.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "06-agent-manager",
+      "title": "6. Agent Manager",
+      "file": "sections/06-agent-manager.html",
+      "readingTime": "6 min"
+    },
+    {
+      "id": "07-artifacts",
+      "title": "7. Artefakty",
+      "file": "sections/07-artifacts.html",
+      "readingTime": "4 min"
+    },
+    {
+      "id": "08-browser-agent",
+      "title": "8. Browser Agent",
+      "file": "sections/08-browser-agent.html",
+      "readingTime": "4 min"
+    },
+    {
+      "id": "09-model-selection",
+      "title": "9. Výběr Modelu",
+      "file": "sections/09-model-selection.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "10-customization",
+      "title": "10. Přizpůsobení",
+      "file": "sections/10-customization.html",
+      "readingTime": "5 min"
+    },
+    {
+      "id": "11-examples",
+      "title": "11. Příklady Promptů",
+      "file": "sections/11-examples.html",
+      "readingTime": "3 min"
+    },
+    {
+      "id": "12-resources",
+      "title": "12. Zdroje & Podpora",
+      "file": "sections/12-resources.html",
+      "readingTime": "2 min"
+    }
+  ],
+  "features": {
+    "dark_mode": true,
+    "search": true,
+    "progress_tracking": true,
+    "onboarding": true
+  }
+}
