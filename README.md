@@ -46,8 +46,6 @@ Projekt vznikl s cílem **maximálně zjednodušit práci učitelům** při zav�
 
 > 🎓 **[START tady →](https://emperorkundis.github.io/ProgramProUcitele/landing/)** — Připojte se ke komunitě pedagogů využívajících AI!
 
-> 🌐 **[WebGuide Po Registraci →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
-
 ### 🎯 Pro koho je tento průvodce?
 
 - **Učitelé informatiky** - Kompletní materiál pro výuku AI-assisted development
@@ -311,6 +309,8 @@ Tento projekt je licencován pod **MIT License** - viz [LICENSE](LICENSE) soubor
 - **Google** - Za vytvoření Antigravity IDE
 - **Praut s.r.o.** - Za vývoj této učebnice
 - **Všichni přispěvatelé** - Za pomoc s rozvojem projektu
+
+> 🌐 **[WebGuide Po Registraci →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
 
 ---
 
