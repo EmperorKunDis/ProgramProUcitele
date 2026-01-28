@@ -23,6 +23,9 @@
   <a href="https://emperorkundis.github.io/ProgramProUcitele/landing/">
     <img src="https://img.shields.io/badge/🎓_Registrace_učitelů-Připojte_se!-8B5CF6?style=for-the-badge" alt="Registrace učitelů">
   </a>
+  <a href="https://discord.gg/RDt5HvP9">
+    <img src="https://img.shields.io/badge/🎮_Discord-Komunita-5865F2?style=for-the-badge" alt="Discord">
+  </a>
   <a href="https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/">
     <img src="https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-2ea44f?style=for-the-badge" alt="Live Demo">
   </a>
@@ -282,6 +285,7 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 |----------|-------|
 | [PRD.md](WebApp_Guide/PRD.md) | Product Requirements Document |
 | [CLAUDE.md](WebApp_Guide/CLAUDE.md) | Instrukce pro AI asistenty |
+| [DISCORD_SETUP.md](DISCORD_SETUP.md) | 🎮 Návod pro nastavení Discord serveru |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Návod pro přispěvatele |
 | [CHANGELOG.md](CHANGELOG.md) | Historie změn |
 
@@ -290,6 +294,7 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 ## 🔗 Užitečné odkazy
 
 - 🎓 [**Registrace pro učitele**](https://emperorkundis.github.io/ProgramProUcitele/landing/) — Připojte se ke komunitě!
+- 🎮 [**Discord komunita**](https://discord.gg/RDt5HvP9) — Antigravity Guide | Praut.cz
 - 🌐 [**Live Demo**](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)
 - [Google Antigravity - Oficiální dokumentace](https://antigravity.google/docs)
 - [Google Antigravity - Download](https://antigravity.google/download)

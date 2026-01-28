@@ -686,6 +686,7 @@ body {
     gap: var(--space-md);
     color: var(--text-muted);
     font-size: var(--font-size-sm);
+    margin-top: var(--space-lg);
 }
 
 .loader-spinner {
@@ -699,6 +700,79 @@ body {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* Discord Info in Modal */
+.discord-info {
+    background: rgba(88, 101, 242, 0.1);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    text-align: left;
+}
+
+.discord-info h3 {
+    color: #5865F2;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.discord-desc {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md) !important;
+}
+
+.discord-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.discord-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.discord-feature .feature-icon {
+    font-size: 1rem;
+}
+
+.discord-steps {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+}
+
+.discord-steps p {
+    margin-bottom: var(--space-sm) !important;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.discord-steps ol {
+    margin: 0;
+    padding-left: var(--space-lg);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.discord-steps li {
+    margin-bottom: var(--space-xs);
+}
+
+.discord-steps code {
+    background: rgba(88, 101, 242, 0.3);
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8em;
+    color: #5865F2;
 }
 
 /* ==========================================
