@@ -151,16 +151,41 @@ function loadStats() {
 function loadTeachers() {
     const grid = document.getElementById('teachersGrid');
     const checkedTeachers = JSON.parse(localStorage.getItem('checkedTeachers') || '[]');
+    const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
+    
+    // Create lookup for registrations by surname
+    const registrationLookup = {};
+    registrations.forEach(r => {
+        if (r.surname) {
+            registrationLookup[r.surname.toLowerCase()] = r;
+        }
+    });
     
     grid.innerHTML = '';
     
     TRAINING_TEACHERS.forEach((name, index) => {
         const isChecked = checkedTeachers.includes(name);
+        const registration = registrationLookup[name.toLowerCase()];
         const item = document.createElement('label');
-        item.className = 'teacher-item' + (isChecked ? ' checked' : '');
+        item.className = 'teacher-item' + (isChecked ? ' checked' : '') + (registration ? ' registered' : '');
+        
+        let extraInfo = '';
+        if (registration) {
+            const parts = [];
+            if (registration.discord) parts.push(`<span class="discord-tag">@${escapeHtml(registration.discord)}</span>`);
+            if (registration.school) parts.push(`<span class="school-tag">${escapeHtml(registration.school)}</span>`);
+            if (parts.length > 0) {
+                extraInfo = `<div class="teacher-extra">${parts.join(' ')}</div>`;
+            }
+        }
+        
         item.innerHTML = `
             <input type="checkbox" ${isChecked ? 'checked' : ''} data-name="${name}">
-            <span>${name}</span>
+            <div class="teacher-info">
+                <span class="teacher-name">${name}</span>
+                ${registration ? '<span class="registered-badge">✓ Registrován</span>' : ''}
+                ${extraInfo}
+            </div>
         `;
         
         const checkbox = item.querySelector('input');
@@ -220,10 +245,10 @@ function loadRegistrations() {
     
     tbody.innerHTML = registrations.map(r => `
         <tr>
-            <td>${escapeHtml(r.surname || '-')}</td>
+            <td><strong>${escapeHtml(r.surname || '-')}</strong></td>
             <td>${escapeHtml(r.school || '-')}</td>
             <td>${escapeHtml(r.city || '-')}</td>
-            <td>${r.birthYear || '-'}</td>
+            <td>${r.discord ? `<span style="color: #5865F2;">@${escapeHtml(r.discord)}</span>` : '-'}</td>
             <td>${escapeHtml(r.subjects || '-')}</td>
             <td>${formatDate(r.timestamp)}</td>
         </tr>

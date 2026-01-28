@@ -105,7 +105,8 @@ function handleFormSubmit(e) {
         school: document.getElementById('school').value.trim(),
         city: document.getElementById('city').value.trim(),
         birthYear: document.getElementById('birthYear').value,
-        subjects: document.getElementById('subjects').value.trim()
+        subjects: document.getElementById('subjects').value.trim(),
+        discord: document.getElementById('discord').value.trim()
     };
     
     // Validate required fields
@@ -146,6 +147,9 @@ function storeRegistration(data) {
     });
     localStorage.setItem('registrations', JSON.stringify(registrations));
     
+    // Auto-check teacher in training list if surname matches
+    autoCheckTeacher(data.surname);
+    
     console.log('Registration stored:', data);
     
     // TODO: Send to backend
@@ -154,6 +158,62 @@ function storeRegistration(data) {
     //     headers: { 'Content-Type': 'application/json' },
     //     body: JSON.stringify(data)
     // });
+}
+
+/**
+ * Auto-check teacher in training list if surname matches
+ * @param {string} surname - Registered surname
+ */
+function autoCheckTeacher(surname) {
+    if (!surname) return;
+    
+    // Training teachers list (must match admin/app.js)
+    const TRAINING_TEACHERS = [
+        'Bacílek', 'Baďurová', 'Balák', 'Baláková', 'Beran', 'Beránek', 'Blažko',
+        'Bobčíková Pechová', 'Bosák', 'Botlíková', 'Brettschneiderová', 'Brisuda',
+        'Bůcha', 'Bumbová', 'Burešová', 'Campr', 'Cimrhaklová', 'Cuper', 'Czelder',
+        'Čerevková', 'Černý', 'Červená', 'Degťarová', 'Dobrovolný', 'Domov',
+        'Dranczak', 'Ederová', 'Endal', 'Farmačka', 'Fialová', 'Fialová',
+        'Fletterová Horová', 'Fučík', 'Fuchs', 'Fůsová', 'Goldschaltová', 'Gross',
+        'Gubran', 'Halová', 'Hanzlík', 'Hejda', 'Herink', 'Homolka', 'Honsig',
+        'Hovorka', 'Hrachová', 'Hrdličková', 'Hrubec', 'Hůdová', 'Humeníková',
+        'Cheníčková', 'Chládková', 'Chval', 'Chvalová', 'Illingerová', 'Jandová',
+        'Jaroš', 'Jeníková', 'Jirásková', 'Jirková', 'Jurčík', 'Kábová', 'Kafková',
+        'Kalianko', 'Karafiátová', 'Karlíková', 'Klierová', 'Kněžická', 'Kofránková',
+        'Kopecká', 'Kouřimský', 'Kovandová', 'Kowaliková', 'Krákora', 'Král',
+        'Krejčová', 'Krupičková', 'Kubešová', 'Kubínová', 'Kuklová', 'Kunštár',
+        'Labudík', 'Langmaier', 'Lehoczky', 'Loukota', 'Maliňáková', 'Marková',
+        'Matějková', 'Matuszný', 'Melková', 'Mondek', 'Müller', 'Müllerová',
+        'Neumannová', 'Norková', 'Nowak', 'Ogorková', 'Olišar', 'Opavová',
+        'Opeltová', 'Pánková', 'Pátek', 'Pátek', 'Pénzesová', 'Perlinger', 'Petrík',
+        'Petrikovičová', 'Petříková', 'Petřík', 'Pivoňková', 'Plaňanská', 'Princ',
+        'Procházka', 'Randa', 'Rech', 'Rejkuba', 'Rejsek', 'Rochel', 'Růžička',
+        'Rychnová', 'Sabadinová', 'Salajková', 'Serbousek', 'Silovská', 'Skočil',
+        'Smutný', 'Sobotka', 'Spáčilová', 'Spáčilová', 'Speierl', 'Speierlová',
+        'Stehlíková', 'Straka', 'Strapková', 'Šimáček', 'Šimon', 'Šímová', 'Štádler',
+        'Študlarová', 'Šustrová', 'Tau', 'Trappmann', 'Trojáčková', 'Trsková',
+        'Třešková', 'Tučák', 'Učíková', 'Urbánková', 'Utíkal', 'Utíkalová',
+        'Valinová', 'Vančurová', 'Vaníková', 'Vasyliev', 'Vasylieva', 'Veselá',
+        'Volf', 'Vomáčka', 'Vrbata', 'Vyhnálková', 'Wunderlich', 'Zuna'
+    ];
+    
+    // Normalize surname for comparison
+    const normalizedSurname = surname.trim().toLowerCase();
+    
+    // Find matching teacher
+    const matchedTeacher = TRAINING_TEACHERS.find(teacher => 
+        teacher.toLowerCase() === normalizedSurname
+    );
+    
+    if (matchedTeacher) {
+        // Add to checked teachers list
+        let checkedTeachers = JSON.parse(localStorage.getItem('checkedTeachers') || '[]');
+        if (!checkedTeachers.includes(matchedTeacher)) {
+            checkedTeachers.push(matchedTeacher);
+            localStorage.setItem('checkedTeachers', JSON.stringify(checkedTeachers));
+            console.log('Auto-checked teacher:', matchedTeacher);
+        }
+    }
 }
 
 /**

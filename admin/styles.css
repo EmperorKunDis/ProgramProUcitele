@@ -328,15 +328,62 @@ body {
     border-color: var(--accent-green);
 }
 
+.teacher-item.registered {
+    background: rgba(88, 101, 242, 0.1);
+    border-color: #5865F2;
+}
+
+.teacher-item.checked.registered {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(88, 101, 242, 0.1));
+    border-color: var(--accent-green);
+}
+
 .teacher-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
     accent-color: var(--accent-green);
+    flex-shrink: 0;
 }
 
-.teacher-item span {
+.teacher-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.teacher-name {
     font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.registered-badge {
+    font-size: 0.7rem;
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.teacher-extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.discord-tag {
+    font-size: 0.75rem;
+    color: #5865F2;
+    background: rgba(88, 101, 242, 0.2);
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+}
+
+.school-tag {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
 }
 
 /* Table */
