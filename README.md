@@ -303,5 +303,5 @@ Tento projekt je licencován pod **MIT License** - viz [LICENSE](LICENSE) soubor
 
 <p align="center">
   Vytvořeno s ❤️ v České republice<br>
-  <a href="https://praut.cz">Praut s.r.o.</a> © 2026
+  Made by <a href="https://www.linkedin.com/in/martin-svanda-b8491a264/">Martin Švanda</a><a href="https://praut.cz">Praut s.r.o.</a> © 2026
 </p>
