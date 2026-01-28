@@ -1,2 +1,104 @@
-# Auto Claude data directory
-.auto-claude/
+# ===================
+# OS Generated Files
+# ===================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===================
+# Editor & IDE
+# ===================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ===================
+# Dependencies
+# ===================
+node_modules/
+bower_components/
+vendor/
+package-lock.json
+yarn.lock
+
+# ===================
+# Build Outputs
+# ===================
+dist/
+build/
+out/
+.cache/
+*.min.js
+*.min.css
+
+# ===================
+# Environment
+# ===================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ===================
+# Logs
+# ===================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================
+# Testing
+# ===================
+coverage/
+.nyc_output/
+*.lcov
+
+# ===================
+# Temporary Files
+# ===================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ===================
+# Python (for local server)
+# ===================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.venv/
+venv/
+ENV/
+
+# ===================
+# Documentation Build
+# ===================
+docs/_build/
+site/
+
+# ===================
+# Project Specific
+# ===================
+# Uncomment if you have local config overrides
+# config.local.json
+
+# Large media files (if not using Git LFS)
+# *.mp4
+# *.mov
+# *.zip
