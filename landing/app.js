@@ -25,6 +25,13 @@ const successModal = document.getElementById('successModal');
  * Initialize the application
  */
 function init() {
+    // Check if user is already registered - redirect to WebApp
+    const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
+    if (registrations.length > 0) {
+        window.location.href = '../WebApp_Guide/';
+        return;
+    }
+    
     // Check if intro was already shown this session
     const introShown = sessionStorage.getItem('introShown');
     
