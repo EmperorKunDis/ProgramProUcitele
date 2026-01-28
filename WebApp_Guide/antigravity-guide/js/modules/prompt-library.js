@@ -1,6 +1,8 @@
 /**
  * Prompt Library Module - Browser for 1000+ markdown files
  * Features: Category navigation, file preview, copy & overwrite
+ * 
+ * NEW: Direct GitHub save via API (no Actions needed!)
  */
 
 const PromptLibrary = {
@@ -8,14 +10,214 @@ const PromptLibrary = {
     currentCategory: null,
     currentFile: null,
     currentContent: '',
+    originalContent: '', // Track original for change detection
     isEditing: false,
     basePath: '../PromptLibrary/',
+
+    // GitHub API Config
+    github: {
+        owner: 'EmperorKunDis',
+        repo: 'ProgramProUcitele',
+        branch: 'main',
+        basePath: 'WebApp_Guide/PromptLibrary/agent-docs'
+    },
 
     async init() {
         this.addStyles();
         this.createModal();
         await this.loadIndex();
     },
+
+    // ==================== GITHUB API METHODS ====================
+
+    getToken() {
+        return localStorage.getItem('github_pat');
+    },
+
+    setToken(token) {
+        localStorage.setItem('github_pat', token);
+    },
+
+    removeToken() {
+        localStorage.removeItem('github_pat');
+    },
+
+    async promptForToken() {
+        return new Promise((resolve) => {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 4000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            `;
+            modal.innerHTML = `
+                <div style="
+                    background: var(--color-bg-secondary, #111);
+                    border: 1px solid var(--color-brand-primary, #00d4ff);
+                    border-radius: 12px;
+                    padding: 30px;
+                    max-width: 500px;
+                    width: 90%;
+                    box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+                ">
+                    <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🔐</div>
+                    <h3 style="color: var(--color-brand-primary, #00d4ff); margin-bottom: 1rem; text-align: center;">
+                        GitHub Access Token
+                    </h3>
+                    <p style="color: var(--color-text-secondary, #888); margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;">
+                        Pro ukládání změn přímo na GitHub potřebuji tvůj Personal Access Token.<br><br>
+                        <strong>Jak ho získat:</strong><br>
+                        1. Jdi na <a href="https://github.com/settings/tokens?type=beta" target="_blank" style="color: var(--color-brand-primary);">GitHub → Settings → Developer settings → Tokens</a><br>
+                        2. Vytvoř "Fine-grained token" pro repo <code>ProgramProUcitele</code><br>
+                        3. Permissions: <code>Contents: Read and write</code><br><br>
+                        <em style="font-size: 0.8rem;">Token se uloží pouze v tvém prohlížeči (localStorage).</em>
+                    </p>
+                    <input type="password" id="github-token-input" placeholder="ghp_xxxxxxxxxxxx nebo github_pat_xxxx" style="
+                        width: 100%;
+                        padding: 12px 16px;
+                        background: #0d0d0d;
+                        border: 1px solid var(--color-border, rgba(255,255,255,0.2));
+                        border-radius: 6px;
+                        color: white;
+                        font-family: monospace;
+                        font-size: 0.9rem;
+                        margin-bottom: 1rem;
+                        box-sizing: border-box;
+                    ">
+                    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                        <button id="token-cancel" style="
+                            padding: 10px 20px;
+                            background: transparent;
+                            border: 1px solid var(--color-border);
+                            border-radius: 6px;
+                            color: var(--color-text-secondary);
+                            cursor: pointer;
+                            font-weight: 600;
+                        ">Zrušit</button>
+                        <button id="token-save" style="
+                            padding: 10px 20px;
+                            background: var(--color-brand-primary, #00d4ff);
+                            border: none;
+                            border-radius: 6px;
+                            color: white;
+                            cursor: pointer;
+                            font-weight: 600;
+                        ">Uložit token</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            const input = modal.querySelector('#github-token-input');
+            const saveBtn = modal.querySelector('#token-save');
+            const cancelBtn = modal.querySelector('#token-cancel');
+
+            input.focus();
+
+            saveBtn.onclick = () => {
+                const token = input.value.trim();
+                if (token) {
+                    this.setToken(token);
+                    modal.remove();
+                    resolve(token);
+                }
+            };
+
+            cancelBtn.onclick = () => {
+                modal.remove();
+                resolve(null);
+            };
+
+            input.onkeydown = (e) => {
+                if (e.key === 'Enter') saveBtn.click();
+                if (e.key === 'Escape') cancelBtn.click();
+            };
+        });
+    },
+
+    async getFileSHA(filePath) {
+        const token = this.getToken();
+        if (!token) return null;
+
+        const url = `https://api.github.com/repos/${this.github.owner}/${this.github.repo}/contents/${filePath}?ref=${this.github.branch}`;
+        
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                return data.sha;
+            }
+            return null;
+        } catch (error) {
+            console.error('Failed to get file SHA:', error);
+            return null;
+        }
+    },
+
+    async commitFile(filePath, content, message) {
+        let token = this.getToken();
+        
+        if (!token) {
+            token = await this.promptForToken();
+            if (!token) {
+                throw new Error('Token required for saving');
+            }
+        }
+
+        // Get current SHA (required for update)
+        const sha = await this.getFileSHA(filePath);
+        
+        const url = `https://api.github.com/repos/${this.github.owner}/${this.github.repo}/contents/${filePath}`;
+        
+        const body = {
+            message: message || `Update ${filePath.split('/').pop()}`,
+            content: btoa(unescape(encodeURIComponent(content))), // Base64 encode with UTF-8 support
+            branch: this.github.branch
+        };
+
+        if (sha) {
+            body.sha = sha;
+        }
+
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            
+            // Token might be invalid
+            if (response.status === 401 || response.status === 403) {
+                this.removeToken();
+                throw new Error('Token neplatný nebo expirovaný. Zkus to znovu.');
+            }
+            
+            throw new Error(error.message || 'GitHub API error');
+        }
+
+        return await response.json();
+    },
+
+    // ==================== END GITHUB API ====================
 
     addStyles() {
         if (document.getElementById('prompt-library-styles')) return;
@@ -343,6 +545,11 @@ const PromptLibrary = {
                 filter: brightness(1.1);
             }
 
+            .btn-save:disabled {
+                background: #666;
+                cursor: not-allowed;
+            }
+
             .btn-cancel {
                 background: #ef4444;
                 color: white;
@@ -438,6 +645,29 @@ const PromptLibrary = {
                 font-size: 4rem;
                 margin-bottom: 1rem;
                 opacity: 0.5;
+            }
+
+            /* Save status indicator */
+            .save-status {
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+
+            .save-status.saving {
+                background: #f59e0b;
+                color: white;
+            }
+
+            .save-status.saved {
+                background: #22c55e;
+                color: white;
+            }
+
+            .save-status.error {
+                background: #ef4444;
+                color: white;
             }
 
             /* Scrollbar */
@@ -566,7 +796,7 @@ const PromptLibrary = {
                         <div class="preview-empty">
                             <div class="preview-empty-icon">📄</div>
                             <p>Vyberte soubor pro náhled</p>
-                            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Podporované akce: Kopírovat, Upravit a Přepsat</p>
+                            <p style="font-size: 0.8rem; margin-top: 0.5rem;">Podporované akce: Kopírovat, Upravit a Přepsat na GitHub</p>
                         </div>
                     </div>
                 </div>
@@ -673,6 +903,7 @@ const PromptLibrary = {
             const path = `${this.basePath}agent-docs/${this.currentCategory}/${filename}`;
             const response = await fetch(path);
             this.currentContent = await response.text();
+            this.originalContent = this.currentContent; // Store original
 
             document.getElementById('preview-title').textContent = filename.replace('.md', '');
             document.getElementById('preview-actions').style.display = 'flex';
@@ -775,10 +1006,11 @@ const PromptLibrary = {
 
             document.getElementById('content-editor').focus();
 
-            // Update actions
+            // Update actions with GitHub save button
             document.getElementById('preview-actions').innerHTML = `
-                <button class="preview-btn btn-save" onclick="PromptLibrary.saveContent()">
-                    💾 Přepsat soubor
+                <span class="save-status" id="save-status" style="display: none;"></span>
+                <button class="preview-btn btn-save" id="btn-save" onclick="PromptLibrary.saveToGitHub()">
+                    🚀 Uložit na GitHub
                 </button>
                 <button class="preview-btn btn-cancel" onclick="PromptLibrary.cancelEdit()">
                     ❌ Zrušit
@@ -819,69 +1051,80 @@ const PromptLibrary = {
         }
     },
 
-    async saveContent() {
+    async saveToGitHub() {
         const editor = document.getElementById('content-editor');
+        const saveBtn = document.getElementById('btn-save');
+        const statusEl = document.getElementById('save-status');
+        
         if (!editor) return;
 
         const newContent = editor.value;
-        const path = `${this.basePath}agent-docs/${this.currentCategory}/${this.currentFile}`;
+        
+        // Check if content changed
+        if (newContent === this.originalContent) {
+            statusEl.textContent = '📝 Žádné změny';
+            statusEl.className = 'save-status';
+            statusEl.style.display = 'inline-block';
+            statusEl.style.background = '#666';
+            setTimeout(() => {
+                statusEl.style.display = 'none';
+            }, 2000);
+            return;
+        }
 
-        // Since we can't write files directly from browser,
-        // we'll copy the content and show instructions
+        // Build file path for GitHub
+        const filePath = `${this.github.basePath}/${this.currentCategory}/${this.currentFile}`;
+
+        // Show saving status
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '⏳ Ukládám...';
+        statusEl.textContent = 'Ukládám na GitHub...';
+        statusEl.className = 'save-status saving';
+        statusEl.style.display = 'inline-block';
+
         try {
-            await navigator.clipboard.writeText(newContent);
+            await this.commitFile(
+                filePath,
+                newContent,
+                `📝 Update ${this.currentFile}`
+            );
 
+            // Success!
             this.currentContent = newContent;
+            this.originalContent = newContent;
 
-            // Show success modal
-            const confirmModal = document.createElement('div');
-            confirmModal.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: var(--color-bg-secondary, #111);
-                border: 1px solid var(--color-brand-primary, #00d4ff);
-                border-radius: 12px;
-                padding: 30px;
-                z-index: 3000;
-                text-align: center;
-                max-width: 400px;
-                box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
-            `;
-            confirmModal.innerHTML = `
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
-                <h3 style="color: var(--color-brand-primary, #00d4ff); margin-bottom: 1rem;">Obsah zkopírován!</h3>
-                <p style="color: var(--color-text-secondary, #888); margin-bottom: 1rem; font-size: 0.9rem;">
-                    Upravený obsah byl zkopírován do schránky.<br><br>
-                    Pro přepsání souboru vložte obsah do:<br>
-                    <code style="background: #0d0d0d; padding: 8px 12px; border-radius: 4px; display: block; margin-top: 8px; font-size: 0.8rem; word-break: break-all;">
-                        ${path}
-                    </code>
-                </p>
-                <button onclick="this.parentElement.remove()" style="
-                    background: var(--color-brand-primary, #00d4ff);
-                    color: white;
-                    border: none;
-                    padding: 10px 24px;
-                    border-radius: 6px;
-                    cursor: pointer;
-                    font-weight: 600;
-                ">OK</button>
-            `;
-            document.body.appendChild(confirmModal);
-
-            // Switch back to preview
-            this.toggleEdit();
+            statusEl.textContent = '✅ Uloženo!';
+            statusEl.className = 'save-status saved';
+            saveBtn.innerHTML = '✅ Uloženo!';
+            
+            // Show success message
+            setTimeout(() => {
+                statusEl.style.display = 'none';
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = '🚀 Uložit na GitHub';
+                
+                // Switch back to preview
+                this.toggleEdit();
+            }, 1500);
 
         } catch (error) {
             console.error('Failed to save:', error);
-            alert('Nepodařilo se uložit změny: ' + error.message);
+            
+            statusEl.textContent = '❌ ' + error.message;
+            statusEl.className = 'save-status error';
+            saveBtn.disabled = false;
+            saveBtn.innerHTML = '🚀 Uložit na GitHub';
+            
+            // Hide error after 5s
+            setTimeout(() => {
+                statusEl.style.display = 'none';
+            }, 5000);
         }
     },
 
     cancelEdit() {
         this.isEditing = false;
+        this.currentContent = this.originalContent; // Restore original
 
         // Restore original content
         this.renderMarkdown(this.currentContent);
