@@ -44,9 +44,9 @@
 
 Projekt vznikl s cílem **maximálně zjednodušit práci učitelům** při zavádění moderních AI nástrojů do výuky, aby měli více času věnovat se samotným studentům.
 
-> 🌐 **[Vyzkoušejte Live Demo →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
+> 🎓 **[START tady →](https://emperorkundis.github.io/ProgramProUcitele/landing/)** — Připojte se ke komunitě pedagogů využívajících AI!
 
-> 🎓 **[Registrace pro učitele →](https://emperorkundis.github.io/ProgramProUcitele/landing/)** — Připojte se ke komunitě pedagogů využívajících AI!
+> 🌐 **[WebGuide Po Registraci →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
 
 ### 🎯 Pro koho je tento průvodce?
 
