@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="WebApp_Guide/Antig.png" alt="Antigravity Guide Logo" width="200"/>
+  <img src="WebApp_Guide/Antig.png" alt="Antigravity Guide Logo" width="200">
 </p>
 
 <h1 align="center">🚀 Antigravity Guide</h1>
@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/">🌐 Live Demo</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-funkce">Funkce</a> •
   <a href="#-struktura-projektu">Struktura</a> •
@@ -18,51 +19,54 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/verze-1.0.0-blue.svg" alt="Verze"/>
-  <img src="https://img.shields.io/badge/jazyk-čeština-green.svg" alt="Jazyk"/>
-  <img src="https://img.shields.io/badge/licence-MIT-yellow.svg" alt="Licence"/>
-  <img src="https://img.shields.io/badge/status-aktivní-brightgreen.svg" alt="Status"/>
-  <img src="https://img.shields.io/badge/PRs-vítány-orange.svg" alt="PRs Welcome"/>
+  <a href="https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/">
+    <img src="https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-2ea44f?style=for-the-badge" alt="Live Demo">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/verze-1.0.0-blue.svg" alt="Verze">
+  <img src="https://img.shields.io/badge/jazyk-čeština-green.svg" alt="Jazyk">
+  <img src="https://img.shields.io/badge/licence-MIT-yellow.svg" alt="Licence">
+  <img src="https://img.shields.io/badge/status-aktivní-brightgreen.svg" alt="Status">
+  <img src="https://img.shields.io/badge/PRs-vítány-orange.svg" alt="PRs Welcome">
 </p>
 
 ---
 
 ## 📖 O projektu
 
-**Antigravity Guide** je komplexní interaktivní webová učebnice navržená pro učitele a vývojáře, kteří chtějí efektivně využívat **Google Antigravity IDE** — revoluční AI-powered vývojovou platformu od Google.
+**Antigravity Guide** je komplexní interaktivní webová učebnice navržená pro učitele a vývojáře, kteří chtějí efektivně využívat **Google Antigravity IDE** - revoluční AI-powered vývojovou platformu od Google.
 
 Projekt vznikl s cílem **maximálně zjednodušit práci učitelům** při zavádění moderních AI nástrojů do výuky, aby měli více času věnovat se samotným studentům.
 
+> 🌐 **[Vyzkoušejte Live Demo →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
+
 ### 🎯 Pro koho je tento průvodce?
 
-| Cílová skupina | Popis |
-|----------------|-------|
-| 👨‍🏫 **Učitelé informatiky** | Kompletní materiál pro výuku AI-assisted development |
-| 🌱 **Začínající vývojáři** | Step-by-step průvodce od instalace po pokročilé funkce |
-| 💼 **Zkušení programátoři** | Rychlý přechod z Cursor/Windsurf/Copilot |
-| 👔 **Tech leads** | Pochopení potenciálu pro týmy |
-
-### 🤖 Co je Google Antigravity?
-
-Google Antigravity je **agent-first vývojová platforma** postavená na fork VS Code s radikálně změněným UX:
-
-- **Dva hlavní pohledy**: Editor View (klasické IDE) + Agent Manager (řízení AI agentů)
-- **Multi-model podpora**: Gemini 3 Pro/Deep Think/Flash, Claude Sonnet 4.5, GPT-OSS
-- **Autonomní agenti**: Plánují, píší kód, testují a verifikují úlohy samostatně
-- **Browser integrace**: Testování aplikací přímo v IDE
-- **Zdarma v preview**: Pro osobní Gmail účty
-- **Cross-platform**: Windows, macOS, Linux
+- **Učitelé informatiky** - Kompletní materiál pro výuku AI-assisted development
+- **Začínající vývojáři** - Step-by-step průvodce od instalace po pokročilé funkce
+- **Zkušení programátoři** - Rychlý přechod z Cursor/Windsurf/Copilot
+- **Tech leads** - Pochopení potenciálu pro týmy
 
 ---
 
 ## ⚡ Quick Start
 
-### Požadavky
+### Online verze (doporučeno)
+
+Nejrychlejší způsob je použít online verzi:
+
+**👉 [https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
+
+### Lokální instalace
+
+#### Požadavky
 
 - Webový prohlížeč (Chrome, Firefox, Safari, Edge)
 - Python 3.x (pro lokální server) nebo VS Code s Live Server
 
-### Spuštění
+#### Spuštění
 
 ```bash
 # Klonování repozitáře
@@ -85,7 +89,7 @@ python3 -m http.server 8000
 ### 📚 4 Progresivní fáze učení
 
 | Fáze | Název | Sekcí | Popis |
-|:----:|-------|:-----:|-------|
+|------|-------|-------|-------|
 | 🟢 | **Základy** | 12 | Instalace, první kroky, základní koncepty |
 | 🔵 | **Navigace & Data** | 8 | Efektivní práce s editorem a daty |
 | 🟣 | **Pro Workflow** | 8 | Pokročilé techniky a automatizace |
@@ -93,15 +97,13 @@ python3 -m http.server 8000
 
 ### 🛠️ Technické funkce
 
-| Funkce | Popis |
-|--------|-------|
-| 🔍 **Fulltext vyhledávání** | Rychlé hledání v celém obsahu (Cmd/Ctrl+K) |
-| 🌓 **Dark/Light mode** | Automatické ukládání preference |
-| 📊 **Progress tracking** | Sledování postupu v každé fázi |
-| ⌨️ **Keyboard navigace** | Plná podpora klávesových zkratek |
-| 📱 **Responzivní design** | Tablet a Desktop (1024px+) |
-| 💾 **Offline podpora** | Funguje po prvním načtení |
-| 📋 **Copy-to-clipboard** | Jedním klikem zkopírujte kód |
+- **🔍 Fulltext vyhledávání** - Rychlé hledání v celém obsahu (Cmd/Ctrl+K)
+- **🌓 Dark/Light mode** - Automatické ukládání preference
+- **📊 Progress tracking** - Sledování postupu v každé fázi
+- **⌨️ Keyboard navigace** - Plná podpora klávesových zkratek
+- **📱 Responzivní design** - Tablet a Desktop (1024px+)
+- **💾 Offline podpora** - Funguje po prvním načtení
+- **📋 Copy-to-clipboard** - Jedním klikem zkopírujte kód
 
 ### ⌨️ Klávesové zkratky
 
@@ -123,18 +125,13 @@ WebApp_Guide/
 ├── 📄 CLAUDE.md               # Instrukce pro AI asistenta
 │
 ├── 📁 antigravity-guide/      # Fáze 1: Základy (12 sekcí)
-│   ├── index.html             # SPA shell
-│   ├── config.json            # Definice sekcí a metadata
+│   ├── index.html
+│   ├── config.json
 │   ├── js/
-│   │   ├── app.js             # Hlavní aplikační logika
+│   │   ├── app.js
 │   │   └── modules/
-│   │       ├── search.js      # Fulltext vyhledávání
-│   │       └── glossary.js    # Slovník pojmů
 │   ├── css/
-│   │   ├── main.css           # Hlavní styly
-│   │   ├── variables.css      # CSS proměnné (PRAUT barvy)
-│   │   └── components/        # Komponentové styly
-│   └── sections/              # HTML fragmenty obsahu
+│   └── sections/
 │
 ├── 📁 phase2-navigation/      # Fáze 2: Navigace (8 sekcí)
 ├── 📁 phase3-pro-workflow/    # Fáze 3: Pro Workflow (8 sekcí)
@@ -142,6 +139,24 @@ WebApp_Guide/
 │
 ├── 📁 PromptLibrary/          # Knihovna promptů
 └── 📁 assets/                 # Obrázky, ikony, videa
+```
+
+### Architektura každé fáze
+
+```
+{phase}/
+├── index.html          # SPA shell
+├── config.json         # Definice sekcí a metadata
+├── js/
+│   ├── app.js          # Hlavní aplikační logika
+│   └── modules/
+│       ├── search.js   # Fulltext vyhledávání
+│       └── glossary.js # Slovník pojmů
+├── css/
+│   ├── main.css        # Hlavní styly
+│   ├── variables.css   # CSS proměnné (PRAUT barvy)
+│   └── components/     # Komponentové styly
+└── sections/           # HTML fragmenty obsahu
 ```
 
 ---
@@ -230,7 +245,7 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 
 1. Forkněte repozitář
 2. Vytvořte feature branch (`git checkout -b feature/nova-funkce`)
-3. Commitněte změny (`git commit -m 'feat: přidání nové funkce'`)
+3. Commitněte změny (`git commit -m 'Přidání nové funkce'`)
 4. Pushněte branch (`git push origin feature/nova-funkce`)
 5. Otevřete Pull Request
 
@@ -264,24 +279,25 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 
 ## 🔗 Užitečné odkazy
 
-- [Google Antigravity — Oficiální dokumentace](https://antigravity.google/docs)
-- [Google Antigravity — Download](https://antigravity.google/download)
-- [Google Antigravity — Changelog](https://antigravity.google/changelog)
-- [Praut s.r.o.](https://praut.cz) — Autor projektu
+- 🌐 [**Live Demo**](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)
+- [Google Antigravity - Oficiální dokumentace](https://antigravity.google/docs)
+- [Google Antigravity - Download](https://antigravity.google/download)
+- [Google Antigravity - Changelog](https://antigravity.google/changelog)
+- [Praut s.r.o.](https://praut.cz) - Autor projektu
 
 ---
 
 ## 📄 Licence
 
-Tento projekt je licencován pod **MIT License** — viz [LICENSE](LICENSE) soubor.
+Tento projekt je licencován pod **MIT License** - viz [LICENSE](LICENSE) soubor.
 
 ---
 
 ## 👏 Poděkování
 
-- **Google** — Za vytvoření Antigravity IDE
-- **Praut s.r.o.** — Za vývoj této učebnice
-- **Všichni přispěvatelé** — Za pomoc s rozvojem projektu
+- **Google** - Za vytvoření Antigravity IDE
+- **Praut s.r.o.** - Za vývoj této učebnice
+- **Všichni přispěvatelé** - Za pomoc s rozvojem projektu
 
 ---
 
