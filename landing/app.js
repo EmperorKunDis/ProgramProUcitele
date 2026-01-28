@@ -113,15 +113,15 @@ function handleFormSubmit(e) {
     // Show success modal
     showSuccessModal();
     
-    // Redirect to Discord after delay
+    // Redirect to Discord (new tab) and WebApp (current window) after delay
     setTimeout(() => {
+        // Open Discord in new tab
         window.open(CONFIG.discordInvite, '_blank');
         
-        // Optionally close modal and reset form
+        // Redirect current window to WebApp Guide
         setTimeout(() => {
-            successModal.classList.remove('visible');
-            teacherForm.reset();
-        }, 1000);
+            window.location.href = '../WebApp_Guide/';
+        }, 500);
     }, CONFIG.redirectDelay);
 }
 
