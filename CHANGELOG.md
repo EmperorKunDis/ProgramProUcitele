@@ -16,6 +16,23 @@ a tento projekt dodržuje [Sémantické verzování](https://semver.org/lang/cs/
 
 ---
 
+## [1.1.0] - 2026-01-28
+
+### Přidáno
+- 🎓 **Landing page pro registraci učitelů** (`/landing/`)
+  - Moderní intro animace s AI brain SVG
+  - Registrační formulář (příjmení, škola, město, předměty)
+  - Automatické přesměrování na Discord server
+  - Dark mode design s gradientovými akcenty
+  - Plně responzivní layout
+  - Session-based skip intro animace
+
+### Změněno
+- Aktualizace README.md s odkazy na landing page
+- Přidány nové badges pro registraci učitelů
+
+---
+
 ## [1.0.0] - 2026-01-22
 
 ### Přidáno

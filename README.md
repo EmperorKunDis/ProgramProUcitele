@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://emperorkundis.github.io/ProgramProUcitele/landing/">🎓 Registrace učitelů</a> •
   <a href="https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/">🌐 Live Demo</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-funkce">Funkce</a> •
@@ -19,6 +20,9 @@
 </p>
 
 <p align="center">
+  <a href="https://emperorkundis.github.io/ProgramProUcitele/landing/">
+    <img src="https://img.shields.io/badge/🎓_Registrace_učitelů-Připojte_se!-8B5CF6?style=for-the-badge" alt="Registrace učitelů">
+  </a>
   <a href="https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/">
     <img src="https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-2ea44f?style=for-the-badge" alt="Live Demo">
   </a>
@@ -41,6 +45,8 @@
 Projekt vznikl s cílem **maximálně zjednodušit práci učitelům** při zavádění moderních AI nástrojů do výuky, aby měli více času věnovat se samotným studentům.
 
 > 🌐 **[Vyzkoušejte Live Demo →](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)**
+
+> 🎓 **[Registrace pro učitele →](https://emperorkundis.github.io/ProgramProUcitele/landing/)** — Připojte se ke komunitě pedagogů využívajících AI!
 
 ### 🎯 Pro koho je tento průvodce?
 
@@ -119,6 +125,11 @@ python3 -m http.server 8000
 ## 📁 Struktura projektu
 
 ```
+landing/                        # 🎓 Registrace učitelů
+├── 📄 index.html              # Landing page s animací
+├── 📄 styles.css              # Styly (dark mode, gradienty)
+└── 📄 app.js                  # Formulář a Discord redirect
+
 WebApp_Guide/
 ├── 📄 index.html              # Landing page s roadmapou
 ├── 📄 PRD.md                  # Product Requirements Document
@@ -258,6 +269,7 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 - [x] Fáze 3: Pro Workflow (8 sekcí)
 - [x] Fáze 4: God Mode (8 sekcí)
 - [x] Landing page s vizualizacemi
+- [x] 🎓 **Registrační stránka pro učitele** (s intro animací)
 - [ ] Video tutoriály
 - [ ] Interaktivní playground
 - [ ] Quiz / Knowledge check
@@ -279,6 +291,7 @@ Příspěvky jsou vítány! Přečtěte si prosím [CONTRIBUTING.md](CONTRIBUTIN
 
 ## 🔗 Užitečné odkazy
 
+- 🎓 [**Registrace pro učitele**](https://emperorkundis.github.io/ProgramProUcitele/landing/) — Připojte se ke komunitě!
 - 🌐 [**Live Demo**](https://emperorkundis.github.io/ProgramProUcitele/WebApp_Guide/)
 - [Google Antigravity - Oficiální dokumentace](https://antigravity.google/docs)
 - [Google Antigravity - Download](https://antigravity.google/download)
