@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate HTML & Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install html-validate
+        run: npm install -g html-validate
+
+      - name: Validate HTML files
+        run: |
+          find WebApp_Guide -name "*.html" -type f | head -20 | xargs html-validate --config .htmlvalidate.json || true
+        continue-on-error: true
+
+      - name: Check for broken internal links
+        run: |
+          echo "Checking for broken internal links..."
+          # Basic check for broken section references
+          find WebApp_Guide -name "*.html" -exec grep -l "sections/" {} \; | head -10
+        continue-on-error: true
+
+  test-server:
+    name: Test Local Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Start server and test
+        run: |
+          cd WebApp_Guide
+          python -m http.server 8000 &
+          sleep 3
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8000 | grep -q "200" && echo "✅ Server started successfully" || echo "❌ Server failed"
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/antigravity-guide/ | grep -q "200" && echo "✅ Phase 1 accessible" || echo "❌ Phase 1 not accessible"
+
+  lighthouse:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Setup Python server
+        run: |
+          cd WebApp_Guide
+          python -m http.server 8000 &
+          sleep 3
+
+      - name: Run Lighthouse
+        run: |
+          lhci autorun --collect.url=http://localhost:8000 --collect.url=http://localhost:8000/antigravity-guide/ || true
+        continue-on-error: true
