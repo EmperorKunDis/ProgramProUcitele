@@ -1,32 +1,117 @@
 <h1>Browser Agent</h1>
 
-<p>Browser Agent je specializovaný pod-agent, který umí ovládat headless (nebo viditelný) webový prohlížeč. Nemyslí, jen
-    koná.</p>
+<p>Browser Agent je specializovaný pod-agent, který umí ovládat webový prohlížeč. Může klikat, scrollovat, vyplňovat formuláře, číst obsah stránek a nahrávat video.</p>
 
-<h2>K čemu slouží?</h2>
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="assets/images/google-codelabs/04-browser.png" alt="Browser Agent v akci" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Browser Agent naviguje na webovou stránku</figcaption>
+</figure>
+
+<h2>Instalace Chrome Extension</h2>
+
+<p>Browser Agent vyžaduje instalaci rozšíření do Chrome:</p>
+
 <ol>
-    <li><strong>Vizuální kontrola:</strong> Otevře váš lokální web (`localhost:3000`) a "podívá se", jestli CSS vypadá
-        správně.</li>
-    <li><strong>E2E Testování:</strong> Může proklikat celou nákupní flow (vložit do košíku, zaplatit) a ověřit, že
-        nenastala chyba.</li>
-    <li><strong>Rešerše dokumentace:</strong> Umí číst online dokumentaci knihoven, které ve svém projektu používáte.
-    </li>
+    <li>Zadejte agentovi úkol vyžadující prohlížeč (např. <code>"Jdi na google.com"</code>)</li>
+    <li>Agent vás vyzve k instalaci rozšíření - klikněte <strong>Setup</strong></li>
+    <li>Otevře se Chrome Web Store s <strong>Antigravity Browser Extension</strong></li>
+    <li>Klikněte <strong>Add to Chrome</strong></li>
+    <li>Potvrďte oprávnění</li>
 </ol>
 
-<div class="visual-placeholder">
-    <div class="icon">🌐</div>
-    <div class="desc">Screenshot: Browser Tool Output</div>
-    <div class="specs">Ukázka logu z browser agenta (screenshot webu)</div>
+<div class="callout callout-info">
+    <div class="callout-icon">ℹ️</div>
+    <div class="callout-content">
+        Rozšíření umožňuje Antigravity ovládat prohlížeč. Běží v sandboxu a nemá přístup k vašim heslům nebo jiným tabům.
+    </div>
 </div>
 
-<h2>Bezpečnost</h2>
-<p>Browser Agent běží v izolovaném kontejneru. Nemůže přistupovat k vašim heslům v Chrome ani k souborům mimo projekt.
-</p>
+<h2>K čemu slouží Browser Agent?</h2>
 
-<div class="callout callout-warning">
+<h3>🔍 Vizuální kontrola</h3>
+<p>Otevře váš lokální web (<code>localhost:3000</code>) a zkontroluje, jestli CSS vypadá správně.</p>
+<pre><code class="language-text">Otevři localhost:3000 a zkontroluj, jestli header má správnou barvu.</code></pre>
+
+<h3>🧪 E2E Testování</h3>
+<p>Může proklikat celou aplikaci a ověřit funkčnost:</p>
+<pre><code class="language-text">Otestuj login flow:
+1. Jdi na /login
+2. Zadej email: test@example.com, heslo: test123
+3. Klikni "Přihlásit"
+4. Ověř, že se zobrazí dashboard</code></pre>
+
+<h3>📚 Čtení dokumentace</h3>
+<p>Agent umí číst online dokumentaci knihoven:</p>
+<pre><code class="language-text">Podívej se na dokumentaci React Router a najdi, jak udělat nested routes.</code></pre>
+
+<h3>📸 Screenshoty</h3>
+<p>Automaticky pořizuje screenshoty pro dokumentaci:</p>
+<pre><code class="language-text">Otevři náš web a udělej screenshot každé stránky pro dokumentaci.</code></pre>
+
+<h2>Permissions Flow</h2>
+
+<p>Když Browser Agent potřebuje provést akci, zobrazí se dialog:</p>
+
+<ul>
+    <li><strong>"Agent needs your input"</strong> - Klikněte pro zobrazení detailů</li>
+    <li><strong>"Agent is using the Browser"</strong> - Vidíte co agent dělá</li>
+    <li><strong>Always Allow</strong> - Povolí akci bez dalšího ptaní (pro tuto session)</li>
+</ul>
+
+<h2>Bezpečnost</h2>
+
+<div class="callout callout-danger">
     <div class="callout-icon">⚠️</div>
     <div class="callout-content">
-        Nikdy nenechávejte Browser Agenta přihlašovat se do vašich osobních účtů na produkčních webech (Gmail, Banka),
-        pokud mu explicitně nepředáte testovací kredenciály.
+        <strong>Nikdy nenechávejte Browser Agent:</strong>
+        <ul>
+            <li>Přihlašovat se do vašich osobních účtů (Gmail, banka)</li>
+            <li>Navštěvovat nedůvěryhodné stránky</li>
+            <li>Spouštět JS na produkčních webech s vašimi daty</li>
+        </ul>
+    </div>
+</div>
+
+<h3>URL Allowlist</h3>
+<p>Pro větší bezpečnost můžete nastavit seznam povolených URL:</p>
+<ol>
+    <li>Jděte do <strong>Antigravity → Settings → Advanced Settings</strong></li>
+    <li>Najděte sekci <strong>Browser URL Allowlist</strong></li>
+    <li>Přidejte povolené domény (např. <code>localhost</code>, <code>github.com</code>)</li>
+</ol>
+
+<h3>JavaScript Execution Policy</h3>
+<p>Nastavte, jak agent zachází s JS v prohlížeči:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Nastavení</th>
+            <th>Popis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Disabled</strong></td>
+            <td>JS zakázán úplně (nejbezpečnější)</td>
+        </tr>
+        <tr>
+            <td><strong>Always Ask</strong></td>
+            <td>Vždy se zeptá před spuštěním JS</td>
+        </tr>
+        <tr>
+            <td><strong>Model Decides</strong></td>
+            <td>Agent rozhodne, kdy se zeptat</td>
+        </tr>
+        <tr>
+            <td><strong>Turbo</strong></td>
+            <td>Spouští JS bez ptaní (nejvíce rizikové)</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Doporučení:</strong> Použijte <em>Always Ask</em> pro většinu případů. <em>Turbo</em> jen pro testování na localhost.
     </div>
 </div>

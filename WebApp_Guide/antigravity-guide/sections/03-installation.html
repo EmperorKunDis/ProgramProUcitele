@@ -1,57 +1,165 @@
-<h1>Instalace a Požadavky</h1>
+<h1>Instalace a Nastavení</h1>
 
-<p>Antigravity je dostupné jako desktopová aplikace pro macOS, Windows a Linux. Zde najdete postup pro váš systém.</p>
-
-<div class="callout callout-warning">
-    <div class="callout-icon">⚠️</div>
-    <div class="callout-content">
-        <strong>Licence PRAUT:</strong> Ujistěte se, že máte aktivní licenci nebo pozvánku do Early Access programu od
-        PRAUT s.r.o.
-    </div>
-</div>
+<p>Antigravity je dostupné jako desktopová aplikace pro macOS, Windows a Linux. Zde najdete kompletní postup instalace a úvodního nastavení.</p>
 
 <h2>Systémové Požadavky</h2>
 <ul>
-    <li><strong>RAM:</strong> Minimum 16GB (doporučeno 32GB pro běh lokálních modelů)</li>
+    <li><strong>OS:</strong> macOS 12+, Windows 10/11, Ubuntu 22.04+</li>
+    <li><strong>RAM:</strong> Minimum 16GB (doporučeno 32GB pro lokální modely)</li>
     <li><strong>Disk:</strong> SSD s alespoň 10GB volného místa</li>
-    <li><strong>Internet:</strong> Stabilní připojení (pro cloudové modely Gemini)</li>
+    <li><strong>Prohlížeč:</strong> Google Chrome (pro Browser Agent)</li>
+    <li><strong>Účet:</strong> Osobní Gmail účet (pro preview přístup)</li>
 </ul>
 
-<h2>Postup Instalace</h2>
+<h2>Stažení a Instalace</h2>
+
+<p>Jděte na <a href="https://antigravity.google/download" target="_blank">antigravity.google/download</a> a stáhněte verzi pro váš operační systém.</p>
 
 <h3 style="color: var(--color-brand-primary)">macOS</h3>
 <ol>
-    <li>Stáhněte <code>Antigravity-x.y.z.dmg</code> z portálu.</li>
-    <li>Otevřete disk image a přetáhněte aplikaci do složky <strong>Applications</strong>.</li>
-    <li>Při prvním spuštění možná budete muset potvrdit bezpečnostní výjimku v <em>System Settings > Privacy &
-            Security</em>.</li>
+    <li>Stáhněte <code>Antigravity-x.y.z.dmg</code></li>
+    <li>Otevřete disk image a přetáhněte aplikaci do <strong>Applications</strong></li>
+    <li>Při prvním spuštění potvrďte v <em>System Settings → Privacy & Security</em></li>
 </ol>
 
 <h3 style="color: var(--color-brand-primary)">Windows</h3>
 <ol>
-    <li>Stáhněte instalátor <code>Antigravity-Setup.exe</code>.</li>
-    <li>Spusťte instalaci jako správce.</li>
+    <li>Stáhněte <code>Antigravity-Setup.exe</code></li>
+    <li>Spusťte instalátor (případně jako správce)</li>
 </ol>
 
-<div class="callout callout-danger">
+<div class="callout callout-warning">
     <div class="callout-icon">🛡️</div>
     <div class="callout-content">
-        <strong>SmartScreen Varování:</strong> Windows Defender může blokovat instalaci, protože aplikace není podepsaná
-        standardním certifikátem. Klikněte na "More info" a poté "Run anyway".
+        <strong>SmartScreen:</strong> Windows může blokovat instalaci. Klikněte "More info" → "Run anyway".
     </div>
 </div>
 
 <h3 style="color: var(--color-brand-primary)">Linux (Debian/Ubuntu)</h3>
-<pre><code class="language-bash">
-# Stáhněte .deb balíček
-wget https://download.praut.cz/antigravity/latest.deb
-
-# Nainstalujte
+<pre><code class="language-bash"># Stáhněte a nainstalujte
+wget https://antigravity.google/download/antigravity_latest.deb
 sudo dpkg -i antigravity_latest.deb
-sudo apt-get install -f  # Doplnění závislostí
-</code></pre>
+sudo apt-get install -f</code></pre>
+
+<h2>Průvodce Nastavením (Setup Wizard)</h2>
+
+<p>Po prvním spuštění vás přivítá průvodce nastavením:</p>
 
 <figure style="margin: 2rem 0; text-align: center;">
-    <img src="assets/images/screens/img08.png" alt="Instalace Antigravity na Ubuntu pomocí apt install - terminálový výstup ukazující úspěšnou instalaci balíčku" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" loading="lazy">
-    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Instalace Antigravity na Linux (Ubuntu)</figcaption>
+    <img src="assets/images/google-codelabs/02-installation.png" alt="Antigravity Setup Wizard" style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Obrazovka výběru režimu agenta</figcaption>
 </figure>
+
+<h3>1. Import nastavení</h3>
+<p>Můžete importovat nastavení z VS Code nebo Cursor, nebo začít s čistým nastavením.</p>
+
+<h3>2. Téma editoru</h3>
+<p>Vyberte světlé nebo tmavé téma (lze změnit kdykoliv později).</p>
+
+<h3>3. Režim agenta (DŮLEŽITÉ!)</h3>
+
+<p>Toto je klíčové rozhodnutí. Vybíráte, kolik autonomie dáte AI agentovi:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Režim</th>
+            <th>Popis</th>
+            <th>Pro koho</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>🔒 Secure Mode</strong></td>
+            <td>Maximální bezpečnost. Agent se ptá na vše.</td>
+            <td>Enterprise, citlivá data</td>
+        </tr>
+        <tr>
+            <td><strong>✅ Review-driven</strong> (Doporučeno)</td>
+            <td>Agent se ptá u důležitých rozhodnutí.</td>
+            <td>Většina uživatelů</td>
+        </tr>
+        <tr>
+            <td><strong>⚡ Agent-driven</strong></td>
+            <td>Agent pracuje autonomně, ptá se minimálně.</td>
+            <td>Zkušení uživatelé, prototypování</td>
+        </tr>
+        <tr>
+            <td><strong>⚙️ Custom</strong></td>
+            <td>Vlastní kombinace politik.</td>
+            <td>Pokročilí uživatelé</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Bezpečnostní Politiky</h3>
+
+<p>Každý režim konfiguruje tři klíčové politiky:</p>
+
+<div class="callout callout-info">
+    <div class="callout-icon">🖥️</div>
+    <div class="callout-content">
+        <strong>Terminal Execution Policy</strong><br>
+        Kontroluje, zda agent může spouštět příkazy v terminálu.
+        <ul>
+            <li><strong>Always proceed:</strong> Automaticky spouští (kromě deny listu)</li>
+            <li><strong>Request review:</strong> Vždy se zeptá před spuštěním</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout callout-info">
+    <div class="callout-icon">📋</div>
+    <div class="callout-content">
+        <strong>Review Policy</strong><br>
+        Kdy agent žádá o schválení svých artefaktů (plánů, kódu).
+        <ul>
+            <li><strong>Always proceed:</strong> Nikdy se neptá</li>
+            <li><strong>Agent decides:</strong> Agent rozhodne, kdy se zeptat</li>
+            <li><strong>Request review:</strong> Vždy čeká na schválení</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout callout-info">
+    <div class="callout-icon">🌐</div>
+    <div class="callout-content">
+        <strong>JavaScript Execution Policy</strong><br>
+        Kontroluje spouštění JS v Browser Agentu.
+        <ul>
+            <li><strong>Always proceed:</strong> Spouští bez ptaní (nejvíce rizikové)</li>
+            <li><strong>Request review:</strong> Vždy se zeptá</li>
+            <li><strong>Disabled:</strong> JS zakázán úplně</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Tip od Martina:</strong> Začněte s <em>Review-driven</em> režimem. Až budete agentu důvěřovat, můžete přejít na <em>Agent-driven</em> pro větší rychlost.
+    </div>
+</div>
+
+<h3>4. Nastavení editoru</h3>
+<ul>
+    <li><strong>Keybindings:</strong> Výchozí, VS Code, nebo Vim</li>
+    <li><strong>Extensions:</strong> Nainstalujte doporučená rozšíření pro váš jazyk</li>
+    <li><strong>Command Line:</strong> Instalace <code>agy</code> příkazu pro otevírání z terminálu</li>
+</ul>
+
+<pre><code class="language-bash"># Po instalaci command line můžete otevřít projekt přímo z terminálu:
+agy ~/muj-projekt</code></pre>
+
+<h3>5. Přihlášení k Google</h3>
+<p>Klikněte na <strong>Sign in with Google</strong>. Použijte osobní Gmail účet (firemní účty zatím nejsou podporovány v preview).</p>
+
+<h3>6. Souhlas s podmínkami</h3>
+<p>Potvrďte Terms of Use a volitelně se přihlaste k odběru novinek.</p>
+
+<div class="callout callout-success">
+    <div class="callout-icon">🎉</div>
+    <div class="callout-content">
+        <strong>Hotovo!</strong> Antigravity je připraveno. V další sekci se podíváme na první spuštění a orientaci v rozhraní.
+    </div>
+</div>

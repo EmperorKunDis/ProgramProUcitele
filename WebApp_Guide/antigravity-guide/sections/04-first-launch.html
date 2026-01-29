@@ -1,48 +1,113 @@
 <h1>První Spuštění</h1>
 
-<p>Po úspěšné instalaci vás čeká úvodní nastavení (Onboarding Wizard). Tento proces nastaví vaše prostředí pro optimální
-    spolupráci s AI.</p>
+<p>Po dokončení Setup Wizardu je čas spustit Antigravity a seznámit se s rozhraním.</p>
 
-<div class="visual-placeholder">
-    <div class="icon">✨</div>
-    <div class="desc">Screenshot: Welcome Wizard</div>
-    <div class="specs">Úvodní obrazovka s logem Antigravity/PRAUT</div>
+<h2>Otevření Projektu</h2>
+
+<p>Spusťte Antigravity a vyberte způsob otevření:</p>
+
+<ul>
+    <li><strong>Open Folder</strong> - Otevře existující projekt</li>
+    <li><strong>Clone Repository</strong> - Naklonuje Git repo</li>
+    <li><strong>Playground</strong> - Prázdný sandbox pro experimenty</li>
+</ul>
+
+<h3>Z terminálu</h3>
+<pre><code class="language-bash"># Otevře aktuální složku
+agy .
+
+# Otevře konkrétní projekt
+agy ~/projekty/muj-web</code></pre>
+
+<h2>Orientace v Rozhraní</h2>
+
+<p>Antigravity má dvě hlavní "views":</p>
+
+<h3>1. Agent Manager</h3>
+<p>Hlavní obrazovka pro práci s AI agentem. Zde:</p>
+<ul>
+    <li>Zadáváte úkoly přirozeným jazykem</li>
+    <li>Vidíte historii konverzací (Inbox)</li>
+    <li>Spravujete workspaces</li>
+</ul>
+
+<h3>2. Editor View</h3>
+<p>Klasické IDE rozhraní známé z VS Code:</p>
+<ul>
+    <li>File Explorer vlevo</li>
+    <li>Editor uprostřed</li>
+    <li>Terminal dole</li>
+    <li>Agent panel vpravo</li>
+</ul>
+
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="assets/images/google-codelabs/07-editor.png" alt="Editor View layout" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Editor View s agentem vpravo</figcaption>
+</figure>
+
+<h3>Klávesové zkratky</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Zkratka</th>
+            <th>Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>Ctrl + `</code></td>
+            <td>Toggle Terminal panel</td>
+        </tr>
+        <tr>
+            <td><code>Cmd + L</code></td>
+            <td>Toggle Agent panel</td>
+        </tr>
+        <tr>
+            <td><code>Cmd + Shift + P</code></td>
+            <td>Command Palette</td>
+        </tr>
+        <tr>
+            <td><code>Cmd + K</code></td>
+            <td>Inline chat (v editoru)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>První Konverzace</h2>
+
+<p>Vyzkoušejte agenta jednoduchým úkolem:</p>
+
+<pre><code class="language-text">Vytvoř soubor hello.py s funkcí, která pozdraví uživatele jménem.</code></pre>
+
+<p>Agent by měl:</p>
+<ol>
+    <li>Porozumět požadavku</li>
+    <li>Vytvořit soubor <code>hello.py</code></li>
+    <li>Implementovat funkci</li>
+    <li>Případně nabídnout spuštění</li>
+</ol>
+
+<div class="callout callout-success">
+    <div class="callout-icon">✅</div>
+    <div class="callout-content">
+        <strong>Tip:</strong> Pokud agent udělal přesně to, co jste chtěli, napište <code>Looks good</code> nebo <code>OK</code>. Pokud ne, popište co změnit.
+    </div>
 </div>
 
-<h2>1. Přihlášení</h2>
-<p>Klikněte na <strong>Sign in with Google</strong>. Musíte použít účet, který má povolený přístup k Gemini API (nebo
-    firemní PRAUT účet).</p>
+<h2>Nastavení Extensions</h2>
 
-<h2>2. Výběr Motivu</h2>
-<p>Antigravity respektuje nastavení vašeho systému, ale můžete si vynutit:</p>
-<ul>
-    <li><strong>Dark Mode</strong> (Doporučeno pro vývojáře)</li>
-    <li><strong>Light Mode</strong></li>
-    <li><strong>High Contrast</strong></li>
-</ul>
+<p>Pro váš programovací jazyk možná budete chtít nainstalovat rozšíření:</p>
 
-<h2>3. Import Nastavení</h2>
-<p>Pokud přecházíte z VS Code, Antigravity může importovat vaše:</p>
-<ul>
-    <li>Klávesové zkratky (Keybindings)</li>
-    <li>Snippety</li>
-    <li>Některá rozšíření (Extensions)</li>
-</ul>
+<ol>
+    <li>Klikněte na ikonu Extensions (čtvereček) v levém panelu</li>
+    <li>Vyhledejte rozšíření (např. "Python", "ESLint")</li>
+    <li>Klikněte <strong>Install</strong></li>
+</ol>
 
 <div class="callout callout-info">
     <div class="callout-icon">ℹ️</div>
     <div class="callout-content">
-        <strong>Rozšíření:</strong> Ne všechna VS Code rozšíření jsou kompatibilní. AI agenti často nahrazují potřebu
-        mnoha pluginů (např. pro formátování nebo linting).
+        Antigravity používá <strong>Open VSX</strong> marketplace (ne VS Code Marketplace). Většina populárních extensions je dostupná.
     </div>
 </div>
-
-<h2>4. Konfigurace Agenta</h2>
-<p>V posledním kroku si pojmenujete svého primárního agenta. Můžete mu dát jméno (např. <em>Jarvis</em>,
-    <em>Friday</em>, nebo české <em>Karel</em>).</p>
-<p>Zde také nastavujete <strong>úroveň autonomie</strong>:</p>
-<ul>
-    <li><strong>Konzervativní:</strong> Agent se ptá před každou změnou souboru.</li>
-    <li><strong>Vyvážená (Default):</strong> Agent se ptá u kritických změn a mazání.</li>
-    <li><strong>Autonomní:</strong> Agent pracuje rychle, ptá se jen při nejasnostech.</li>
-</ul>

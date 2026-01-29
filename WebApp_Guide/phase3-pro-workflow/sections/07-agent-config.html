@@ -48,6 +48,83 @@
   ]
 }</code></pre>
 
+<h2>Deny List (Bezpečnostní blokace)</h2>
+
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="../antigravity-guide/assets/images/google-codelabs/11-security.png" alt="Security Settings" style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Nastavení Deny List pro terminálové příkazy</figcaption>
+</figure>
+
+<p>Deny List je seznam příkazů, které agent <strong>nikdy</strong> nesmí spustit, ani když máte Terminal Command na "Turbo".</p>
+
+<h3>Konfigurace Deny List</h3>
+
+<ol>
+    <li>Jděte do <strong>Antigravity → Settings</strong></li>
+    <li>Nastavte <strong>Terminal Command Auto Execution</strong> na vaši preferenci</li>
+    <li>V sekci <strong>Deny List Terminal Commands</strong> přidejte nebezpečné příkazy</li>
+</ol>
+
+<h3>Doporučené příkazy pro Deny List</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Příkaz</th>
+            <th>Proč blokovat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>rm</code></td>
+            <td>Smazání souborů bez možnosti obnovy</td>
+        </tr>
+        <tr>
+            <td><code>rmdir</code></td>
+            <td>Smazání složek</td>
+        </tr>
+        <tr>
+            <td><code>sudo</code></td>
+            <td>Systémové příkazy s root právy</td>
+        </tr>
+        <tr>
+            <td><code>curl</code></td>
+            <td>Stahování z internetu (riziko malware)</td>
+        </tr>
+        <tr>
+            <td><code>wget</code></td>
+            <td>Stahování z internetu</td>
+        </tr>
+        <tr>
+            <td><code>chmod</code></td>
+            <td>Změna oprávnění souborů</td>
+        </tr>
+        <tr>
+            <td><code>ssh</code></td>
+            <td>Vzdálený přístup k serverům</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Poznámka:</strong> Po změně Deny List restartujte Antigravity, aby se změny projevily.
+    </div>
+</div>
+
+<h3>Browser URL Allowlist</h3>
+
+<p>Pro Browser Agent můžete nastavit povolené domény:</p>
+
+<ol>
+    <li><strong>Antigravity → Settings → Advanced Settings</strong></li>
+    <li>Sekce <strong>Browser URL Allowlist</strong></li>
+    <li>Přidejte povolené domény (např. <code>localhost</code>, <code>github.com</code>)</li>
+</ol>
+
+<p>Agent pak nebude moci navštívit stránky mimo tento seznam.</p>
+
 <h2>File Access Control</h2>
 
 <p>Omezte, které soubory může agent měnit:</p>

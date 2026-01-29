@@ -1,35 +1,97 @@
 <h1>Artefakty</h1>
 
-<p>Artefakty jsou speciální soubory, které agenti vytvářejí, aby udrželi kontext a dokumentaci. Najdete je ve složce
-    <code>.gemini/brain/</code>, ale Antigravity vám je ukazuje v hezkém UI.</p>
+<p>Artefakty jsou dokumenty, které agent vytváří během práce. Slouží ke komunikaci, dokumentaci a řešení <strong>"Trust Gap"</strong> - když agent tvrdí "opravil jsem bug", artefakt to dokazuje.</p>
 
-<div class="visual-placeholder">
-    <div class="icon">📄</div>
-    <div class="desc">Screenshot: Artifact Panel</div>
-    <div class="specs">Zobrazený renderovaný markdown soubor</div>
-</div>
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="assets/images/google-codelabs/05-artifacts.png" alt="Artifacts panel v Antigravity" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Artifacts panel zobrazující různé typy artefaktů</figcaption>
+</figure>
 
 <h2>Typy Artefaktů</h2>
 
-<h3 style="color: var(--color-brand-primary)">1. Task Checklist (task.md)</h3>
-<p>Živý seznam úkolů. Agent si zde odškrtává, co už má hotové. Vy tak vždy vidíte progres na první pohled.</p>
-
+<h3>📋 Task Lists</h3>
+<p>Živý checklist úkolů. Agent si odškrtává, co má hotové:</p>
 <pre><code class="language-markdown">- [x] Inicializace projektu
 - [x] Vytvoření databáze
 - [ ] Implementace API endpointů
 - [ ] Testování</code></pre>
 
-<h3 style="color: var(--color-brand-primary)">2. Implementation Plan</h3>
-<p>Technický návrh řešení. Obsahuje seznam souborů, které se budou měnit, a popis změn. Vždy čtěte tento dokument
-    předtím, než dáte agentovi "zelenou".</p>
+<h3>📝 Implementation Plan</h3>
+<p>Technický návrh řešení. Obsahuje:</p>
+<ul>
+    <li>Seznam souborů, které se budou měnit</li>
+    <li>Popis změn pro každý soubor</li>
+    <li>Očekávané závislosti a rizika</li>
+</ul>
 
-<h3 style="color: var(--color-brand-primary)">3. Walkthrough</h3>
-<p>Dokumentace "po akci". Když agent skončí velký úkol, vygeneruje walkthrough, kde popíše, co udělal a jak to otestovat
-    (včetně příkazů do terminálu).</p>
-
-<div class="callout callout-info">
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
     <div class="callout-content">
-        <strong>Tip:</strong> Tyto soubory jsou v Markdownu. Můžete je sami editovat a agent si změny přečte a
-        přizpůsobí se jim.
+        <strong>Důležité:</strong> Vždy si přečtěte Implementation Plan před schválením! Agent může navrhnout řešení, které není optimální pro váš projekt.
     </div>
 </div>
+
+<h3>📖 Walkthrough</h3>
+<p>Dokumentace "po akci". Když agent dokončí velký úkol, vytvoří walkthrough s:</p>
+<ul>
+    <li>Co bylo změněno</li>
+    <li>Jak změny otestovat</li>
+    <li>Příkazy pro spuštění/build</li>
+</ul>
+
+<h3>📊 Code Diffs</h3>
+<p>Zobrazení změn v kódu (přidané/odebrané řádky). Můžete přidávat komentáře ve stylu Google Docs:</p>
+<ul>
+    <li>Vyberte část kódu</li>
+    <li>Napište komentář ("Tady chybí error handling")</li>
+    <li>Agent přečte komentář a opraví</li>
+</ul>
+
+<h3>📸 Screenshots</h3>
+<p>Agent automaticky pořizuje screenshoty UI <strong>před a po</strong> změnách. Užitečné pro:</p>
+<ul>
+    <li>Vizuální kontrolu CSS změn</li>
+    <li>Dokumentaci UI flow</li>
+    <li>Debugging layout problémů</li>
+</ul>
+
+<h3>🎥 Browser Recordings</h3>
+<p>Pro dynamické interakce agent nahrává <strong>video</strong>:</p>
+<ul>
+    <li>"Klikni na login, počkej na spinner, ověř dashboard"</li>
+    <li>Můžete sledovat celý flow bez spouštění aplikace</li>
+    <li>Ideální pro E2E testování a demo</li>
+</ul>
+
+<h2>Kde najít Artefakty</h2>
+
+<h3>V Editor View</h3>
+<p>Klikněte na <strong>Artifacts</strong> v pravém dolním rohu.</p>
+
+<h3>V Agent Manager</h3>
+<p>Klikněte na <strong>Review Changes</strong> v pravém horním rohu vedle konverzace.</p>
+
+<h2>Práce s Artefakty</h2>
+
+<div class="callout callout-info">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Tip:</strong> Artefakty jsou uloženy v <code>.gemini/brain/</code> složce jako Markdown. Můžete je editovat přímo a agent si změny přečte.
+    </div>
+</div>
+
+<h3>Komentování změn</h3>
+<ol>
+    <li>Otevřete Code Diff v Review Changes</li>
+    <li>Vyberte řádek nebo blok kódu</li>
+    <li>Napište komentář (např. "Přidej try-catch")</li>
+    <li>Agent automaticky zpracuje feedback</li>
+</ol>
+
+<h3>Export Artefaktů</h3>
+<p>Artefakty můžete exportovat pro dokumentaci:</p>
+<ul>
+    <li>Implementation Plan → PDF pro stakeholdery</li>
+    <li>Walkthrough → README.md update</li>
+    <li>Screenshots → PR description</li>
+</ul>

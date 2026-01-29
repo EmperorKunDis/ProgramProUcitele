@@ -1,41 +1,166 @@
 <h1>Agent Manager</h1>
 
-<p>Agent Manager je mozkem operací. Zde zadáváte komplexní úkoly, které vyžadují práci s více soubory, terminálem nebo
-    prohlížečem.</p>
+<p>Agent Manager je <strong>Mission Control</strong> pro vaše AI agenty. Zde zadáváte komplexní úkoly, sledujete jejich průběh a spravujete více konverzací současně.</p>
 
-<div class="visual-placeholder">
-    <div class="icon">🤖</div>
-    <div class="desc">Screenshot: Agent Manager Chat</div>
-    <div class="specs">Ukázat běžící konverzaci s agentem a seznam nástrojů</div>
+<h2>Přehled rozhraní</h2>
+
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="assets/images/google-codelabs/03-agent-manager.png" alt="Agent Manager rozhraní s očíslovanými prvky" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Agent Manager - hlavní ovládací panel</figcaption>
+</figure>
+
+<h3>Prvky rozhraní</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Prvek</th>
+            <th>Popis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>1</strong></td>
+            <td>📥 Inbox</td>
+            <td>Seznam všech vašich konverzací s agenty. Můžete se vrátit k předchozím úkolům.</td>
+        </tr>
+        <tr>
+            <td><strong>2</strong></td>
+            <td>➕ Start Conversation</td>
+            <td>Zahájení nové konverzace s agentem.</td>
+        </tr>
+        <tr>
+            <td><strong>3</strong></td>
+            <td>📁 Workspaces</td>
+            <td>Přepínání mezi projekty/složkami. Můžete mít více workspaces.</td>
+        </tr>
+        <tr>
+            <td><strong>4</strong></td>
+            <td>🎮 Playground</td>
+            <td>Scratch area pro experimenty bez workspace. Ideální pro rychlé testy.</td>
+        </tr>
+        <tr>
+            <td><strong>5</strong></td>
+            <td>📝 Open Editor</td>
+            <td>Přepnutí do Editor View pro práci se soubory.</td>
+        </tr>
+        <tr>
+            <td><strong>6</strong></td>
+            <td>🌐 Browser</td>
+            <td>Otevření Browser Agenta pro webové úkoly.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Jak zadávat úkoly</h2>
+
+<p>Buďte <strong>specifičtí</strong>, ale nechte prostor pro autonomii agenta.</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+    <div class="callout callout-danger">
+        <div class="callout-icon">❌</div>
+        <div class="callout-content">
+            <strong>Špatně:</strong><br>
+            <code>Udělej mi web.</code>
+        </div>
+    </div>
+    <div class="callout callout-success">
+        <div class="callout-icon">✅</div>
+        <div class="callout-content">
+            <strong>Dobře:</strong><br>
+            <code>Vytvoř landing page pro produkt "SuperBot" v HTML/CSS. Sekce: Hero, Features, Pricing.</code>
+        </div>
+    </div>
 </div>
 
-<h2>Jak zadávat úkoly?</h2>
-<p>Buďte specifičtí, ale nechte prostor pro autonomii.</p>
+<h2>Planning vs. Fast Mode</h2>
 
-<div class="code-block">
-    <pre><code class="language-markdown"># Špatně
-Udělej mi web.
+<p>V horní části konverzace najdete dropdown pro výběr režimu:</p>
 
-# Dobře (PRAUT Standard)
-Vytvoř jednostránkovou prezentaci pro produkt "SuperBot".
-- Použij HTML/CSS (žádný framework).
-- Hlavní barvy: fialová a zelená.
-- Sekce: Hero, Features, Pricing, Contact.
-- Vytvoř soubory v adresáři `/landing`.</code></pre>
+<table>
+    <thead>
+        <tr>
+            <th>Režim</th>
+            <th>Chování</th>
+            <th>Kdy použít</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>📋 Planning</strong></td>
+            <td>Agent nejprve vytvoří plán (<code>implementation_plan.md</code>), počká na schválení, pak implementuje.</td>
+            <td>Komplexní úkoly, refaktoring, nové featury</td>
+        </tr>
+        <tr>
+            <td><strong>⚡ Fast</strong></td>
+            <td>Agent začne rovnou pracovat bez plánování.</td>
+            <td>Jednoduché opravy, malé změny, "napiš mi funkci"</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        <strong>Tip:</strong> Pro úkoly nad 15 minut práce vždy použijte <em>Planning</em> mode. Ušetříte si přepracování.
+    </div>
 </div>
 
-<h2>Mode: Planning vs. Quick</h2>
+<h2>Model Selection</h2>
+
+<p>Vedle režimu je dropdown pro výběr AI modelu:</p>
+
 <ul>
-    <li><strong>Planning Mode:</strong> Agent nejprve napíše plán (`implementation_plan.md`) k odsouhlasení. Použijte
-        pro úkoly nad 15 minut práce.</li>
-    <li><strong>Quick Mode:</strong> Agent začne rovnou pracovat. Vhodné pro malé opravy nebo "write me a script" úkoly.
-    </li>
+    <li><strong>Gemini 3 Pro</strong> - Výchozí, nejlepší poměr cena/výkon</li>
+    <li><strong>Gemini 3 Flash</strong> - Rychlejší, levnější, pro jednoduché úkoly</li>
+    <li><strong>Claude Sonnet</strong> - Alternativa od Anthropic (vyžaduje API klíč)</li>
 </ul>
 
-<h2>Feedback Loop (Smyčka zpětné vazby)</h2>
-<p>Když agent dokončí úkol, požádá vás o kontrolu. </p>
+<h2>Feedback Loop</h2>
+
+<p>Když agent dokončí úkol, požádá vás o kontrolu:</p>
+
 <ul>
-    <li>Pokud je vše OK, napište <em>"Looks good"</em> nebo <em>"Pokračuj"</em>.</li>
-    <li>Pokud vidíte chybu, napište jen <em>"Ten nadpis je moc malý"</em> nebo <em>"Testy neprošly"</em>. Agent se
-        opraví sám.</li>
+    <li><strong>"Looks good"</strong> nebo <strong>"Pokračuj"</strong> - Schválení</li>
+    <li><strong>"Ten nadpis je moc malý"</strong> - Specifická zpětná vazba → agent opraví</li>
+    <li><strong>"Vrať změny"</strong> - Agent revertuje poslední změny</li>
 </ul>
+
+<h2>@ Mentions a / Workflows</h2>
+
+<p>V chatu můžete použít speciální syntaxi:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Syntaxe</th>
+            <th>Příklad</th>
+            <th>Účel</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>@soubor</code></td>
+            <td><code>@src/utils.ts</code></td>
+            <td>Přidá soubor do kontextu</td>
+        </tr>
+        <tr>
+            <td><code>@složka</code></td>
+            <td><code>@src/components/</code></td>
+            <td>Přidá celou složku</td>
+        </tr>
+        <tr>
+            <td><code>/workflow</code></td>
+            <td><code>/generate-unit-tests</code></td>
+            <td>Spustí uložený workflow</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="callout callout-info">
+    <div class="callout-icon">📚</div>
+    <div class="callout-content">
+        <strong>Workflows</strong> jsou uložené prompty, které můžete opakovaně používat. Více v sekci <em>Rules and Workflows</em>.
+    </div>
+</div>

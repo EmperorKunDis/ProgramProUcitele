@@ -1,29 +1,153 @@
-<h1>Přizpůsobení (Customization)</h1>
+<h1>Přizpůsobení a Workflows</h1>
 
-<p>Každý tým má jiné standardy. Antigravity se přizpůsobí vám, ne naopak.</p>
+<p>Každý tým má jiné standardy. Antigravity se přizpůsobí vám pomocí pravidel, workflows a vlastní paměti.</p>
 
-<h2>Pravidla (.cursorrules / .antigravityrules)</h2>
-<p>Vytvořte v kořeni projektu soubor <code>.antigravityrules</code>. Zde definujete chování agentů.</p>
+<h2>Rules (Pravidla projektu)</h2>
 
-<div class="code-block">
-    <pre><code class="language-markdown"># Globální Pravidla
-- Vždy používej TypeScript místo JavaScriptu.
-- Pro stylování používej Tailwind CSS.
-- Každá funkce musí mít JSDoc komentář.
-- Nikdy nemazej soubory v `/legacy` bez explicitního povolení.</code></pre>
+<p>Vytvořte v kořeni projektu soubor <code>.antigravityrules</code> nebo <code>.gemini/rules.md</code>:</p>
+
+<pre><code class="language-markdown"># Pravidla projektu
+
+## Kód
+- Vždy používej TypeScript místo JavaScriptu
+- Pro stylování používej Tailwind CSS
+- Každá funkce musí mít JSDoc komentář
+
+## Bezpečnost
+- Nikdy nemazej soubory v `/legacy` bez povolení
+- Netestuj na produkčních datech
+
+## Formátování
+- Používej 2 mezery pro odsazení
+- Max 100 znaků na řádek</code></pre>
+
+<div class="callout callout-info">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+        Agent přečte pravidla před každým úkolem a bude je dodržovat.
+    </div>
 </div>
 
-<h2>Vlastní Paměť</h2>
-<p>Agenti si budují paměť vašeho projektu. Můžete jim ale pomoci nahráním dokumentace.</p>
-<p>Stačí přetáhnout PDF nebo MD soubory do složky <code>.gemini/knowledge/</code>. Agent si je přečte před každým
-    úkolem.</p>
+<h2>Workflows (Uložené prompty)</h2>
 
-<div class="visual-placeholder">
-    <div class="icon">📚</div>
-    <div class="desc">Screenshot: Knowledge Base Panel</div>
-    <div class="specs">Panel s nahranými PDF dokumenty</div>
+<p>Workflows jsou znovupoužitelné prompty, které spouštíte příkazem <code>/</code> v chatu.</p>
+
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="assets/images/google-codelabs/09-workflows.png" alt="Workflow trigger" style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Spuštění workflow pomocí /generate</figcaption>
+</figure>
+
+<h3>Vytvoření workflow</h3>
+
+<p>Vytvořte soubor v <code>.gemini/workflows/</code>:</p>
+
+<pre><code class="language-markdown"># .gemini/workflows/generate-unit-tests.md
+---
+name: generate-unit-tests
+description: Vygeneruje unit testy pro vybraný soubor
+---
+
+Analyzuj soubor {{file}} a vygeneruj unit testy.
+
+Požadavky:
+- Použij Jest
+- Testuj happy path i edge cases
+- Mockuj externí závislosti
+- Přidej coverage minimálně 80%</code></pre>
+
+<h3>Použití workflow</h3>
+
+<ol>
+    <li>V chatu napište <code>/</code></li>
+    <li>Začněte psát název workflow (např. <code>/generate</code>)</li>
+    <li>Vyberte z nabídky <code>generate-unit-tests</code></li>
+    <li>Agent spustí workflow s vybraným kontextem</li>
+</ol>
+
+<h3>Vestavěné workflows</h3>
+
+<p>Antigravity obsahuje několik předpřipravených workflows:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Workflow</th>
+            <th>Popis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>/explain</code></td>
+            <td>Vysvětlí vybraný kód</td>
+        </tr>
+        <tr>
+            <td><code>/refactor</code></td>
+            <td>Navrhne refaktoring</td>
+        </tr>
+        <tr>
+            <td><code>/document</code></td>
+            <td>Přidá dokumentaci (JSDoc, docstrings)</td>
+        </tr>
+        <tr>
+            <td><code>/fix</code></td>
+            <td>Opraví chybu na základě error message</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Knowledge Base (Vlastní paměť)</h2>
+
+<p>Agenti si mohou přečíst vaši dokumentaci, aby lépe rozuměli projektu.</p>
+
+<h3>Přidání dokumentace</h3>
+
+<ol>
+    <li>Vytvořte složku <code>.gemini/knowledge/</code></li>
+    <li>Přidejte soubory (MD, PDF, TXT)</li>
+    <li>Agent je přečte před úkolem</li>
+</ol>
+
+<pre><code class="language-text">.gemini/
+├── knowledge/
+│   ├── architecture.md      # Popis architektury
+│   ├── api-spec.yaml        # OpenAPI specifikace
+│   └── coding-standards.pdf # Firemní standardy
+├── rules.md
+└── workflows/
+    └── generate-unit-tests.md</code></pre>
+
+<h2>Ignore List (.agignore)</h2>
+
+<p>Chcete, aby agent ignoroval určité soubory? Vytvořte <code>.agignore</code>:</p>
+
+<pre><code class="language-text"># Testovací data
+test/fixtures/
+*.mock.json
+
+# Generované soubory
+dist/
+node_modules/
+
+# Citlivá data
+.env
+secrets/</code></pre>
+
+<div class="callout callout-warning">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+        <strong>Poznámka:</strong> <code>.agignore</code> funguje stejně jako <code>.gitignore</code>. Agent tyto soubory neuvidí ani nečte.
+    </div>
 </div>
 
-<h2>Ignore List</h2>
-<p>Chcete, aby agent ignoroval testovací data? Přidejte je do <code>.agignore</code> (funguje stejně jako .gitignore).
-</p>
+<h2>Sdílení konfigurace v týmu</h2>
+
+<p>Commitujte tyto soubory do Gitu:</p>
+
+<ul>
+    <li><code>.antigravityrules</code> nebo <code>.gemini/rules.md</code></li>
+    <li><code>.gemini/workflows/</code></li>
+    <li><code>.gemini/knowledge/</code> (veřejná dokumentace)</li>
+    <li><code>.agignore</code></li>
+</ul>
+
+<p>Tím zajistíte, že celý tým používá stejná pravidla a workflows.</p>

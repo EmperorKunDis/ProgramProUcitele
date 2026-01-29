@@ -222,9 +222,97 @@ gemini agent import reviewer.zip
 # Publikování do team registry
 gemini agent publish code-reviewer --team myteam</code></pre>
 
+<h2>Workspace Skills</h2>
+
+<p>Skills jsou jednodušší verze custom agentů - naučí agenta nové dovednosti specifické pro váš projekt.</p>
+
+<figure style="margin: 2rem 0; text-align: center;">
+    <img src="../antigravity-guide/assets/images/google-codelabs/10-skills.png" alt="Workspace Skills" style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--p1-text-secondary);">Příklad workspace skill pro přidání license header</figcaption>
+</figure>
+
+<h3>Struktura Skill</h3>
+
+<pre><code class="language-text">.agent/skills/
+└── license-header-adder/
+    ├── SKILL.md           # Instrukce pro agenta
+    └── resources/
+        └── HEADER.txt     # Template soubory</code></pre>
+
+<h3>Příklad: License Header Skill</h3>
+
+<pre><code class="language-markdown"># .agent/skills/license-header-adder/SKILL.md
+---
+name: license-header-adder
+description: Adds the standard corporate license header to new source files.
+---
+
+# License Header Adder
+
+This skill ensures that all new source files have the correct copyright header.
+
+## Instructions
+
+1. **Read the Template**: Read the content of `resources/HEADER.txt`.
+
+2. **Apply to File**: When creating a new file, prepend this exact content.
+
+3. **Adapt Syntax**:
+   - For C-style languages (Java, TS), keep the `/* */` block.
+   - For Python/Shell, convert to `#` comments.</code></pre>
+
+<h3>Template soubor</h3>
+
+<pre><code class="language-text"># resources/HEADER.txt
+/*
+ * Copyright (c) 2026 YOUR_COMPANY_NAME LLC.
+ * All rights reserved.
+ * This code is proprietary and confidential.
+ */</code></pre>
+
+<h3>Použití Skill</h3>
+
+<p>Jakmile skill existuje, agent ho automaticky použije:</p>
+
+<pre><code class="language-text">Vytvoř nový Python script data_processor.py s funkcí pro zpracování CSV.</code></pre>
+
+<p>Agent přečte skill, konvertuje header do Python syntaxe a přidá ho na začátek souboru:</p>
+
+<pre><code class="language-python"># Copyright (c) 2026 YOUR_COMPANY_NAME LLC.
+# All rights reserved.
+# This code is proprietary and confidential.
+
+def process_csv(filepath):
+    ...</code></pre>
+
+<h3>Proč Skills?</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Custom Agents</th>
+            <th>Skills</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Komplexní konfigurace</td>
+            <td>Jednoduchý Markdown soubor</td>
+        </tr>
+        <tr>
+            <td>Samostatná entita</td>
+            <td>Rozšíření hlavního agenta</td>
+        </tr>
+        <tr>
+            <td>Pro velké workflows</td>
+            <td>Pro menší, specifické úkoly</td>
+        </tr>
+    </tbody>
+</table>
+
 <div class="callout callout-tip">
     <div class="callout-icon">💡</div>
     <div class="callout-content">
-        <strong>Pro Tip:</strong> Začněte s jednoduchým agentem a postupně přidávejte schopnosti. Komplexní agenti vyžadují více ladění.
+        <strong>Pro Tip:</strong> Začněte se Skills pro jednoduché věci (license headers, coding standards). Na Custom Agents přejděte až pro komplexní workflows.
     </div>
 </div>
